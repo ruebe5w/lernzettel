@@ -5,7 +5,27 @@ todo:
   + [x] Methoden
   + [ ] Schleifen
   + [ ] Threads
+  + [ ] Frequenz zu Periodendauer
 
+- [Technik](#technik)
+  - [Netzwerktechnik](#netzwerktechnik)
+  - [Steuerungtechnik](#steuerungtechnik)
+  - [Java](#java)
+    - [Datentypen](#datentypen)
+      - [einfache Datentypen](#einfache-datentypen)
+      - [komplexe Datentype](#komplexe-datentype)
+    - [Klassen](#klassen)
+      - [Deklaration](#deklaration)
+      - [Konstruktor](#konstruktor)
+      - [Beispiel](#beispiel)
+    - [Methoden](#methoden)
+      - [Deklaration](#deklaration-1)
+      - [Beispiel](#beispiel-1)
+    - [Schleifen](#schleifen)
+      - [for-Schleife](#for-schleife)
+      - [while-schleife](#while-schleife)
+    - [Verzweigungen](#verzweigungen)
+    - [Frequenz zu Periodendauer](#frequenz-zu-periodendauer)
 
 
 # Technik
@@ -111,5 +131,44 @@ private static int getTime() {
 }
 ```
 
-
 ### Schleifen
+#### for-Schleife
+Eine **for-Schleife** wird verwendet wenn man z.B. eine bestimmte Anzahl an Durchgängen ausführen möchte.
+```java
+for (int i=0; i<50; i++) {
+    ...
+}
+```
+
+#### while-schleife
+
+```java
+while (time < 4000) {
+    ...
+}
+```
+
+### Verzweigungen
+### Frequenz zu Periodendauer
+Im Unterricht ist es öfters vorgekommen, dass die Frequenz zur Verfügung steht und man nun mit dieser Frequenz z.B. eine LED blinken zu lassen.
+
+Um die Periodendauer zu berechnen können wir folgende Formel benutzen:
+
+> $f$ = $\frac{1}{T}$ bzw. $T$ = $\frac{1}{f}$
+
+Beispiel: geg.: $f$=20Hz
+> $T$ = $\frac{1}{f}$ = $\frac{1}{20Hz}$ = $\frac{1}{20\frac{1}{s}}$
+
+Mit dem Kehrwert multiplizieren;
+> $T$ = $\frac{1}{20}$s = 0,050s = 50ms
+
+Um die Aufgabe zu verfollständigen, muss man diese Zeit noch durch 2 dividieren, da wir bis jetzt nur die Dauer eines ganzen Vorgangs berechnet haben. Möchten wir aber die LED mit einer Frequenz von 20Hz blinken lassen wollen, ist zwischen den dem Ein- und Ausschalten der LED eine verzögerung von 25ms nötig.
+
+```java
+while (true) {
+    Tools.delay(25);
+    LampSimulator.setOn();
+    Tools.delay(25);
+    LampSimulator.setOff();
+}
+```
