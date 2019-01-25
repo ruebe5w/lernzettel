@@ -4,9 +4,7 @@ todo:
 + Steuerungstechnik
   + Schrittkette
 + Netzwerktechnik
-  + **Grafiken Backup**
   + Schwachstellen
-  + Hardware (Raid)
   + ipv4
   + Subnetz Standard Gateway
   + Subnetze Bilden
@@ -18,9 +16,13 @@ todo:
 - [Lernzettel Technik](#lernzettel-technik)
   - [Netzwerktechnik](#netzwerktechnik)
     - [Begriffe](#begriffe)
-    - [Backup](#backup)
     - [Übertragungsmedien](#%C3%BCbertragungsmedien)
     - [Protokolle](#protokolle)
+  - [Backup](#backup)
+    - [inkrementelles Backup](#inkrementelles-backup)
+    - [differentielles Backup](#differentielles-backup)
+    - [Vollbackup](#vollbackup)
+    - [in einer Firma](#in-einer-firma)
   - [Verschlüsselung](#verschl%C3%BCsselung)
     - [symmetrische Verschlüsselung](#symmetrische-verschl%C3%BCsselung)
     - [asymmetrische Verschlüsselung](#asymmetrische-verschl%C3%BCsselung)
@@ -104,36 +106,7 @@ Bsp.: Dosentelefon
 #### datagrammorientiert:
 * Daten werden paketweise einfach aud den Weg geschickt
 * Bsp.: Postwurfsendung
-### Backup
-#### inkrementelles Backup
-Beim inkrementellen Backup wird eine Vollsicherung des Datenbestandes durchgeführt. Anschließend werden Sicherungen zum letzten Backup gemacht. Das bedeutet, dass beim dersten Mal eine Sicherung der Veränderungen seit dem letzten Backup (egal ob inkrementell oder Vollbackup) gemacht werden. Zur Wiederherstellung des Datenbestandes werden alle Bänder benötigt. Fehlt eines der Bänder bzw. ist eine Sicherung nicht vorhanden, ist eine Wiederherstellung des gesicherten Datenbestands nicht möglich.
-* Vorteile:
-  * Einfaches Verfahren
-  * niedriger Speicherbedarf(wegen der kleinen inkrementen Backups)
-  * Wiederherstellung der Daten zu jedem Backupzeitpunkt möglich
-* Nachteile:
-  * Es sind das Vollbackup und **alle** seitdem gemachten Bänder notwendig
-#### differentielles Backup
-Das differentielle Backup ist dem inkrementellen Backup sehr ähnlich. Es wird erneut eine Vollsicherung gemacht. Anschließend werden die Veränderungen zum letzten Vollbackup gesichert. Demnach ist zur Wiederherstellung des Datenbestandes das Vollbackup und das gewünschte differentielle Backup notwendig
-* Vorteile:
-  * weniger Speicherbedarf als bei Vollnbackup
-  * Vollbackup und nur die differentielle Sicherung zum gewünschten Zeitpunkt notwendig
-* Nachteile:
-  * Dateien, die einaml verändert werden, müssen bei jedem differentiellen Backup neu gesichert werden. Dadurch hat man ein erhöhtes Datenaufkommen
-#### Vollbackup
-Beim Vollbackup wird der komplette Datenbestand gesichert. Um verlorene Daten wieder herzustellen, wird das entsprechende Vollbackupmedium benötigt.
-* Vorteile:
-  * Ein Band zur Wiederherstellung notwendig
-  * einfache Wiederherstellung
-* Nachteile:
-  * Sehr hoher Speicherbedarf
-  * im mehrere Versionen zu haben, müssen mehrere Sicherungsbänder aufbewahrt werden.
-#### in einer Firma
-* am besten: 3 Kopien
-  1. Kopie: mit der man arbeitet
-  2. Kopie: lokal gesichert (NAS, Festplatten)
-  3. Kopie: räumlich entfernt gesichert (cloud)
-* Restore kann bei kompletter Programm/Datei wiederherstellung sehr lange dauern
+
 ### Übertragungsmedien
 | Art                   | Aufbau                                                                |
 | :-------------------- | :-------------------------------------------------------------------- |
@@ -168,6 +141,42 @@ DHCP - Dynamik Host Configuration Protocol. Dieses Protokoll ist dafür zuständ
 * DNS-Server Adresse
 * ...
 #### ARP
+## Backup
+### inkrementelles Backup
+Beim inkrementellen Backup wird eine Vollsicherung des Datenbestandes durchgeführt. Anschließend werden Sicherungen zum letzten Backup gemacht. Das bedeutet, dass beim dersten Mal eine Sicherung der Veränderungen seit dem letzten Backup (egal ob inkrementell oder Vollbackup) gemacht werden. Zur Wiederherstellung des Datenbestandes werden alle Bänder benötigt. Fehlt eines der Bänder bzw. ist eine Sicherung nicht vorhanden, ist eine Wiederherstellung des gesicherten Datenbestands nicht möglich.
+
+![inkrementelles Backup](img/inkrementes&#32;Backup.png)
+* Vorteile:
+  * Einfaches Verfahren
+  * niedriger Speicherbedarf(wegen der kleinen inkrementen Backups)
+  * Wiederherstellung der Daten zu jedem Backupzeitpunkt möglich
+* Nachteile:
+  * Es sind das Vollbackup und **alle** seitdem gemachten Bänder notwendig
+### differentielles Backup
+Das differentielle Backup ist dem inkrementellen Backup sehr ähnlich. Es wird erneut eine Vollsicherung gemacht. Anschließend werden die Veränderungen zum letzten Vollbackup gesichert. Demnach ist zur Wiederherstellung des Datenbestandes das Vollbackup und das gewünschte differentielle Backup notwendig.
+
+![differientielles Backup](img/differientielles&#32;Backup.png)
+* Vorteile:
+  * weniger Speicherbedarf als bei Vollbackup
+  * Vollbackup und nur die differentielle Sicherung zum gewünschten Zeitpunkt notwendig
+* Nachteile:
+  * Dateien, die einaml verändert werden, müssen bei jedem differentiellen Backup neu gesichert werden. Dadurch hat man ein erhöhtes Datenaufkommen
+### Vollbackup
+Beim Vollbackup wird der komplette Datenbestand gesichert. Um verlorene Daten wieder herzustellen, wird das entsprechende Vollbackupmedium benötigt.
+
+![Vollbackup](img/Vollbackup.png)
+* Vorteile:
+  * Ein Band zur Wiederherstellung notwendig
+  * einfache Wiederherstellung
+* Nachteile:
+  * Sehr hoher Speicherbedarf
+  * im mehrere Versionen zu haben, müssen mehrere Sicherungsbänder aufbewahrt werden.
+### in einer Firma
+* am besten: 3 Kopien
+  1. Kopie: mit der man arbeitet
+  2. Kopie: lokal gesichert (NAS, Festplatten)
+  3. Kopie: räumlich entfernt gesichert (cloud)
+* Restore kann bei kompletter Programm/Datei wiederherstellung sehr lange dauern
 ## Verschlüsselung
 ### symmetrische Verschlüsselung
 * beide Kommunikationspartner benötigen den gleichen Schlüssel
@@ -230,6 +239,7 @@ Meist genutztes Modell. Hierfür sind mindestens 3 Festplatten benötigt. Die Da
 * benötigt aufgrund der Parität deutlich mehr Rechenleistung als Raid 0 aund 1
 ## Steuerungstechnik
 ### Zuordnungstabelle
+
 Eingänge:
 | Eingang       | Kennzeichnung | log. Zuordnung |
 | :------------ | :-----------: | :------------- |
@@ -239,10 +249,10 @@ Ausgänge:
 | :--------------- | :-----------: | :------------- |
 | Zylinder Tür auf |      M1       | fährt ein M1=1 |
 ### R-S Tabelle
-| Setzen/Rücksetzen |    Ö     | S                | Schritte                          |
-| :---------------- | :------: | :--------------- | :-------------------------------- |
+| Setzen/Rücksetzen |    Ö     |        S         | Schritte                          |
+| :---------------- | :------: | :--------------: | :-------------------------------- |
 | Setzen            | M1<br>S1 | M2<br>S2, ~~B3~~ | 1.öffnen <br> 2. öffnen abbrechen |
-| Rücksetzen        |    B1    | B2 v B3          | 3.<br> 4.                         |
+| Rücksetzen        |    B1    |     B2 v B3      | 3.<br> 4.                         |
 ### Drahtbruchsicherheit
 Eine Steuerung ist drahtbruchsicher, wenn das Einschalten durch einen Schließer (Arbeitsstromprinzip) und das Ausschalten durch einen Öffner (Ruhestromprinzip) erfolgt.
 ## Java 
