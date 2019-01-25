@@ -145,20 +145,24 @@ Bsp.: Dosentelefon
 
 #### Twisted-Pair-Leitungen
 Für Punkt-zu-Punkt Verbindungen z.B. vom Switch zu den Teilnehmern, für Halbduplex Datenübertragungen die die Doppelader.
+
 > Leitungslängen: $\le$ 25m bis $\le$ 100m
 
 #### Lichtwellenleiter
 Für Punkt-zu-Punkt Verbindungen bei Halbduplexübertragung je Faser (z.B. Switch zu Switch)
+
 > Leitungslängen: bis 3000m
 
 #### Koaxialleitungen
 Für Busverbindungen mit mehreren Teilnehmern an einer Leitung
+
 > Leitungslängen:
 > * Thick Wire $\ge$ 500m
 > * Thin Wire $\ge$ 185m
 
 ### Hardware
 Netzwerkgeräte (Hub, Switch, Router) erfüllende folgende Aufgaben:
+
 * Paket-Weiterleitung innerhalb eines logischen Netzes
 * Verbindung zwischen logischen Netzen herstellen
 
