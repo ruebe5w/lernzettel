@@ -7,12 +7,10 @@ todo:
   + Drahtbruchsicherheit
   + Schrittkette
 + Netzwerktechnik
+  + **Grafiken Backup**
   + Schwachstellen
   + Verschlüsselung
-  + Datensicherheit
-  + Firma Daten sichern Konzepte
   + Hardware (Raid)
-  + räumlich getrennte Sicherung
   + ipv4
   + Subnetz Standard Gateway
   + Subnetze Bilden
@@ -25,7 +23,36 @@ todo:
 
 - [Technik](#technik)
   - [Netzwerktechnik](#netzwerktechnik)
+    - [Begriffe](#begriffe)
+      - [BasisBand](#basisband)
+      - [Breitband](#breitband)
+      - [Punkt-zu-Punkt](#punkt-zu-punkt)
+      - [Punkt-zu-Mehrpunkt](#punkt-zu-mehrpunkt)
+      - [Mehrpunkt-zu-Punkt](#mehrpunkt-zu-punkt)
+      - [paketorientierte Übertragung](#paketorientierte-%C3%BCbertragung)
+      - [NAS](#nas)
+      - [synchrone Datenübertragung](#synchrone-daten%C3%BCbertragung)
+      - [asynchrone Datenübertragung](#asynchrone-daten%C3%BCbertragung)
+      - [symetrische Datenübertragung](#symetrische-daten%C3%BCbertragung)
+      - [asymetrische Datenübertragung](#asymetrische-daten%C3%BCbertragung)
+      - [Simplex](#simplex)
+      - [Duplex](#duplex)
+      - [Halbduplex](#halbduplex)
+      - [leistungsvermittelte Verbindung](#leistungsvermittelte-verbindung)
+      - [verbingdungsorientiert:](#verbingdungsorientiert)
+      - [datagrammorientiert:](#datagrammorientiert)
+    - [Backup](#backup)
+      - [inkrementelles Backup](#inkrementelles-backup)
+      - [differentielles Backup](#differentielles-backup)
+      - [Vollbackup](#vollbackup)
+      - [in einer Firma](#in-einer-firma)
+    - [Übertragungsmedien](#%C3%BCbertragungsmedien)
+      - [Twisted-Pair-Leitungen](#twisted-pair-leitungen)
+      - [Lichtwellenleiter](#lichtwellenleiter)
+      - [Koaxialleitungen](#koaxialleitungen)
   - [Steuerungstechnik](#steuerungstechnik)
+    - [Zuordnungstabelle](#zuordnungstabelle)
+    - [R-S Tabelle](#r-s-tabelle)
     - [Drahtbruchsicherheit](#drahtbruchsicherheit)
   - [Java](#java)
     - [Quick-Links](#quick-links)
@@ -55,9 +82,137 @@ todo:
 
 # Technik
 ## Netzwerktechnik
+### Begriffe
+#### BasisBand
+* der gesamte nutzbare Frequenzbereich des Übertragungsmedium steht exklusiv für diese Datenkommunikation zur Verfügung
+* Bsp.: analoges Telefon, Dosentelefon, Ethernet, Lautsprecherkabel
+#### Breitband
+* das nutzbare Frequenzspektrum/die nutzbare Bandbreite eines Übertragungsmediums wird in einzelne, diskrete Bereiche aufgeleitet, die von mehreren Diensten gleichzeitig genutzt werden können
+* Bsp.: Luft-Radio, ISDN mit DSL
+#### Punkt-zu-Punkt
+* zwei Kommunikationspartner sind direkt mit einander verbunden
+* Bsp.: Telefon, 2PCs mit TCP-IP
+#### Punkt-zu-Mehrpunkt
+* ein zentraler Sender, viele Empfänger
+* Bsp.: Radio, Bahnhofsdurchsage
+#### Mehrpunkt-zu-Punkt
+* mehrere Sender, ein zentraler Empfänger
+* Bsp.: Anmeldeserver eines Netzwerkes
+#### paketorientierte Übertragung
+* Daten werden in kleine Pakete verpackt, mit Empfänger- und Absenderadresse versehen und auf die Reise geschickt
+* effektive Nutzung der Resourcen (Kabel)
+* Bsp.: Brief, Handy, ISDN
+#### NAS
+* Network Attached Storage
+#### synchrone Datenübertragung
+* Sender und Empfänger synchronisieren sich (Übertragungsrate, Takt, ...) und dann werden, nach Senden des Start-Bits, alle Daten gesendet
+* schnell
+* störanfällig
+* Bsp.: Fax
+#### asynchrone Datenübertragung
+* es gibt ein Signal, das die Daten als gültig erklärt
+* oder aber: variable Bit Raten, des Übetragungsprotokolls
+* störungsempfindlich
+* langsam
+* Bsp.: PCI-Bus, Ethernet
+#### symetrische Datenübertragung
+* Up- und Downstream sind gleich
+* Bsp.: ISDN, Ethernet
+#### asymetrische Datenübertragung
+* Up- und Downstream sind ungleich
+* Bsp.: T-DSL, Sky-DSL, ADSL
+#### Simplex
+* Übertragung nur in eine Richtung
+* Bsp.: Radio, Fernsehen
+#### Duplex
+* Übertragung in beide Richtungen gleichzeitig möglich
+* Bsp.: Telefon, Handy
+#### Halbduplex
+* Übertragung in beide Richtungen möglich, aber nur eine Richtung zur Zeit nutzbar
+* Bsp.: WalkyTalky
+#### leistungsvermittelte Verbindung
+* es existiert für die gesamter Dauer der Kommunikation eine fest aufgebaute direkte exklusive Verbindung, auch während der Paus
+* uneffektivem Nutzung der Resourcen
+Bsp.: Dosentelefon
+#### verbingdungsorientiert:
+* es wird quittiert, dass die Daten angekommen sind
+* Bsp.: "hm ja" des Gesprächspartners
+#### datagrammorientiert:
+* Daten werden paketweise einfach aud den Weg geschickt
+* Bsp.: Postwurfsendung
+### Backup
+#### inkrementelles Backup
+Beim inkrementellen Backup wird eine Vollsicherung des Datenbestandes durchgeführt. Anschließend werden Sicherungen zum letzten Backup gemacht. Das bedeutet, dass beim dersten Mal eine Sicherung der Veränderungen seit dem letzten Backup (egal ob inkrementell oder Vollbackup) gemacht werden. Zur Wiederherstellung des Datenbestandes werden alle Bänder benötigt. Fehlt eines der Bänder bzw. ist eine Sicherung nicht vorhanden, ist eine Wiederherstellung des gesicherten Datenbestands nicht möglich.
+* Vorteile:
+  * Einfaches Verfahren
+  * niedriger Speicherbedarf(wegen der kleinen inkrementen Backups)
+  * Wiederherstellung der Daten zu jedem Backupzeitpunkt möglich
+* Nachteile:
+  * Es sind das Vollbackup und **alle** seitdem gemachten Bänder notwendig
+#### differentielles Backup
+Das differentielle Backup ist dem inkrementellen Backup sehr ähnlich. Es wird erneut eine Vollsicherung gemacht. Anschließend werden die Veränderungen zum letzten Vollbackup gesichert. Demnach ist zur Wiederherstellung des Datenbestandes das Vollbackup und das gewünschte differentielle Backup notwendig
+* Vorteile:
+  * weniger Speicherbedarf als bei Vollnbackup
+  * Vollbackup und nur die differentielle Sicherung zum gewünschten Zeitpunkt notwendig
+* Nachteile:
+  * Dateien, die einaml verändert werden, müssen bei jedem differentiellen Backup neu gesichert werden. Dadurch hat man ein erhöhtes Datenaufkommen
+#### Vollbackup
+Beim Vollbackup wird der komplette Datenbestand gesichert. Um verlorene Daten wieder herzustellen, wird das entsprechende Vollbackupmedium benötigt.
+* Vorteile:
+  * Ein Band zur Wiederherstellung notwendig
+  * einfache Wiederherstellung
+* Nachteile:
+  * Sehr hoher Speicherbedarf
+  * im mehrere Versionen zu haben, müssen mehrere Sicherungsbänder aufbewahrt werden.
+#### in einer Firma
+* am besten: 3 Kopien
+  1. Kopie: mit der man arbeitet
+  2. Kopie: lokal gesichert (NAS, Festplatten)
+  3. Kopie: räumlich entfernt gesichert (cloud)
+* Restore kann bei kompletter Programm/Datei wiederherstellung sehr lange dauern
+### Übertragungsmedien
+| Art                   | Aufbau                                                                |
+| :-------------------- | :-------------------------------------------------------------------- |
+| **Twisted-Pair**      | meist mit 2 oder mehreren verdrillten Doppeladern                     |
+| - UTP                 | ungeschirmt (Unshielded-Twisted-Pair)                                 |
+| - STP                 | paarweise mit Aluminiumfolie geschirmt (Shielded-Twisted-Pair)        |
+| - S/STP               | paarweise geschirmt mit zusätzlichen Gesamtschirm                     |
+| **Lichtwellenleiter** | Kunststoffmantel mit Glaskern                                         |
+| - Single-Mode Faser   | einfache Erscheinungsform, ohen Reflexion                             |
+| - Multi-Mode Faser    | mehrfache Erscheinungsform, vielfache Reflexion                       |
+| **Koaxialleitung**    |
+| - Cu-Massiv-Draht     | dicke gelbe Leitung mit massivem Innendraht und Cu-Blechmantel        |
+| - Cu-dünner-Draht     | dünnere schwarze Leitung mit Cu-Geflechtmantel und innerer Drahtlitze |
+#### Twisted-Pair-Leitungen
+Für Punkt-zu-Punkt Verbindungen z.B. vom Switch zu den Teilnehmern, für Halbduplex Datenübertragungen die die Doppelader.
+> Leitungslängen: $\le$ 25m bis $\le$ 100m
+#### Lichtwellenleiter
+Für Punkt-zu-Punkt Verbindungen bei Halbduplexübertragung je Faser (z.B. Switch zu Switch)
+> Leitungslängen: bis 3000m
+#### Koaxialleitungen
+Für Busverbindungen mit mehreren Teilnehmern an einer Leitung
+> Leitungslängen:
+> * Thick Wire $\ge$ 500m
+> * Thin Wire $\ge$ 185m
+
 ## Steuerungstechnik
+### Zuordnungstabelle
+Eingänge:
+| Eingang       | Kennzeichnung | log. Zuordnung |
+| :------------ | :-----------: | :------------- |
+| Taster öffnen |      S1       | Betätigt S1=1  |
+Ausgänge:
+| Ausgang          | Kennzeichnung | log. Zuordnung |
+| :--------------- | :-----------: | :------------- |
+| Zylinder Tür auf |      M1       | fährt ein M1=1 |
+### R-S Tabelle
+| Setzen/Rücksetzen |    Ö     | S                | Schritte                          |
+| :---------------- | :------: | :--------------- | :-------------------------------- |
+| Setzen            | M1<br>S1 | M2<br>S2, ~~B3~~ | 1.öffnen <br> 2. öffnen abbrechen |
+| Rücksetzen        |    B1    | B2 v B3          | 3.<br> 4.                         |
 ### Drahtbruchsicherheit
-## Java
+Eine Steuerung ist drahtbruchsicher, wenn das Einschalten durch einen Schließer (Arbeitsstromprinzip) und das Ausschalten durch einen Öffner (Ruhestromprinzip) erfolgt.
+## Java 
 ### Quick-Links
 * [Vergleichsoperatoren](#if-else)
 ### Datentypen
