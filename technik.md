@@ -1,22 +1,28 @@
-todo:
-+ Java
-  + Threads
-+ Steuerungstechnik
-  + Schrittkette
-+ Netzwerktechnik
-  + Schwachstellen
-  + ipv4
-  + Subnetz Standard Gateway
-  + Subnetze Bilden
-  + Router, Switch
-  + Firewall
-  + Feste IP bei Servern
-  + MAC Adresse + freigeben
+---
+title: "Lernzettel Technik"
+---
 
+Todo:
+
+* Java
+  * Threads
+* Steuerungstechnik
+  * Schrittkette
+* Netzwerktechnik
+  * Schwachstellen
+  * ipv4
+  * Subnetz Standard Gateway
+  * Subnetze Bilden
+  * Firewall
+  * Feste IP bei Servern
+  * MAC Adresse + freigeben
+
+## Inhaltsverzeichnis
 - [Lernzettel Technik](#lernzettel-technik)
   - [Netzwerktechnik](#netzwerktechnik)
     - [Begriffe](#begriffe)
     - [Übertragungsmedien](#%C3%BCbertragungsmedien)
+    - [Hardware](#hardware)
     - [Protokolle](#protokolle)
   - [Backup](#backup)
     - [inkrementelles Backup](#inkrementelles-backup)
@@ -52,62 +58,79 @@ todo:
 #### BasisBand
 * der gesamte nutzbare Frequenzbereich des Übertragungsmedium steht exklusiv für diese Datenkommunikation zur Verfügung
 * Bsp.: analoges Telefon, Dosentelefon, Ethernet, Lautsprecherkabel
+
 #### Breitband
 * das nutzbare Frequenzspektrum/die nutzbare Bandbreite eines Übertragungsmediums wird in einzelne, diskrete Bereiche aufgeleitet, die von mehreren Diensten gleichzeitig genutzt werden können
 * Bsp.: Luft-Radio, ISDN mit DSL
+
 #### Punkt-zu-Punkt
 * zwei Kommunikationspartner sind direkt mit einander verbunden
 * Bsp.: Telefon, 2PCs mit TCP-IP
+
 #### Punkt-zu-Mehrpunkt
 * ein zentraler Sender, viele Empfänger
 * Bsp.: Radio, Bahnhofsdurchsage
+
 #### Mehrpunkt-zu-Punkt
 * mehrere Sender, ein zentraler Empfänger
 * Bsp.: Anmeldeserver eines Netzwerkes
+
 #### paketorientierte Übertragung
 * Daten werden in kleine Pakete verpackt, mit Empfänger- und Absenderadresse versehen und auf die Reise geschickt
 * effektive Nutzung der Resourcen (Kabel)
 * Bsp.: Brief, Handy, ISDN
+
 #### NAS
 * Network Attached Storage
+
 #### synchrone Datenübertragung
 * Sender und Empfänger synchronisieren sich (Übertragungsrate, Takt, ...) und dann werden, nach Senden des Start-Bits, alle Daten gesendet
 * schnell
 * störanfällig
 * Bsp.: Fax
+
 #### asynchrone Datenübertragung
 * es gibt ein Signal, das die Daten als gültig erklärt
 * oder aber: variable Bit Raten, des Übetragungsprotokolls
 * störungsempfindlich
 * langsam
 * Bsp.: PCI-Bus, Ethernet
+
 #### symmetrische Datenübertragung
 * Up- und Downstream sind gleich
 * Bsp.: ISDN, Ethernet
+
 #### asymmetrische Datenübertragung
 * Up- und Downstream sind ungleich
 * Bsp.: T-DSL, Sky-DSL, ADSL
+
 #### Simplex
 * Übertragung nur in eine Richtung
 * Bsp.: Radio, Fernsehen
+
 #### Duplex
 * Übertragung in beide Richtungen gleichzeitig möglich
 * Bsp.: Telefon, Handy
+
 #### Halbduplex
 * Übertragung in beide Richtungen möglich, aber nur eine Richtung zur Zeit nutzbar
 * Bsp.: WalkyTalky
+
 #### leistungsvermittelte Verbindung
 * es existiert für die gesamter Dauer der Kommunikation eine fest aufgebaute direkte exklusive Verbindung, auch während der Paus
 * uneffektivem Nutzung der Resourcen
 Bsp.: Dosentelefon
+
 #### verbingdungsorientiert:
 * es wird quittiert, dass die Daten angekommen sind
 * Bsp.: "hm ja" des Gesprächspartners
+
 #### datagrammorientiert:
 * Daten werden paketweise einfach aud den Weg geschickt
 * Bsp.: Postwurfsendung
 
 ### Übertragungsmedien
+
 | Art                   | Aufbau                                                                |
 | :-------------------- | :-------------------------------------------------------------------- |
 | **Twisted-Pair**      | meist mit 2 oder mehreren verdrillten Doppeladern                     |
@@ -120,63 +143,89 @@ Bsp.: Dosentelefon
 | **Koaxialleitung**    |
 | - Cu-Massiv-Draht     | dicke gelbe Leitung mit massivem Innendraht und Cu-Blechmantel        |
 | - Cu-dünner-Draht     | dünnere schwarze Leitung mit Cu-Geflechtmantel und innerer Drahtlitze |
+
 #### Twisted-Pair-Leitungen
 Für Punkt-zu-Punkt Verbindungen z.B. vom Switch zu den Teilnehmern, für Halbduplex Datenübertragungen die die Doppelader.
 > Leitungslängen: $\le$ 25m bis $\le$ 100m
+
 #### Lichtwellenleiter
 Für Punkt-zu-Punkt Verbindungen bei Halbduplexübertragung je Faser (z.B. Switch zu Switch)
 > Leitungslängen: bis 3000m
+
 #### Koaxialleitungen
 Für Busverbindungen mit mehreren Teilnehmern an einer Leitung
 > Leitungslängen:
 > * Thick Wire $\ge$ 500m
 > * Thin Wire $\ge$ 185m
+
+### Hardware
+Netzwerkgeräte (Hub, Switch, Router) erfüllende folgende Aufgaben:
+* Paket-Weiterleitung innerhalb eines logischen Netzes
+* Verbindung zwischen logischen Netzen herstellen
+
+#### Router
+Der Router ist ein Netzwerkgerät welches Netzwerkpakete zwischen mehreren Rechnernetzen weiterleiten kann. Sie arbeiten auf der 3. Schicht (mit der IP-Adresse) des OSI Schichten Modells. Zusätzlich blockiert er Broadcasts vor dem verlassen des Netzwerks.
+
+#### Switch
+Ein Switch ist ein Kopplungselement, das mehrere Hosts in einem Netzwerk miteinander verbindet und den Datenaustausch zwischen diesen ermöglicht. In einem Netzwerk mit einer Stern-Topologie dient ein Switch als Verteiler für die Datenpakete. Er arbeitet auf der 2. Schicht (mit der MAC-Adresse) des OSI Schichten Modells.
+
 ### Protokolle
 #### DNS
 DNS - Domain Name System. Dieses Protokoll ist für die Namensauflösung zuständig. Das bedeutet, wenn ein Benutzer eine url, wie z.B. google.com, dann wird diese URL von dem Protokoll in eine dezimale IP-Adresse umgewandelt.
+
 #### DHCP
 DHCP - Dynamik Host Configuration Protocol. Dieses Protokoll ist dafür zuständig automatisch Clients des Netzwerks Netzwerkonfiguraionen zu zuweisen. Dies wird von einem DHCP Server gemacht. Inhalte dieser Konfiguraitinen sind unter anderem:
 * IP-Adresse und Subnetzmaske
 * Default-Gateway
 * DNS-Server Adresse
 * ...
+
 #### ARP
+ARP - Address Resolution Protocol. Das Protokoll ist dafür da einer MAC-Adresse eine IP-Adresse zuzuordnen. Diese Informationen sind wichtig um ein Paket über das Netzwerk nicht nur an den richtigen PC, sondern auch an die richtige Netzwerkschnittstelle zu schicken. Diese Informationen werden zusätzlich in sogenannten ARP-Tabllen von z.B. PCs und Switches gespeichert.
+
 ## Backup
 ### inkrementelles Backup
 Beim inkrementellen Backup wird eine Vollsicherung des Datenbestandes durchgeführt. Anschließend werden Sicherungen zum letzten Backup gemacht. Das bedeutet, dass beim dersten Mal eine Sicherung der Veränderungen seit dem letzten Backup (egal ob inkrementell oder Vollbackup) gemacht werden. Zur Wiederherstellung des Datenbestandes werden alle Bänder benötigt. Fehlt eines der Bänder bzw. ist eine Sicherung nicht vorhanden, ist eine Wiederherstellung des gesicherten Datenbestands nicht möglich.
 
 ![inkrementelles Backup](img/inkrementes&#32;Backup.png)
+
 * Vorteile:
   * Einfaches Verfahren
   * niedriger Speicherbedarf(wegen der kleinen inkrementen Backups)
   * Wiederherstellung der Daten zu jedem Backupzeitpunkt möglich
 * Nachteile:
   * Es sind das Vollbackup und **alle** seitdem gemachten Bänder notwendig
+
 ### differentielles Backup
 Das differentielle Backup ist dem inkrementellen Backup sehr ähnlich. Es wird erneut eine Vollsicherung gemacht. Anschließend werden die Veränderungen zum letzten Vollbackup gesichert. Demnach ist zur Wiederherstellung des Datenbestandes das Vollbackup und das gewünschte differentielle Backup notwendig.
 
 ![differientielles Backup](img/differientielles&#32;Backup.png)
+
 * Vorteile:
   * weniger Speicherbedarf als bei Vollbackup
   * Vollbackup und nur die differentielle Sicherung zum gewünschten Zeitpunkt notwendig
 * Nachteile:
   * Dateien, die einaml verändert werden, müssen bei jedem differentiellen Backup neu gesichert werden. Dadurch hat man ein erhöhtes Datenaufkommen
+
 ### Vollbackup
 Beim Vollbackup wird der komplette Datenbestand gesichert. Um verlorene Daten wieder herzustellen, wird das entsprechende Vollbackupmedium benötigt.
 
 ![Vollbackup](img/Vollbackup.png)
+
 * Vorteile:
   * Ein Band zur Wiederherstellung notwendig
   * einfache Wiederherstellung
 * Nachteile:
   * Sehr hoher Speicherbedarf
   * im mehrere Versionen zu haben, müssen mehrere Sicherungsbänder aufbewahrt werden.
+
 ### in einer Firma
 * am besten: 3 Kopien
   1. Kopie: mit der man arbeitet
   2. Kopie: lokal gesichert (NAS, Festplatten)
   3. Kopie: räumlich entfernt gesichert (cloud)
 * Restore kann bei kompletter Programm/Datei wiederherstellung sehr lange dauern
+
 ## Verschlüsselung
 ### symmetrische Verschlüsselung
 * beide Kommunikationspartner benötigen den gleichen Schlüssel
@@ -184,15 +233,18 @@ Beim Vollbackup wird der komplette Datenbestand gesichert. Um verlorene Daten wi
 * Schlüssel muss auf einen gesicherten Übertragungskanal übertragen werden
 * schnell im Vergleich zum asymmetrischen
 * evtl. hohe Schlüsselzahl
+
 > Schlüsselzahl für $n$-Personen = $n$ $\cdot$ $\frac{n-1}{2}$
 
 symmetrische Verfahren/Protokolle
+
 * DES/3DES
   * 56Bit (3 * 56Bit)
 * AES (advanced encryption stand)
   * 128, 192, 256 Bit Schlüssel
 * RC4 (Rivest Cypher 4)
   * 128 Bit Schlüssel
+
 ### asymmetrische Verschlüsselung
 * für jede Person wird Schlüsselpaar generiert
 * 1x Geheimschlüssel (**secret key**) wird zum Verschlüsseln einer Nachricht genutzt
@@ -202,41 +254,54 @@ symmetrische Verfahren/Protokolle
 * Unklar, ob der verwendete **public key** auch wirklich demjenigen gehört, dem man die verschlüsselte Nachricht schicken will, PKI = public key infrastructure
 
 Asymmetrische Verfahren/Protokolle
+
 * RSA $\ge$ 512 Bit
 * DSS $\ge$ 512 Bit
+
 ### Hybrides Verschlüsselungssystem/verfahren
 Verschlüsselung:
+
 1. Sender verschlüsselt Dokument symmetrisch (Geschwindigkeit)
 2. Der symmetrische Schlüssel (**session key**) wird asymmetrisch verschlüsselt (public key des Empfängers)
 3. Verschlüsselte Nachricht und verschlüsselter Schlüssel werden vom Sender zum Empfänger geschickt.
 
 Entschlüsselung:
+
 1. **session key** wird mit **private key** des Empfängers  entschlüsselt
 2. Mit entschlüsseltem **session key** (symmetrischer Schlüssel) kann Nachricht entschlüsselt werden.
 
 Hybride Verfahren/Protokolle
+
 * PGP
   * Email Verschlüsselung (GPG)
 * SSL/TLS
 * IPSec
+
 ## Raid
 Ein Raid ist ein Verbund aus mehreren Festplatten, mit dem Ziel, der Datensicherheit und/oder die Geschwindigkeit der Datenübertragung zu erhöhen.
+
 * Raid kann vollwertiges Backup auf andere Speichermedien nie ersetzen
 * alle Änderungen sofort niedergeschrieben
 * möglich verursachte Schäden können nicht rückgängig gemacht werden
+
 ### Raid 0
 Dieses Raid fasst mehrere (min. 2) zu einer großen Festplatte zusammen. $\rightarrow$ Alle Daten werden unter den verfügbaren Festplatten verteilt.
+
 * dadurch wird die Schreib- und Lesegeschwindigkeit erheben gesteigert
 * Wahrscheinlichkeit von Datenverlust gesteigert
   * Sobald Teil des Arrays ausfällt sind alle Daten darauf verloren
+
 ### Raid 1
 Normaler Schutz vor Ausfällen einzelner Festplatten (min. 2) erreicht. Die Daten werden 1:1 auf die andere gespielt.
+
 ### Raid 5
 Meist genutztes Modell. Hierfür sind mindestens 3 Festplatten benötigt. Die Daten werden ähnlich verteilt wie bei Raid 0, auf verschiedene Festplatten. 
+
 * ebenfalls abwechselnd auf die einzelnen Festplatten verteilt $\rightarrow$ nie auf selbe wie Original!
 * Zusätzlich: Bestimmung der Parität
 * eine Festplatte kann ausfallen ohne verlust
 * benötigt aufgrund der Parität deutlich mehr Rechenleistung als Raid 0 aund 1
+
 ## Steuerungstechnik
 ### Zuordnungstabelle
 
@@ -251,16 +316,20 @@ Ausgänge:
 | Ausgang          | Kennzeichnung | log. Zuordnung |
 | :--------------- | :-----------: | :------------- |
 | Zylinder Tür auf |      M1       | fährt ein M1=1 |
+
 ### R-S Tabelle
 | Setzen/Rücksetzen |    Ö     |        S         | Schritte                          |
 | :---------------- | :------: | :--------------: | :-------------------------------- |
 | Setzen            | M1<br>S1 | M2<br>S2, ~~B3~~ | 1.öffnen <br> 2. öffnen abbrechen |
 | Rücksetzen        |    B1    |     B2 v B3      | 3.<br> 4.                         |
+
 ### Drahtbruchsicherheit
 Eine Steuerung ist drahtbruchsicher, wenn das Einschalten durch einen Schließer (Arbeitsstromprinzip) und das Ausschalten durch einen Öffner (Ruhestromprinzip) erfolgt.
+
 ## Java 
 ### Quick-Links
 * [Vergleichsoperatoren](#if-else)
+
 ### Datentypen
 #### einfache Datentypen
 | Name    | Größe           | Wertebereich                                                      |
@@ -320,11 +389,13 @@ public class Schueler {
 ### Methoden
 #### Deklaration
 Eine Methode wird deklariert indem zuerst ihr Umfang/ihre Reichweite angegeben wird. Mögliche Werte sind: `public` oder `private`.
+
 > `public` ermöglicht es außerhalb der Klasse auf die Methode zuzugreifen und sie ausführen zu können.
 
 > `public` limitiert den Zugriff auf nur in der eigenen Klasse.
 
 Weiterhin muss angegeben werden, ob eine Methode `static` oder dynamisch ist. Bei einer statischen Methode muss bei der Deklaration zusaätzlich `static` nach der Reichweite angegeben werden. Ist die dynamisch, wird dies einfach weggelassen und es folgt der Rückgabewert.
+
 > dynamische Methoden erfordern ein Objekt der Klasse um verwendet werden zu können.
 ```java
 KlassenName referenz = new KlassenName();referenz.methodenName();
@@ -452,6 +523,7 @@ Methoden:
 Mit der Methode `send()` wird der Parameter des Datentyps *String* an alle Mitglieder der Multicast-Gruppe gesendet.
 
 Mit der Methode `close()` wird die Verbindung geschlossen.
+
 #### Multicast-Receiver
 Objekte dieser Klasse sind Mitglied in einer Multicast-Gruppe und können Informationen über ein Netzwerk von den Mitgliedern dieser Gruppe empfangen.
 ```java
@@ -462,6 +534,7 @@ MulticastReceiver mcs = new MulticastReceiver(ip, port);
 Methoden:
 
 Mit der Methode `receive()` können Informationen vom Netzwerk empfangen werden. Die Methode gibt diese als eine Referenz auf ein Objekt der Klasse *String* zurück.
+
 #### Simple-Server
 #### Simple-Client
 
@@ -473,12 +546,14 @@ Im Unterricht ist es öfters vorgekommen, dass die Frequenz zur Verfügung steht
 
 Um die Periodendauer zu berechnen können wir folgende Formel benutzen:
 
-> $f$ = $\frac{1}{T}$ bzw. $T$ = $\frac{1}{f}$
+> $$f=\frac{1}{T}\thickspace bzw. \thickspace T=\frac{1}{f}$$
 
 Beispiel: geg.: $f$=20Hz
+
 > $T$ = $\frac{1}{f}$ = $\frac{1}{20Hz}$ = $\frac{1}{20\frac{1}{s}}$
 
-Mit dem Kehrwert multiplizieren;
+Mit dem Kehrwert multiplizieren
+
 > $T$ = $\frac{1}{20}$s = 0,050s = 50ms
 
 Um die Aufgabe zu verfollständigen, muss man diese Zeit noch durch 2 dividieren, da wir bis jetzt nur die Dauer eines ganzen Vorgangs berechnet haben. Möchten wir aber die LED mit einer Frequenz von 20Hz blinken lassen, ist zwischen den dem Ein- und Ausschalten der LED eine verzögerung von 25ms nötig.
