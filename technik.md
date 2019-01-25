@@ -244,6 +244,7 @@ Eingänge:
 | Eingang       | Kennzeichnung | log. Zuordnung |
 | :------------ | :-----------: | :------------- |
 | Taster öffnen |      S1       | Betätigt S1=1  |
+
 Ausgänge:
 | Ausgang          | Kennzeichnung | log. Zuordnung |
 | :--------------- | :-----------: | :------------- |
