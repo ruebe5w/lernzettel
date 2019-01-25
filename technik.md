@@ -241,11 +241,13 @@ Meist genutztes Modell. Hierfür sind mindestens 3 Festplatten benötigt. Die Da
 ### Zuordnungstabelle
 
 Eingänge:
+
 | Eingang       | Kennzeichnung | log. Zuordnung |
 | :------------ | :-----------: | :------------- |
 | Taster öffnen |      S1       | Betätigt S1=1  |
 
 Ausgänge:
+
 | Ausgang          | Kennzeichnung | log. Zuordnung |
 | :--------------- | :-----------: | :------------- |
 | Zylinder Tür auf |      M1       | fährt ein M1=1 |
