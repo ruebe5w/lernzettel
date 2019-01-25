@@ -42,7 +42,6 @@ Todo:
     - [R-S Tabelle](#r-s-tabelle)
     - [Drahtbruchsicherheit](#drahtbruchsicherheit)
   - [Java](#java)
-    - [Quick-Links](#quick-links)
     - [Datentypen](#datentypen)
     - [Klassen](#klassen)
     - [Methoden](#methoden)
@@ -327,9 +326,6 @@ Ausgänge:
 Eine Steuerung ist drahtbruchsicher, wenn das Einschalten durch einen Schließer (Arbeitsstromprinzip) und das Ausschalten durch einen Öffner (Ruhestromprinzip) erfolgt.
 
 ## Java 
-### Quick-Links
-* [Vergleichsoperatoren](#if-else)
-
 ### Datentypen
 #### einfache Datentypen
 | Name    | Größe           | Wertebereich                                                      |
@@ -539,8 +535,34 @@ Mit der Methode `receive()` können Informationen vom Netzwerk empfangen werden.
 #### Simple-Client
 
 ### Threads
+Um ein Programm nebenläufig laufen zu lassen, ist neben dem Hauptthread (`public static void main(String[] args)`) ein weiterer Thread nötig. Dies kann realisiert werden, indem eine neue Klasse erstellt wird, welche von der Klasse `Thread` durch eine Erweiterungen mit `extends Thread` erben muss. In der neuen Klasse muss die vererbte Methode `run` überschrieben werden. Um sicherzugehen, dass keine neue Methode deklariert wird, wird über der Deklaration ein `@override` geschrieben. Dies versichert, dass falls der Name, der Rückgabewert oder die Parameter falsch ist/sind, wird ein Fehler angezeigt.
 
+> Um ein Thread zu starten, kann die Methode `start()` des Objekts der neuen Klasse verwendet werden.
 
+Beispiel Thread
+
+```java
+public class KlassenName extends Thread
+{
+    public KlassenName()
+    {
+        ...
+    }
+
+    @Override
+    public void run()
+    {
+        ...
+    }
+}
+```
+
+Aufruf:
+
+```java
+KlassenName kn = new KlassenName();
+kn.start();
+```
 ### Frequenz zu Periodendauer
 Im Unterricht ist es öfters vorgekommen, dass die Frequenz zur Verfügung steht und man nun mit dieser Frequenz z.B. eine LED blinken zu lassen.
 

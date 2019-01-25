@@ -1,7 +1,30 @@
 # Lernzettel Mathe
 
 ## Analysis
-### Funktionsanalyse
+### Kurvendiskussion
+
+#### 1. Symmetrie
+#### 2. Nullstellen
+> $f(x)=0$
+
+#### 3. Extrema
+> $f'(x)=0$
+> 
+> $f''(x_E) < 0 \Rightarrow$ Maximum
+> 
+> $f''(x_E) > 0 \Rightarrow$ Minimum
+> 
+> $f''(x_E) = 0 \Rightarrow$ keine Aussage
+
+#### 4. Wendepunkte
+> $f''(x)=0$  
+> 
+> $f'''(x_W) < 0 \Rightarrow$ Wendepunkt(L-r) 
+> 
+> $f'''(x_W) > 0 \Rightarrow$ Wendepunkt(R-l) 
+> 
+> $f'''(x_W) = 0 \Rightarrow$ keine Aussage 
+
 ### e-Funktionen
 ### Integration
 Mit der Integration lässt sich der Flächeninhalt unter einer Funktion berechnen.
@@ -32,12 +55,5 @@ $$f(x)=u(x)\cdot v(x)$$
 $$f' = u'\cdot v +u\cdot v'$$
 
 #### Kettenregel
-<!--
-$f(x)=g(h(x))\longrightarrow f'(x)=g'(h(x))\cdot h'(x)$
-* $g(x)$ = äußere Funktion
-* $g'(x)$ = äußere Ableitung
-* $h(x)$ = innere Funktion
-* $h'(x)$ = innere Ableitung -->
-
 ## Stochastik
 ## Analytische Geometrie
