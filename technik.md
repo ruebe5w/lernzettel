@@ -2,54 +2,33 @@ todo:
 + Java
   + Threads
 + Steuerungstechnik
-  + Zuordnungstabelle
-  + Datenblatt
-  + Drahtbruchsicherheit
   + Schrittkette
 + Netzwerktechnik
   + **Grafiken Backup**
   + Schwachstellen
-  + Verschlüsselung
   + Hardware (Raid)
   + ipv4
   + Subnetz Standard Gateway
   + Subnetze Bilden
   + Router, Switch
   + Firewall
-  + DHCP
   + Feste IP bei Servern
   + MAC Adresse + freigeben
-  + DNS
 
-- [Technik](#technik)
+- [Lernzettel Technik](#lernzettel-technik)
   - [Netzwerktechnik](#netzwerktechnik)
     - [Begriffe](#begriffe)
-      - [BasisBand](#basisband)
-      - [Breitband](#breitband)
-      - [Punkt-zu-Punkt](#punkt-zu-punkt)
-      - [Punkt-zu-Mehrpunkt](#punkt-zu-mehrpunkt)
-      - [Mehrpunkt-zu-Punkt](#mehrpunkt-zu-punkt)
-      - [paketorientierte Übertragung](#paketorientierte-%C3%BCbertragung)
-      - [NAS](#nas)
-      - [synchrone Datenübertragung](#synchrone-daten%C3%BCbertragung)
-      - [asynchrone Datenübertragung](#asynchrone-daten%C3%BCbertragung)
-      - [symetrische Datenübertragung](#symetrische-daten%C3%BCbertragung)
-      - [asymetrische Datenübertragung](#asymetrische-daten%C3%BCbertragung)
-      - [Simplex](#simplex)
-      - [Duplex](#duplex)
-      - [Halbduplex](#halbduplex)
-      - [leistungsvermittelte Verbindung](#leistungsvermittelte-verbindung)
-      - [verbingdungsorientiert:](#verbingdungsorientiert)
-      - [datagrammorientiert:](#datagrammorientiert)
     - [Backup](#backup)
-      - [inkrementelles Backup](#inkrementelles-backup)
-      - [differentielles Backup](#differentielles-backup)
-      - [Vollbackup](#vollbackup)
-      - [in einer Firma](#in-einer-firma)
     - [Übertragungsmedien](#%C3%BCbertragungsmedien)
-      - [Twisted-Pair-Leitungen](#twisted-pair-leitungen)
-      - [Lichtwellenleiter](#lichtwellenleiter)
-      - [Koaxialleitungen](#koaxialleitungen)
+    - [Protokolle](#protokolle)
+  - [Verschlüsselung](#verschl%C3%BCsselung)
+    - [symmetrische Verschlüsselung](#symmetrische-verschl%C3%BCsselung)
+    - [asymmetrische Verschlüsselung](#asymmetrische-verschl%C3%BCsselung)
+    - [Hybrides Verschlüsselungssystem/verfahren](#hybrides-verschl%C3%BCsselungssystemverfahren)
+  - [Raid](#raid)
+    - [Raid 0](#raid-0)
+    - [Raid 1](#raid-1)
+    - [Raid 5](#raid-5)
   - [Steuerungstechnik](#steuerungstechnik)
     - [Zuordnungstabelle](#zuordnungstabelle)
     - [R-S Tabelle](#r-s-tabelle)
@@ -57,30 +36,15 @@ todo:
   - [Java](#java)
     - [Quick-Links](#quick-links)
     - [Datentypen](#datentypen)
-      - [einfache Datentypen](#einfache-datentypen)
-      - [komplexe Datentype](#komplexe-datentype)
     - [Klassen](#klassen)
-      - [Deklaration](#deklaration)
-      - [Konstruktor](#konstruktor)
-      - [Beispiel](#beispiel)
     - [Methoden](#methoden)
-      - [Deklaration](#deklaration-1)
-      - [Beispiel](#beispiel-1)
     - [Verzweigungen](#verzweigungen)
-      - [if else](#if-else)
-      - [if else-if](#if-else-if)
     - [Schleifen](#schleifen)
-      - [for-Schleife](#for-schleife)
-      - [while-schleife](#while-schleife)
     - [Netzwerk](#netzwerk)
-      - [Multicast-Sender](#multicast-sender)
-      - [Multicast-Receiver](#multicast-receiver)
-      - [Simple-Server](#simple-server)
-      - [Simple-Client](#simple-client)
     - [Threads](#threads)
     - [Frequenz zu Periodendauer](#frequenz-zu-periodendauer)
 
-# Technik
+# Lernzettel Technik
 ## Netzwerktechnik
 ### Begriffe
 #### BasisBand
@@ -115,10 +79,10 @@ todo:
 * störungsempfindlich
 * langsam
 * Bsp.: PCI-Bus, Ethernet
-#### symetrische Datenübertragung
+#### symmetrische Datenübertragung
 * Up- und Downstream sind gleich
 * Bsp.: ISDN, Ethernet
-#### asymetrische Datenübertragung
+#### asymmetrische Datenübertragung
 * Up- und Downstream sind ungleich
 * Bsp.: T-DSL, Sky-DSL, ADSL
 #### Simplex
@@ -194,7 +158,76 @@ Für Busverbindungen mit mehreren Teilnehmern an einer Leitung
 > Leitungslängen:
 > * Thick Wire $\ge$ 500m
 > * Thin Wire $\ge$ 185m
+### Protokolle
+#### DNS
+DNS - Domain Name System. Dieses Protokoll ist für die Namensauflösung zuständig. Das bedeutet, wenn ein Benutzer eine url, wie z.B. google.com, dann wird diese URL von dem Protokoll in eine dezimale IP-Adresse umgewandelt.
+#### DHCP
+DHCP - Dynamik Host Configuration Protocol. Dieses Protokoll ist dafür zuständig automatisch Clients des Netzwerks Netzwerkonfiguraionen zu zuweisen. Dies wird von einem DHCP Server gemacht. Inhalte dieser Konfiguraitinen sind unter anderem:
+* IP-Adresse und Subnetzmaske
+* Default-Gateway
+* DNS-Server Adresse
+* ...
+#### ARP
+## Verschlüsselung
+### symmetrische Verschlüsselung
+* beide Kommunikationspartner benötigen den gleichen Schlüssel
+* 1 Schlüssel zum Ver- und Entschlüsseln
+* Schlüssel muss auf einen gesicherten Übertragungskanal übertragen werden
+* schnell im Vergleich zum asymmetrischen
+* evtl. hohe Schlüsselzahl
+> Schlüsselzahl für $n$-Personen = $n$ $\cdot$ $\frac{n-1}{2}$
 
+symmetrische Verfahren/Protokolle
+* DES/3DES
+  * 56Bit (3 * 56Bit)
+* AES (advanced encryption stand)
+  * 128, 192, 256 Bit Schlüssel
+* RC4 (Rivest Cypher 4)
+  * 128 Bit Schlüssel
+### asymmetrische Verschlüsselung
+* für jede Person wird Schlüsselpaar generiert
+* 1x Geheimschlüssel (**secret key**) wird zum Verschlüsseln einer Nachricht genutzt
+* 1x öffentlicher Schlüssel (**public key**) wird zum Verschlüsseln einer Nachricht genutzt
+* Schlüsselaustauschproblematik entfällt
+* sehr rechen- und zeitaufwendig; ca. 1000mal langsamer als symmetrischer Verschlüsselung
+* Unklar, ob der verwendete **public key** auch wirklich demjenigen gehört, dem man die verschlüsselte Nachricht schicken will, PKI = public key infrastructure
+
+Asymmetrische Verfahren/Protokolle
+* RSA $\ge$ 512 Bit
+* DSS $\ge$ 512 Bit
+### Hybrides Verschlüsselungssystem/verfahren
+Verschlüsselung:
+1. Sender verschlüsselt Dokument symmetrisch (Geschwindigkeit)
+2. Der symmetrische Schlüssel (**session key**) wird asymmetrisch verschlüsselt (public key des Empfängers)
+3. Verschlüsselte Nachricht und verschlüsselter Schlüssel werden vom Sender zum Empfänger geschickt.
+
+Entschlüsselung:
+1. **session key** wird mit **private key** des Empfängers  entschlüsselt
+2. Mit entschlüsseltem **session key** (symmetrischer Schlüssel) kann Nachricht entschlüsselt werden.
+
+Hybride Verfahren/Protokolle
+* PGP
+  * Email Verschlüsselung (GPG)
+* SSL/TLS
+* IPSec
+## Raid
+Ein Raid ist ein Verbund aus mehreren Festplatten, mit dem Ziel, der Datensicherheit und/oder die Geschwindigkeit der Datenübertragung zu erhöhen.
+* Raid kann vollwertiges Backup auf andere Speichermedien nie ersetzen
+* alle Änderungen sofort niedergeschrieben
+* möglich verursachte Schäden können nicht rückgängig gemacht werden
+### Raid 0
+Dieses Raid fasst mehrere (min. 2) zu einer großen Festplatte zusammen. $\rightarrow$ Alle Daten werden unter den verfügbaren Festplatten verteilt.
+* dadurch wird die Schreib- und Lesegeschwindigkeit erheben gesteigert
+* Wahrscheinlichkeit von Datenverlust gesteigert
+  * Sobald Teil des Arrays ausfällt sind alle Daten darauf verloren
+### Raid 1
+Normaler Schutz vor Ausfällen einzelner Festplatten (min. 2) erreicht. Die Daten werden 1:1 auf die andere gespielt.
+### Raid 5
+Meist genutztes Modell. Hierfür sind mindestens 3 Festplatten benötigt. Die Daten werden ähnlich verteilt wie bei Raid 0, auf verschiedene Festplatten. 
+* ebenfalls abwechselnd auf die einzelnen Festplatten verteilt $\rightarrow$ nie auf selbe wie Original!
+* Zusätzlich: Bestimmung der Parität
+* eine Festplatte kann ausfallen ohne verlust
+* benötigt aufgrund der Parität deutlich mehr Rechenleistung als Raid 0 aund 1
 ## Steuerungstechnik
 ### Zuordnungstabelle
 Eingänge:
@@ -280,15 +313,14 @@ Eine Methode wird deklariert indem zuerst ihr Umfang/ihre Reichweite angegeben w
 
 Weiterhin muss angegeben werden, ob eine Methode `static` oder dynamisch ist. Bei einer statischen Methode muss bei der Deklaration zusaätzlich `static` nach der Reichweite angegeben werden. Ist die dynamisch, wird dies einfach weggelassen und es folgt der Rückgabewert.
 > dynamische Methoden erfordern ein Objekt der Klasse um verwendet werden zu können.
-> ```java
->   KlassenName referenz = new KlassenName();
->   referenz.methodenName();
-> ```
+```java
+KlassenName referenz = new KlassenName();referenz.methodenName();
+```
 
 > `static` Methoden können aufgerufen werden, ohne dass ein Objekt der Klasse vorhanden ist.
-> ```java
->   referenz.methodenName();
-> ```
+```java
+referenz.methodenName();
+```
 
 Danach folgt der Rückgabewert. Hier muss der Rückgabewert der Klasse angeben werden. Dieser kann z.B. ein *Integer*, ein *String* oder auch ein eigener Datentyp sein. Wenn eine Methode ein Rückgabewert hat, muss dieser mit `return` im Methodenkörper zurückgegen werden, hat sie keinen kann dies weggelassen werden, jedoch muss in in der Deklaration `void` als Datentyp angegeben werden.
 
@@ -334,6 +366,7 @@ Bedingung lassen sich mit den folgenden Operatoren bilden
 |    >     | größer als     |
 |    <=    | kleiner gleich |
 |    >=    | größer gleich  |
+
 **Hinweis:** Diese Operatoren gelten nur für Zahlen
 
 > Die Gleichheit von *String*-Objekten wird über die Methode `equals` überprüft
@@ -435,7 +468,7 @@ Beispiel: geg.: $f$=20Hz
 Mit dem Kehrwert multiplizieren;
 > $T$ = $\frac{1}{20}$s = 0,050s = 50ms
 
-Um die Aufgabe zu verfollständigen, muss man diese Zeit noch durch 2 dividieren, da wir bis jetzt nur die Dauer eines ganzen Vorgangs berechnet haben. Möchten wir aber die LED mit einer Frequenz von 20Hz blinken lassen wollen, ist zwischen den dem Ein- und Ausschalten der LED eine verzögerung von 25ms nötig.
+Um die Aufgabe zu verfollständigen, muss man diese Zeit noch durch 2 dividieren, da wir bis jetzt nur die Dauer eines ganzen Vorgangs berechnet haben. Möchten wir aber die LED mit einer Frequenz von 20Hz blinken lassen, ist zwischen den dem Ein- und Ausschalten der LED eine verzögerung von 25ms nötig.
 
 ```java
 while (true) {
