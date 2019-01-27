@@ -417,12 +417,13 @@ Weiterhin muss angegeben werden, ob eine Methode `static` oder dynamisch ist. Be
 
 > dynamische Methoden erfordern ein Objekt der Klasse um verwendet werden zu können.
 ```java
-KlassenName referenz = new KlassenName();referenz.methodenName();
+KlassenName referenz = new KlassenName();
+referenz.methodenName();
 ```
 
 > `static` Methoden können aufgerufen werden, ohne dass ein Objekt der Klasse vorhanden ist.
 ```java
-referenz.methodenName();
+KlassenName.methodenName();
 ```
 
 Danach folgt der Rückgabewert. Hier muss der Rückgabewert der Klasse angeben werden. Dieser kann z.B. ein *Integer*, ein *String* oder auch ein eigener Datentyp sein. Wenn eine Methode ein Rückgabewert hat, muss dieser mit `return` im Methodenkörper zurückgegen werden, hat sie keinen kann dies weggelassen werden, jedoch muss in in der Deklaration `void` als Datentyp angegeben werden.
