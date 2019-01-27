@@ -455,7 +455,7 @@ private static int getTime() {
 Bei einer einfachen Verzweigung wird die Bedingung überprüft. Wenn diese erfüllt ist, wird der folgende Code-Block ausgeführt, wenn nicht, dann springt das Programm in den Code-Block, welcher zu `else` gehört.
 ```java
 if(counter > 255) {
-    counter == 255
+    counter == 255;
 } else {
     counter++;
 }
@@ -538,6 +538,7 @@ MulticastSender mcs = new MulticastSender(ip, port);
 ```
 > Die Adresse des MulticastSenders muss zwischen 224.0.0.0 und 239.255.255.255 liegen.
 
+
 Methoden:
 
 Mit der Methode `send()` wird der Parameter des Datentyps *String* an alle Mitglieder der Multicast-Gruppe gesendet.
@@ -551,12 +552,35 @@ MulticastReceiver mcs = new MulticastReceiver(ip, port);
 ```
 > Die Adresse des MulticastSenders muss zwischen 224.0.0.0 und 239.255.255.255 liegen.
 
+
 Methoden:
 
 Mit der Methode `receive()` können Informationen vom Netzwerk empfangen werden. Die Methode gibt diese als eine Referenz auf ein Objekt der Klasse *String* zurück.
 
-#### Simple-Server
 #### Simple-Client
+Objekte dieser Klasse können mit Serverprogrammen kommunizieren. Um mit einem bestimmten Server zu kommunizieren, kann an den Konstruktor die IP-Adresse als *String* und den Port als *Integer* als Parameter übergeben werden.
+```java
+SimpleClient sc = new SimpleClient(ip, port);
+```
+
+Mit der Methode `openConnection()` wird versucht eine Verbindung zum Host aufzubauen. Da die Methode eine Ausnahme ausgibt, muss diese behandelt werden. Dies kann durch ein `throws Exception` oder ein `try`-`catch` Block gelöst werden.
+
+Lösung 1:
+```java
+public void senden(String msg) throws Exception {
+    sc.openConnection();
+}
+```
+
+Lösung 2:
+```java
+try {
+    sc.openConnection();
+} catch (Exception as e) {
+    ...
+}
+```
+
 ### Konfigurations-Datei
 Mit der Klasse `PrefsFileStore` können Informationen in einer Datei unter einem Schlüssel gespeichert und wieder abgerufen werden.
 
