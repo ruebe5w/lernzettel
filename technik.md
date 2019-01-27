@@ -1,11 +1,15 @@
 ---
 title: "Lernzettel Technik"
+date: 2019
+listings-disable-line-numbers: true
 ---
 
 Todo:
 
 * Java
-  * Threads
+  * Alarmanlage testen
+  * Funktionsfähigkeit beurteilen
+  * Kommunikationsprotokoll
 * Steuerungstechnik
   * Schrittkette
 * Netzwerktechnik
@@ -14,7 +18,6 @@ Todo:
   * Subnetz Standard Gateway
   * Subnetze Bilden
   * Firewall
-  * Feste IP bei Servern
   * MAC Adresse + freigeben
 
 ## Inhaltsverzeichnis
@@ -41,6 +44,7 @@ Todo:
     - [Zuordnungstabelle](#zuordnungstabelle)
     - [R-S Tabelle](#r-s-tabelle)
     - [Drahtbruchsicherheit](#drahtbruchsicherheit)
+    - [Regelung - Steuerung](#regelung---steuerung)
   - [Java](#java)
     - [Datentypen](#datentypen)
     - [Klassen](#klassen)
@@ -48,6 +52,7 @@ Todo:
     - [Verzweigungen](#verzweigungen)
     - [Schleifen](#schleifen)
     - [Netzwerk](#netzwerk)
+    - [Konfigurations-Datei](#konfigurations-datei)
     - [Threads](#threads)
     - [Frequenz zu Periodendauer](#frequenz-zu-periodendauer)
 
@@ -178,10 +183,14 @@ DNS - Domain Name System. Dieses Protokoll ist für die Namensauflösung zustän
 
 #### DHCP
 DHCP - Dynamik Host Configuration Protocol. Dieses Protokoll ist dafür zuständig automatisch Clients des Netzwerks Netzwerkonfiguraionen zu zuweisen. Dies wird von einem DHCP Server gemacht. Inhalte dieser Konfiguraitinen sind unter anderem:
+
 * IP-Adresse und Subnetzmaske
 * Default-Gateway
 * DNS-Server Adresse
 * ...
+
+> Server bzw. oft verwendete Geräte werden jedoch meist mit statischen Adressen versehen, um zu verhindern, dass Nutzer bzw. Zugriffe auf diesen Server die ändernde IP-Adresse suchen müssen. So werden z.B Drucker und Server eine statische Adresse zugewiesen.
+
 
 #### ARP
 ARP - Address Resolution Protocol. Das Protokoll ist dafür da einer MAC-Adresse eine IP-Adresse zuzuordnen. Diese Informationen sind wichtig um ein Paket über das Netzwerk nicht nur an den richtigen PC, sondern auch an die richtige Netzwerkschnittstelle zu schicken. Diese Informationen werden zusätzlich in sogenannten ARP-Tabllen von z.B. PCs und Switches gespeichert.
@@ -327,7 +336,16 @@ Ausgänge:
 | Rücksetzen        |    B1    |     B2 v B3      | 3.<br> 4.                         |
 
 ### Drahtbruchsicherheit
-Eine Steuerung ist drahtbruchsicher, wenn das Einschalten durch einen Schließer (Arbeitsstromprinzip) und das Ausschalten durch einen Öffner (Ruhestromprinzip) erfolgt.
+
+Eine Steuerung ist drahtbruchsicher, wenn das Einschalten durch einen Schließer (Arbeitsstromprinzip) und das Ausschalten durch einen Öffner (Ruhestromprinzip) erfolgt. Bei Auftreten eines Drahtbruches erfolgt **kein unbeabsichtigtes Einschalten**, jedoch wird eine **eingeschaltete Steuerung abgeschaltet**.
+
+### Regelung - Steuerung
+
+#### Regelung
+> eine ist-Größe wird erfasst und mit einer soll-Größe verglichen und wenn nötig angepasst
+
+#### Steuerung
+> es gibt nur eine ist-Größe und diese wird nicht verändert, keine Rückwürkung odder Vergleich. offender Wirkungsablauf
 
 ## Java 
 ### Datentypen
@@ -393,6 +411,7 @@ Eine Methode wird deklariert indem zuerst ihr Umfang/ihre Reichweite angegeben w
 > `public` ermöglicht es außerhalb der Klasse auf die Methode zuzugreifen und sie ausführen zu können.
 
 > `public` limitiert den Zugriff auf nur in der eigenen Klasse.
+
 
 Weiterhin muss angegeben werden, ob eine Methode `static` oder dynamisch ist. Bei einer statischen Methode muss bei der Deklaration zusaätzlich `static` nach der Reichweite angegeben werden. Ist die dynamisch, wird dies einfach weggelassen und es folgt der Rückgabewert.
 
@@ -537,6 +556,46 @@ Mit der Methode `receive()` können Informationen vom Netzwerk empfangen werden.
 
 #### Simple-Server
 #### Simple-Client
+### Konfigurations-Datei
+Mit der Klasse `PrefsFileStore` können Informationen in einer Datei unter einem Schlüssel gespeichert und wieder abgerufen werden.
+
+Der Konstruktor der Klasse braucht den Namen der Datei als Parameter. Ist diese nicht vorhanden, wird sie erstellt.
+```java
+PrefsFileStore pfs = new PrefsFileStore("NameDerTextDatei.txt");
+```
+
+Die Konfigurationsdatei muss zusätzlich folgendermaßen strukturiert sein:
+
+``` 
+#Kommentar 
+schuluessel1 = wert1
+schuluessel2 = wert2
+``` 
+#### Speichern eines Wertes
+Für das Speichern eines Wertes sind die Methoden `putString()`, `putLong()`, `putInt()` und `putDouble()` zuständig. Als erster Parameter ist der Schlüsselname notwenig, der zweite Parameter ist der Wert der hinterlegt werden soll.
+
+```java
+pfs.putString("schluessel1", "wert1"); 
+// oder auch
+pfs.putInt("schluessel2", 15);
+```
+#### Lesen eines Wertes
+Um Werte der Konfigutrationsdatei zu entnehmen, können die Methoden `getString()`, `getLong()`, `getInt()` und `getDouble()` genutzt werden. Sie brauchen ebenfalls als ersten Parameter den Schlüsselnamen, der zweite Parameter ist der Standard Wert, welcher hinterlegt wird, falls der Schlüssel noch nicht vorhanden wird. Die Methoden geben den hinterlegten Wert in ihrem entsprechenden Datentyp zurück.
+
+```java
+String s1 = pfs.getString("schluessel1", "Standardwert"); 
+// oder auch
+int s2 = pfs.getInt("schluessel2", 0);
+```
+
+#### Überprufung der Existenz eines Wertes
+Die Methode `keyExists()` der Klasse gibt ein boolschen Wert (`true`, `false`) zurück, welcher aussagt, ob ein schlüssel bereits existiert. Diese Methode benötigt nur einen Parameter, den Schlüssel.
+
+```java
+if(keyExists("schluessel1")) {
+    ...
+}
+```
 
 ### Threads
 Um ein Programm nebenläufig laufen zu lassen, ist neben dem Hauptthread (`public static void main(String[] args)`) ein weiterer Thread nötig. Dies kann realisiert werden, indem eine neue Klasse erstellt wird, welche von der Klasse `Thread` durch eine Erweiterungen mit `extends Thread` erben muss. In der neuen Klasse muss die vererbte Methode `run` überschrieben werden. Um sicherzugehen, dass keine neue Methode deklariert wird, wird über der Deklaration ein `@override` geschrieben. Dies versichert, dass falls der Name, der Rückgabewert oder die Parameter falsch ist/sind, wird ein Fehler angezeigt.
