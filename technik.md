@@ -24,7 +24,7 @@ Todo:
 - [Lernzettel Technik](#lernzettel-technik)
   - [Netzwerktechnik](#netzwerktechnik)
     - [Begriffe](#begriffe)
-    - [Übertragungsmedien](#%C3%BCbertragungsmedien)
+    - [Uebertragungsmedien](#uebertragungsmedien)
     - [Hardware](#hardware)
     - [Protokolle](#protokolle)
   - [Backup](#backup)
@@ -81,7 +81,7 @@ Todo:
 
 #### paketorientierte Übertragung
 * Daten werden in kleine Pakete verpackt, mit Empfänger- und Absenderadresse versehen und auf die Reise geschickt
-* effektive Nutzung der Resourcen (Kabel)
+* effektive Nutzung der Ressourcen (Kabel)
 * Bsp.: Brief, Handy, ISDN
 
 #### NAS
@@ -118,11 +118,11 @@ Todo:
 
 #### Halbduplex
 * Übertragung in beide Richtungen möglich, aber nur eine Richtung zur Zeit nutzbar
-* Bsp.: WalkyTalky
+* Bsp.: Walky-Talky
 
 #### leistungsvermittelte Verbindung
-* es existiert für die gesamter Dauer der Kommunikation eine fest aufgebaute direkte exklusive Verbindung, auch während der Paus
-* uneffektivem Nutzung der Resourcen
+* es existiert für die gesamter Dauer der Kommunikation eine fest aufgebaute direkte exklusive Verbindung, auch während der Pause
+* ineffektive Nutzung der Ressourcen
 Bsp.: Dosentelefon
 
 #### verbingdungsorientiert:
@@ -133,7 +133,7 @@ Bsp.: Dosentelefon
 * Daten werden paketweise einfach aud den Weg geschickt
 * Bsp.: Postwurfsendung
 
-### Übertragungsmedien
+### Uebertragungsmedien
 
 | Art                   | Aufbau                                                                |
 | :-------------------- | :-------------------------------------------------------------------- |
@@ -142,7 +142,7 @@ Bsp.: Dosentelefon
 | - STP                 | paarweise mit Aluminiumfolie geschirmt (Shielded-Twisted-Pair)        |
 | - S/STP               | paarweise geschirmt mit zusätzlichen Gesamtschirm                     |
 | **Lichtwellenleiter** | Kunststoffmantel mit Glaskern                                         |
-| - Single-Mode Faser   | einfache Erscheinungsform, ohen Reflexion                             |
+| - Single-Mode Faser   | einfache Erscheinungsform, ohne Reflexion                             |
 | - Multi-Mode Faser    | mehrfache Erscheinungsform, vielfache Reflexion                       |
 | **Koaxialleitung**    |
 | - Cu-Massiv-Draht     | dicke gelbe Leitung mit massivem Innendraht und Cu-Blechmantel        |
@@ -162,6 +162,7 @@ Für Punkt-zu-Punkt Verbindungen bei Halbduplexübertragung je Faser (z.B. Switc
 Für Busverbindungen mit mehreren Teilnehmern an einer Leitung
 
 > Leitungslängen:
+> 
 > * Thick Wire $\ge$ 500m
 > * Thin Wire $\ge$ 185m
 
@@ -182,7 +183,7 @@ Ein Switch ist ein Kopplungselement, das mehrere Hosts in einem Netzwerk miteina
 DNS - Domain Name System. Dieses Protokoll ist für die Namensauflösung zuständig. Das bedeutet, wenn ein Benutzer eine url, wie z.B. google.com, dann wird diese URL von dem Protokoll in eine dezimale IP-Adresse umgewandelt.
 
 #### DHCP
-DHCP - Dynamik Host Configuration Protocol. Dieses Protokoll ist dafür zuständig automatisch Clients des Netzwerks Netzwerkonfiguraionen zu zuweisen. Dies wird von einem DHCP Server gemacht. Inhalte dieser Konfiguraitinen sind unter anderem:
+DHCP - Dynamik Host Configuration Protocol. Dieses Protokoll ist dafür zuständig automatisch Clients des Netzwerks Netzwerkonfigurationen zu zuweisen. Dies wird von einem DHCP Server gemacht. Inhalte dieser Konfigurationen sind unter anderem:
 
 * IP-Adresse und Subnetzmaske
 * Default-Gateway
@@ -211,13 +212,13 @@ Beim inkrementellen Backup wird eine Vollsicherung des Datenbestandes durchgefü
 ### differentielles Backup
 Das differentielle Backup ist dem inkrementellen Backup sehr ähnlich. Es wird erneut eine Vollsicherung gemacht. Anschließend werden die Veränderungen zum letzten Vollbackup gesichert. Demnach ist zur Wiederherstellung des Datenbestandes das Vollbackup und das gewünschte differentielle Backup notwendig.
 
-![differientielles Backup](img/differientielles&#32;Backup.png)
+![differenzielles Backup](img/differenzielles&#32;Backup.png)
 
 * Vorteile:
   * weniger Speicherbedarf als bei Vollbackup
   * Vollbackup und nur die differentielle Sicherung zum gewünschten Zeitpunkt notwendig
 * Nachteile:
-  * Dateien, die einaml verändert werden, müssen bei jedem differentiellen Backup neu gesichert werden. Dadurch hat man ein erhöhtes Datenaufkommen
+  * Dateien, die einmal verändert werden, müssen bei jedem differentiellen Backup neu gesichert werden. Dadurch hat man ein erhöhtes Datenaufkommen
 
 ### Vollbackup
 Beim Vollbackup wird der komplette Datenbestand gesichert. Um verlorene Daten wieder herzustellen, wird das entsprechende Vollbackupmedium benötigt.
@@ -312,7 +313,7 @@ Meist genutztes Modell. Hierfür sind mindestens 3 Festplatten benötigt. Die Da
 * ebenfalls abwechselnd auf die einzelnen Festplatten verteilt $\rightarrow$ nie auf selbe wie Original!
 * Zusätzlich: Bestimmung der Parität
 * eine Festplatte kann ausfallen ohne verlust
-* benötigt aufgrund der Parität deutlich mehr Rechenleistung als Raid 0 aund 1
+* benötigt aufgrund der Parität deutlich mehr Rechenleistung als Raid 0 und 1
 
 ## Steuerungstechnik
 ### Zuordnungstabelle
@@ -345,7 +346,7 @@ Eine Steuerung ist drahtbruchsicher, wenn das Einschalten durch einen Schließer
 > eine ist-Größe wird erfasst und mit einer soll-Größe verglichen und wenn nötig angepasst
 
 #### Steuerung
-> es gibt nur eine ist-Größe und diese wird nicht verändert, keine Rückwürkung odder Vergleich. offender Wirkungsablauf
+> es gibt nur eine ist-Größe und diese wird nicht verändert, keine Rückwirkung odder Vergleich. offender Wirkungsablauf
 
 ## Java 
 ### Datentypen
@@ -413,7 +414,7 @@ Eine Methode wird deklariert indem zuerst ihr Umfang/ihre Reichweite angegeben w
 > `public` limitiert den Zugriff auf nur in der eigenen Klasse.
 
 
-Weiterhin muss angegeben werden, ob eine Methode `static` oder dynamisch ist. Bei einer statischen Methode muss bei der Deklaration zusaätzlich `static` nach der Reichweite angegeben werden. Ist die dynamisch, wird dies einfach weggelassen und es folgt der Rückgabewert.
+Weiterhin muss angegeben werden, ob eine Methode `static` oder dynamisch ist. Bei einer statischen Methode muss bei der Deklaration zusätzlich `static` nach der Reichweite angegeben werden. Ist die dynamisch, wird dies einfach weggelassen und es folgt der Rückgabewert.
 
 > dynamische Methoden erfordern ein Objekt der Klasse um verwendet werden zu können.
 ```java
@@ -430,7 +431,7 @@ Danach folgt der Rückgabewert. Hier muss der Rückgabewert der Klasse angeben w
 
 Nun folgt der Methodenname, welcher konventioneller Weise in 'camelCase' geschrieben wird, das bedeutet der Anfangsbuchstabe wird kleingeschrieben und jedes neue folgende Wort wird mit einem Großbuchstaben begonnen. Beispiel `methodenName`. Zusätzlich sollte der Name einer Methode ihre Aufgabe/Funktion möglichst genau beschreiben, wie z.B. `getVar` und `setVar`.
 
-Parameter welche beim Aufruf der Methode an diese übergeben werden soll, werden nach dem Methodennamen in Klammer '()' führend mit ihrem Datentyp angegeben. Im folgenden Beispiel wird zum Beispiel ein Parameter mit dem Datentype *String* an die Methode weitergegeben und kann ab dann im Methodenkörper von nun mit der Referenu 'Name' drauf zugegriffen werden.
+Parameter welche beim Aufruf der Methode an diese übergeben werden soll, werden nach dem Methodennamen in Klammer '()' führend mit ihrem Datentyp angegeben. Im folgenden Beispiel wird zum Beispiel ein Parameter mit dem Datentype *String* an die Methode weitergegeben und kann ab dann im Methodenkörper von nun mit der Referenz 'Name' drauf zugegriffen werden.
 ```java
 public void setName(String Name) {}
 ```
@@ -509,7 +510,7 @@ if(Bedingung1) {
 
 ### Schleifen
 #### for-Schleife
-Eine **for-Schleife** wird verwendet wenn man z.B. eine bestimmte Anzahl an Durchgängen ausführen möchte. In diesem Falle zählt die die Schleife von 0 bis 49. Als erstes wird ein *Integer* deklariert, definiert und auf den gewünschten Startwert gesetzt(`int i=0`). Auf diese kann man danach nur im Schleifenkörper zugreifen. Oft heißt dieser `i`, Ankürzend für 'Index'. Danach folgt die Bedingung, welche die Schleife begrenzt(`i<50`). Als letztes wird der laufende Wert von `i` erhöht. Dies kann wie in diesem Falle um den Wert 1(`i++`) geschehen, aber z.B. auch bei jeden Durchgang um jeden beliebigen Wert erhöht werden.
+Eine **for-Schleife** wird verwendet wenn man z.B. eine bestimmte Anzahl an Durchgängen ausführen möchte. In diesem Falle zählt die die Schleife von 0 bis 49. Als erstes wird ein *Integer* deklariert, definiert und auf den gewünschten Startwert gesetzt(`int i=0`). Auf diese kann man danach nur im Schleifenkörper zugreifen. Oft heißt dieser `i`, Abkürzend für 'Index'. Danach folgt die Bedingung, welche die Schleife begrenzt(`i<50`). Als letztes wird der laufende Wert von `i` erhöht. Dies kann wie in diesem Falle um den Wert 1(`i++`) geschehen, aber z.B. auch bei jeden Durchgang um jeden beliebigen Wert erhöht werden.
 ```java
 for (int i=0; i<50; i++) {
     ...
@@ -523,7 +524,7 @@ while (time < 4000) {
     ...
 }
 ```
-Eine besondere Version der **while-Schleife** ist die Endlos-Schleife, bei der der Wert der Bedingung auf den boolschen Wert `true` gesetzt wird. Somit ist die Bedingung immer erfüllt und die Schleife wird endlos lange ausgeführt.
+Eine besondere Version der **while-Schleife** ist die Endlos-Schleife, bei der der Wert der Bedingung auf den booleschen Wert `true` gesetzt wird. Somit ist die Bedingung immer erfüllt und die Schleife wird endlos lange ausgeführt.
 ```java
 while (true) {
     ...
@@ -605,7 +606,7 @@ pfs.putString("schluessel1", "wert1");
 pfs.putInt("schluessel2", 15);
 ```
 #### Lesen eines Wertes
-Um Werte der Konfigutrationsdatei zu entnehmen, können die Methoden `getString()`, `getLong()`, `getInt()` und `getDouble()` genutzt werden. Sie brauchen ebenfalls als ersten Parameter den Schlüsselnamen, der zweite Parameter ist der Standard Wert, welcher hinterlegt wird, falls der Schlüssel noch nicht vorhanden wird. Die Methoden geben den hinterlegten Wert in ihrem entsprechenden Datentyp zurück.
+Um Werte der Konfigurationsdatei zu entnehmen, können die Methoden `getString()`, `getLong()`, `getInt()` und `getDouble()` genutzt werden. Sie brauchen ebenfalls als ersten Parameter den Schlüsselnamen, der zweite Parameter ist der Standard Wert, welcher hinterlegt wird, falls der Schlüssel noch nicht vorhanden wird. Die Methoden geben den hinterlegten Wert in ihrem entsprechenden Datentyp zurück.
 
 ```java
 String s1 = pfs.getString("schluessel1", "Standardwert"); 
@@ -613,8 +614,8 @@ String s1 = pfs.getString("schluessel1", "Standardwert");
 int s2 = pfs.getInt("schluessel2", 0);
 ```
 
-#### Überprufung der Existenz eines Wertes
-Die Methode `keyExists()` der Klasse gibt ein boolschen Wert (`true`, `false`) zurück, welcher aussagt, ob ein schlüssel bereits existiert. Diese Methode benötigt nur einen Parameter, den Schlüssel.
+#### Überprüfung der Existenz eines Wertes
+Die Methode `keyExists()` der Klasse gibt ein booleschen Wert (`true`, `false`) zurück, welcher aussagt, ob ein schlüssel bereits existiert. Diese Methode benötigt nur einen Parameter, den Schlüssel.
 
 ```java
 if(keyExists("schluessel1")) {
@@ -623,7 +624,7 @@ if(keyExists("schluessel1")) {
 ```
 
 ### Threads
-Um ein Programm nebenläufig laufen zu lassen, ist neben dem Hauptthread (`public static void main(String[] args)`) ein weiterer Thread nötig. Dies kann realisiert werden, indem eine neue Klasse erstellt wird, welche von der Klasse `Thread` durch eine Erweiterungen mit `extends Thread` erben muss. In der neuen Klasse muss die vererbte Methode `run` überschrieben werden. Um sicherzugehen, dass keine neue Methode deklariert wird, wird über der Deklaration ein `@override` geschrieben. Dies versichert, dass falls der Name, der Rückgabewert oder die Parameter falsch ist/sind, wird ein Fehler angezeigt.
+Um ein Programm nebenläufig laufen zu lassen, ist neben dem Haupt-Thread (`public static void main(String[] args)`) ein weiterer Thread nötig. Dies kann realisiert werden, indem eine neue Klasse erstellt wird, welche von der Klasse `Thread` durch eine Erweiterungen mit `extends Thread` erben muss. In der neuen Klasse muss die vererbte Methode `run` überschrieben werden. Um sicherzugehen, dass keine neue Methode deklariert wird, wird über der Deklaration ein `@override` geschrieben. Dies versichert, dass falls der Name, der Rückgabewert oder die Parameter falsch ist/sind, wird ein Fehler angezeigt.
 
 > Um ein Thread zu starten, kann die Methode `start()` des Objekts der neuen Klasse verwendet werden.
 
