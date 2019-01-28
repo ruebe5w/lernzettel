@@ -2,6 +2,7 @@
 title: "Lernzettel Technik"
 date: 2019
 listings-disable-line-numbers: true
+page-numbers: true
 ---
 
 Todo:
@@ -54,6 +55,7 @@ Todo:
     - [Netzwerk](#netzwerk)
     - [Konfigurations-Datei](#konfigurations-datei)
     - [Threads](#threads)
+    - [Kommunikation mit einem Server mit telnet](#kommunikation-mit-einem-server-mit-telnet)
     - [Frequenz zu Periodendauer](#frequenz-zu-periodendauer)
 
 # Lernzettel Technik
@@ -351,13 +353,13 @@ Eine Steuerung ist drahtbruchsicher, wenn das Einschalten durch einen Schließer
 ## Java 
 ### Datentypen
 #### einfache Datentypen
-| Name    | Größe           | Wertebereich                                                      |
-| :------ | :-------------- | :---------------------------------------------------------------- |
-| boolean | 1 Byte = 8 Bit  | **true**, **false**                                               |
-| char    | 2 Byte = 16 Bit | **-128** bis **+127**                                             |
-| int     | 4 Byte = 32 Bit | **-2.147.483.648** bis **+2.147.483.647**                         |
+| Name    | Größe           |                           Wertebereich                            |
+| :------ | :-------------- | :---------------------------------------------------------------: |
+| boolean | 1 Byte = 8 Bit  |                       **true** , **false**                        |
+| char    | 2 Byte = 16 Bit |                       **-128** bis **+127**                       |
+| int     | 4 Byte = 32 Bit |             **-2.147.483.648** bis **+2.147.483.647**             |
 | long    | 8 Byte = 64 Bit | **-9.223.372.036.854.775.808** bis **+9.223.372.036.854.775.807** |
-| float   | 4 Byte = 32 Bit | **-10$^{38}$** bis **+10$^{38}$**                                 |
+| float   | 4 Byte = 32 Bit |                 **-10$^{38}$** bis **+10$^{38}$**                 |
 
 #### komplexe Datentype
 | Name       | Größe                               |
@@ -543,13 +545,16 @@ MulticastSender mcs = new MulticastSender(ip, port);
 Methoden:
 
 Mit der Methode `send()` wird der Parameter des Datentyps *String* an alle Mitglieder der Multicast-Gruppe gesendet.
+```java
+mcs.send("Hallo");
+```
 
 Mit der Methode `close()` wird die Verbindung geschlossen.
 
 #### Multicast-Receiver
 Objekte dieser Klasse sind Mitglied in einer Multicast-Gruppe und können Informationen über ein Netzwerk von den Mitgliedern dieser Gruppe empfangen.
-```java
-MulticastReceiver mcs = new MulticastReceiver(ip, port);
+```java 
+MulticastReceiver mcr = new MulticastReceiver(ip, port);
 ```
 > Die Adresse des MulticastSenders muss zwischen 224.0.0.0 und 239.255.255.255 liegen.
 
@@ -557,6 +562,10 @@ MulticastReceiver mcs = new MulticastReceiver(ip, port);
 Methoden:
 
 Mit der Methode `receive()` können Informationen vom Netzwerk empfangen werden. Die Methode gibt diese als eine Referenz auf ein Objekt der Klasse *String* zurück.
+```java
+String result = msr.receive();
+```
+
 
 #### Simple-Client
 Objekte dieser Klasse können mit Serverprogrammen kommunizieren. Um mit einem bestimmten Server zu kommunizieren, kann an den Konstruktor die IP-Adresse als *String* und den Port als *Integer* als Parameter übergeben werden.
@@ -652,6 +661,19 @@ Aufruf:
 KlassenName kn = new KlassenName();
 kn.start();
 ```
+### Kommunikation mit einem Server mit telnet
+Um herauszufinden wie mit einem Server kommuniziert werden muss, um eine bestimmte Funktion zu erzielen, kann das Programm **telnet** genutzt werden. Dies wird über die Eingabeaufforderung mit **telnet** gestartet. Danach kann die Verbindung mit dem Befehl **open** oder auch **o** folgend mit der IP-Adresse (format: 111.111.111.111), Leerzeichen und dann dem Port mit einem Host/Server hergestellt werden. Abhängig vom Server kann eine Hilfeseite mit den verfügbaren Befehlen aufgerufen werden. Diese können meist mit dem Befehl **help** aufgerufen werden.
+
+Aufruf von telnet:
+```
+C:\> telnet
+```
+
+Öffnen einer Verbindung:
+```
+Microsoft Telnet> open 127.0.0.1 55555
+```
+
 ### Frequenz zu Periodendauer
 Im Unterricht ist es öfters vorgekommen, dass die Frequenz zur Verfügung steht und man nun mit dieser Frequenz z.B. eine LED blinken zu lassen.
 
