@@ -10,14 +10,11 @@ Todo:
 * Java
   * Alarmanlage testen
   * Funktionsfähigkeit beurteilen
-  * Kommunikationsprotokoll
 * Steuerungstechnik
   * Schrittkette
 * Netzwerktechnik
   * Schwachstellen
   * ipv4
-  * Subnetz Standard Gateway
-  * Subnetze Bilden
   * Firewall
   * MAC Adresse + freigeben
 
@@ -28,6 +25,7 @@ Todo:
     - [Uebertragungsmedien](#uebertragungsmedien)
     - [Hardware](#hardware)
     - [Protokolle](#protokolle)
+    - [Subnetze](#subnetze)
   - [Backup](#backup)
     - [inkrementelles Backup](#inkrementelles-backup)
     - [differentielles Backup](#differentielles-backup)
@@ -197,6 +195,47 @@ DHCP - Dynamik Host Configuration Protocol. Dieses Protokoll ist dafür zuständ
 
 #### ARP
 ARP - Address Resolution Protocol. Das Protokoll ist dafür da einer MAC-Adresse eine IP-Adresse zuzuordnen. Diese Informationen sind wichtig um ein Paket über das Netzwerk nicht nur an den richtigen PC, sondern auch an die richtige Netzwerkschnittstelle zu schicken. Diese Informationen werden zusätzlich in sogenannten ARP-Tabllen von z.B. PCs und Switches gespeichert.
+
+### Subnetze
+Ein Netzwerk kann in mehrere kleine Netze, sogenannte Subnetze unterteilt werden, um z.B. die Netzlast sinnvoll und geordnet zu verteilen. Diese Subnetze werden daher oft nach örtlichen Gegebenheiten oder auch organisatorischen Punkten eingeteilt (z.B. alle Hosts der Abteilung "Verkauf" in einem Subnetz). Die **Subnetzmaske** spielt hierbei eine sehr wichtige Rolle. Sie legt fest wie groß der Host- bzw. der Netzanteil ist, also wie viele Netze gebildet werden können und demnach auch wie groß / wie viele Hosts diese beinhalten. Um es sich einfach zu machen kann man die Subnetzmaske zuerst in die binäre Darstellung umwandeln. Bsp.: Ein Netwerk mit der Adresse 192.168.210.0 und der Subnetzmaske 255.255.255.0:
+
+> 225.225.225.0 entspricht 11111111.11111111.11111111.00000000
+
+Diese Adresse legt fest, dass die ersten 3 Byte für das Netzwerk stehen. Die letzten 8 Bit sind demnach der Hostanteil. Somit ist eine mögliche IP-Adresse eines Hosts 192.168.210.57.
+
+Möchte man dieses Netzwerk nun aber unterteilen, muss die Subnetzmaske abgeändert werden. Hierzu werden einfach die benötigten Bits auf 1 gesetzt. Dies ermöglicht diese neu-hinzugefügten Bits zum Indeninfizieren des Netzwerks zu benutzten. Die Formel für die Berechnung der benötigten Bits lautet $N=2^n-2$ ($N$ für Anzahl der Subnetze, $n$ für Anzahl der Bits). Werden also 4 Subnetze in diesem Netzwerk benötigt, dann müssen wir laut der Formel 3 Bits in der Subnetzmaske zusätzlich auf 1 setzen.
+
+> Aus
+> 
+> 11111111.11111111.11111111.00000000
+> 
+> wird also
+> 
+> 11111111.11111111.11111111.11100000 bzw. 255.255.255.224
+
+Die Netzwerke können dann einfach mit den drei neuen Bit berechnet werden:
+
+| Subnetz |  128  |  64   |  32   | Netzadresse     |
+| :-----: | :---: | :---: | :---: | :-------------- |
+|    0    |   0   |   0   |   0   | 192.168.210.0   |
+|    1    |   0   |   0   |   1   | 192.168.210.32  |
+|    2    |   0   |   1   |   0   | 192.168.210.64  |
+|    3    |   0   |   1   |   1   | 192.168.210.96  |
+|    4    |   1   |   0   |   0   | 192.168.210.128 |
+|    5    |   1   |   0   |   1   | 192.168.210.160 |
+|    6    |   1   |   1   |   0   | 192.168.210.192 |
+|    7    |   1   |   1   |   1   | 192.168.210.224 |
+
+Mit diesen Netzadressen lasse sich jetzt der erste Host, der Letzte Host und die Broadcastadresse des Netzes berechnen.
+
+#### Der erste Host
+Der **erste Host** eines Netzwerkes kann berechnet werden, indem der erste Bit des Hostanteils auf 1 gesetzt wird. In dem Subnetz 0 ist der erste Host z.B. 192.168.210.1 und im Subnetz 1 192.168.219.33. Der erste Host ist die erste Adresse nach der Netzadresse.
+
+#### Der letzte Host
+Der **letzte Host** des Netzwerks wird ermittelt, indem alle Bits den Hostanteils - bis auf der das letzte - auf 1 gesetzt. In dem Subnetz 2 ist der letzte Host z.B. 192.168.210.94 und im Subnetz 3 192.168.219.126. Der letzte Host ist die letzte Adresse vor der Broadcastadresse.
+
+#### Die Broadcastadresse
+Die **Broadcast Adresse**, also die Adresse, die genutzt wird, um ein Paket an alle Mitglieder des Netzes zu schicken, wird ermittelt indem einfach alle Bits des Hostanteils auf 1 gesetzt werden. Somit sind die Broadcastadressen für das Subnetz 4 192.168.210.159 und das Subnetz 5 192.168.210.191. Die Broadcastadresse ist die letzte Adresse des Netzwerks.
 
 ## Backup
 ### inkrementelles Backup
