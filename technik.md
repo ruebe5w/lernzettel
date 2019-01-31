@@ -10,8 +10,6 @@ Todo:
 * Java
   * Alarmanlage testen
   * Funktionsfähigkeit beurteilen
-* Steuerungstechnik
-  * Schrittkette
 * Netzwerktechnik
   * Schwachstellen
   * ipv4
@@ -40,10 +38,11 @@ Todo:
     - [Raid 1](#raid-1)
     - [Raid 5](#raid-5)
   - [Steuerungstechnik](#steuerungstechnik)
-    - [Zuordnungstabelle](#zuordnungstabelle)
-    - [R-S Tabelle](#r-s-tabelle)
     - [Drahtbruchsicherheit](#drahtbruchsicherheit)
     - [Regelung - Steuerung](#regelung---steuerung)
+    - [Zuordnungstabelle](#zuordnungstabelle)
+    - [R-S Tabelle](#r-s-tabelle)
+    - [Schrittkette](#schrittkette)
   - [Java](#java)
     - [Datentypen](#datentypen)
     - [Klassen](#klassen)
@@ -183,7 +182,7 @@ Ein Switch ist ein Kopplungselement, das mehrere Hosts in einem Netzwerk miteina
 DNS - Domain Name System. Dieses Protokoll ist für die Namensauflösung zuständig. Das bedeutet, wenn ein Benutzer eine url, wie z.B. google.com, dann wird diese URL von dem Protokoll in eine dezimale IP-Adresse umgewandelt.
 
 #### DHCP
-DHCP - Dynamik Host Configuration Protocol. Dieses Protokoll ist dafür zuständig automatisch Clients des Netzwerks Netzwerkonfigurationen zu zuweisen. Dies wird von einem DHCP Server gemacht. Inhalte dieser Konfigurationen sind unter anderem:
+DHCP - Dynamic Host Configuration Protocol. Dieses Protokoll ist dafür zuständig automatisch Clients des Netzwerks Netzwerkonfigurationen zu zuweisen. Dies wird von einem DHCP Server gemacht. Inhalte dieser Konfigurationen sind unter anderem:
 
 * IP-Adresse und Subnetzmaske
 * Default-Gateway
@@ -357,6 +356,17 @@ Meist genutztes Modell. Hierfür sind mindestens 3 Festplatten benötigt. Die Da
 * benötigt aufgrund der Parität deutlich mehr Rechenleistung als Raid 0 und 1
 
 ## Steuerungstechnik
+### Drahtbruchsicherheit
+Eine Steuerung ist drahtbruchsicher, wenn das Einschalten durch einen Schließer (Arbeitsstromprinzip) und das Ausschalten durch einen Öffner (Ruhestromprinzip) erfolgt. Bei Auftreten eines Drahtbruches erfolgt **kein unbeabsichtigtes Einschalten**, jedoch wird eine **eingeschaltete Steuerung abgeschaltet**.
+
+### Regelung - Steuerung
+
+#### Regelung
+> eine ist-Größe wird erfasst und mit einer soll-Größe verglichen und wenn nötig angepasst
+
+#### Steuerung
+> es gibt nur eine ist-Größe und diese wird nicht verändert, keine Rückwirkung odder Vergleich. offender Wirkungsablauf
+
 ### Zuordnungstabelle
 
 Eingänge:
@@ -377,17 +387,31 @@ Ausgänge:
 | Setzen            | M1<br>S1 | M2<br>S2, ~~B3~~ | 1.öffnen <br> 2. öffnen abbrechen |
 | Rücksetzen        |    B1    |     B2 v B3      | 3.<br> 4.                         |
 
-### Drahtbruchsicherheit
+### Schrittkette
+![Schrittkette](img/Schrittkette.png)
 
-Eine Steuerung ist drahtbruchsicher, wenn das Einschalten durch einen Schließer (Arbeitsstromprinzip) und das Ausschalten durch einen Öffner (Ruhestromprinzip) erfolgt. Bei Auftreten eines Drahtbruches erfolgt **kein unbeabsichtigtes Einschalten**, jedoch wird eine **eingeschaltete Steuerung abgeschaltet**.
+Legende:
 
-### Regelung - Steuerung
+1. Aktion Ausgang
+2. Schritt Bezeichnung
+3. Name der Bedingung
+4. Bedingung 
 
-#### Regelung
-> eine ist-Größe wird erfasst und mit einer soll-Größe verglichen und wenn nötig angepasst
+* grün: **Schritt**
+* rot: **Transition** (Weiterschaltbedingung)
+* blau: **Aktion**
 
-#### Steuerung
-> es gibt nur eine ist-Größe und diese wird nicht verändert, keine Rückwirkung odder Vergleich. offender Wirkungsablauf
+#### Funktionsablauf
+
+* **Schritt** und **Transition** wechseln sich immer ab.
+* Der Anfangsschritt (Doppelquadrat) ist die Einsprungstelle für das SPS-Programm.
+* In der linearen Schrittkette ist immer nur ein **Schritt** gesetzt.
+* Der Vorgängerschritt setzt zusammen mit der **Transistion** (UND-Verknüpfung) den Nachfolgeschritt auf 1.
+* Der aktivierte **Schritt** setzt den Vorgängerschritt auf 0 zurück und führt seine **Aktion** (Befehl) aus.
+
+#### Umsetzung on LOGO
+
+![Umsetzung in Logo](img/Schrittkette&#32;LOGO.png)
 
 ## Java 
 ### Datentypen
