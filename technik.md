@@ -4,7 +4,7 @@ date: 2019
 listings-disable-line-numbers: true
 page-numbers: true
 ---
-
+# Lernzettel Technik
 Todo:
 
 * Java
@@ -12,18 +12,18 @@ Todo:
   * Funktionsfähigkeit beurteilen
 * Netzwerktechnik
   * Schwachstellen
-  * ipv4
-  * Firewall
-  * MAC Adresse + freigeben
 
 ## Inhaltsverzeichnis
 - [Lernzettel Technik](#lernzettel-technik)
+  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [Netzwerktechnik](#netzwerktechnik)
     - [Begriffe](#begriffe)
-    - [Uebertragungsmedien](#uebertragungsmedien)
     - [Hardware](#hardware)
+    - [Uebertragungsmedien](#uebertragungsmedien)
     - [Protokolle](#protokolle)
     - [Subnetze](#subnetze)
+    - [VLan](#vlan)
+    - [Firewall](#firewall)
   - [Backup](#backup)
     - [inkrementelles Backup](#inkrementelles-backup)
     - [differentielles Backup](#differentielles-backup)
@@ -55,7 +55,6 @@ Todo:
     - [Kommunikation mit einem Server mit telnet](#kommunikation-mit-einem-server-mit-telnet)
     - [Frequenz zu Periodendauer](#frequenz-zu-periodendauer)
 
-# Lernzettel Technik
 ## Netzwerktechnik
 ### Begriffe
 #### BasisBand
@@ -132,6 +131,21 @@ Bsp.: Dosentelefon
 * Daten werden paketweise einfach aud den Weg geschickt
 * Bsp.: Postwurfsendung
 
+### Hardware
+Netzwerkgeräte (Hub, Switch, Router) erfüllende folgende Aufgaben:
+
+* Paket-Weiterleitung innerhalb eines logischen Netzes
+* Verbindung zwischen logischen Netzen herstellen
+
+#### Router
+Der Router ist ein Netzwerkgerät welches Netzwerkpakete zwischen mehreren Rechnernetzen weiterleiten kann. Sie arbeiten auf der 3. Schicht (mit der IP-Adresse) des OSI Schichten Modells. Zusätzlich blockiert er Broadcasts vor dem verlassen des Netzwerks.
+
+#### Switch
+Ein Switch ist ein Kopplungselement, das mehrere Hosts in einem Netzwerk miteinander verbindet und den Datenaustausch zwischen diesen ermöglicht. In einem Netzwerk mit einer Stern-Topologie dient ein Switch als Verteiler für die Datenpakete. Er arbeitet auf der 2. Schicht (mit der MAC-Adresse) des OSI Schichten Modells.
+
+#### Mac-Adresse
+MAC - Media Access Control. Die MAC-Adresse (auch physische Adresse) eines Netzwerkadapters dient als eindeutiger Identifikator des Geräts in einem Netz. Ein Datenpaket benötigt eine Ziel- und Absender MAC-Adresse, um nicht nur basierend auf der IP-Adresse an den richtigen Host, sondern auch an den richtigen Netzwerkadapter zugestellt werden zu können.
+
 ### Uebertragungsmedien
 
 | Art                   | Aufbau                                                                |
@@ -165,19 +179,13 @@ Für Busverbindungen mit mehreren Teilnehmern an einer Leitung
 > * Thick Wire $\ge$ 500m
 > * Thin Wire $\ge$ 185m
 
-### Hardware
-Netzwerkgeräte (Hub, Switch, Router) erfüllende folgende Aufgaben:
-
-* Paket-Weiterleitung innerhalb eines logischen Netzes
-* Verbindung zwischen logischen Netzen herstellen
-
-#### Router
-Der Router ist ein Netzwerkgerät welches Netzwerkpakete zwischen mehreren Rechnernetzen weiterleiten kann. Sie arbeiten auf der 3. Schicht (mit der IP-Adresse) des OSI Schichten Modells. Zusätzlich blockiert er Broadcasts vor dem verlassen des Netzwerks.
-
-#### Switch
-Ein Switch ist ein Kopplungselement, das mehrere Hosts in einem Netzwerk miteinander verbindet und den Datenaustausch zwischen diesen ermöglicht. In einem Netzwerk mit einer Stern-Topologie dient ein Switch als Verteiler für die Datenpakete. Er arbeitet auf der 2. Schicht (mit der MAC-Adresse) des OSI Schichten Modells.
-
 ### Protokolle
+#### IP
+IP - Internet Protocol.
+
+##### IPv4
+Das IP ist eine wichtige Grundlage des Internets. Das Protokoll ist zur Vermittlung von Datenpaketen zuständig. Es wird genutzt Datenpakete zu adressieren und in einem dezentralen, verbindungslosen und paketorientierten Netzwerk zu übertragen. Zusätzlich dient es zur Identifikation eines Hosts und des Netzes.
+
 #### DNS
 DNS - Domain Name System. Dieses Protokoll ist für die Namensauflösung zuständig. Das bedeutet, wenn ein Benutzer eine url, wie z.B. google.com, dann wird diese URL von dem Protokoll in eine dezimale IP-Adresse umgewandelt.
 
@@ -199,6 +207,8 @@ ARP - Address Resolution Protocol. Das Protokoll ist dafür da einer MAC-Adresse
 Ein Netzwerk kann in mehrere kleine Netze, sogenannte Subnetze unterteilt werden, um z.B. die Netzlast sinnvoll und geordnet zu verteilen. Diese Subnetze werden daher oft nach örtlichen Gegebenheiten oder auch organisatorischen Punkten eingeteilt (z.B. alle Hosts der Abteilung "Verkauf" in einem Subnetz). Die **Subnetzmaske** spielt hierbei eine sehr wichtige Rolle. Sie legt fest wie groß der Host- bzw. der Netzanteil ist, also wie viele Netze gebildet werden können und demnach auch wie groß / wie viele Hosts diese beinhalten. Um es sich einfach zu machen kann man die Subnetzmaske zuerst in die binäre Darstellung umwandeln. Bsp.: Ein Netwerk mit der Adresse 192.168.210.0 und der Subnetzmaske 255.255.255.0:
 
 > 225.225.225.0 entspricht 11111111.11111111.11111111.00000000
+
+> Die Subnetzmaske kann auch mit einem "/" dargestellt werden. Eine Adresse plus Subnetzmaske sieht dann aus wie: 192.168.210.0/24. Die 24 sagt aus wie viele Bits für den Netzanteil genutzt werden
 
 Diese Adresse legt fest, dass die ersten 3 Byte für das Netzwerk stehen. Die letzten 8 Bit sind demnach der Hostanteil. Somit ist eine mögliche IP-Adresse eines Hosts 192.168.210.57.
 
@@ -235,6 +245,12 @@ Der **letzte Host** des Netzwerks wird ermittelt, indem alle Bits den Hostanteil
 
 #### Die Broadcastadresse
 Die **Broadcast Adresse**, also die Adresse, die genutzt wird, um ein Paket an alle Mitglieder des Netzes zu schicken, wird ermittelt indem einfach alle Bits des Hostanteils auf 1 gesetzt werden. Somit sind die Broadcastadressen für das Subnetz 4 192.168.210.159 und das Subnetz 5 192.168.210.191. Die Broadcastadresse ist die letzte Adresse des Netzwerks.
+
+### VLan
+VLan - Virtual Local Area Network. Ein VLan ist ein logisches Teilnetz, welches auf einem physischen LAN aufsetzt und mehr Flexibilität, Leistung und Sicherheit bietet. Hierfür ist ein VLan-fähiger Switch nötig. VLans kann man sich so vorstellen, als würde man diesen Switch in mehrere kleine aufteilen. Zwei verschiedene VLans können nicht sehen was andere VLans machen, so bieten sie eine kostengünstige Alternative die Netzwerksicherheit zu erhöhen.
+
+### Firewall
+Eine Firewall ist ein Sicherungssystem, welches ein PC oder auch ein ganzes Netzwerk vor unerwünschten Zugriffen schützt. Die Firewall entscheidet basierend auf festgelegten Regeln, ob Netzwerkzugriffe zugelassen werden je nach Absender oder Ziel des genutzten Dienstes.
 
 ## Backup
 ### inkrementelles Backup
@@ -492,11 +508,11 @@ referenz.methodenName();
 KlassenName.methodenName();
 ```
 
-Danach folgt der Rückgabewert. Hier muss der Rückgabewert der Klasse angeben werden. Dieser kann z.B. ein *Integer*, ein *String* oder auch ein eigener Datentyp sein. Wenn eine Methode ein Rückgabewert hat, muss dieser mit `return` im Methodenkörper zurückgegen werden, hat sie keinen kann dies weggelassen werden, jedoch muss in in der Deklaration `void` als Datentyp angegeben werden.
+Danach folgt der Rückgabewert. Hier muss der Rückgabewert der Klasse angeben werden. Dieser kann z.B. ein *Integer*, ein *String* oder auch ein eigener Datentyp sein. Wenn eine Methode ein Rückgabewert hat, muss dieser mit `return` im Methodenkörper zurückgegen werden, hat sie keinen kann dies weggelassen werden, jedoch muss dann in in der Deklaration `void` als Datentyp angegeben werden.
 
 Nun folgt der Methodenname, welcher konventioneller Weise in 'camelCase' geschrieben wird, das bedeutet der Anfangsbuchstabe wird kleingeschrieben und jedes neue folgende Wort wird mit einem Großbuchstaben begonnen. Beispiel `methodenName`. Zusätzlich sollte der Name einer Methode ihre Aufgabe/Funktion möglichst genau beschreiben, wie z.B. `getVar` und `setVar`.
 
-Parameter welche beim Aufruf der Methode an diese übergeben werden soll, werden nach dem Methodennamen in Klammer '()' führend mit ihrem Datentyp angegeben. Im folgenden Beispiel wird zum Beispiel ein Parameter mit dem Datentype *String* an die Methode weitergegeben und kann ab dann im Methodenkörper von nun mit der Referenz 'Name' drauf zugegriffen werden.
+Parameter, welche beim Aufruf der Methode an diese übergeben werden soll, werden nach dem Methodennamen in Klammer '()' führend mit ihrem Datentyp angegeben. Im folgenden Beispiel wird zum Beispiel ein Parameter mit dem Datentype *String* an die Methode weitergegeben und kann ab dann im Methodenkörper unter der Referenz 'Name' genutzt werden.
 ```java
 public void setName(String Name) {}
 ```
