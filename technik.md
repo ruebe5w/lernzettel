@@ -316,7 +316,7 @@ symmetrische Verfahren/Protokolle
 
 ### asymmetrische Verschlüsselung
 * für jede Person wird Schlüsselpaar generiert
-* 1x Geheimschlüssel (**secret key**) wird zum Verschlüsseln einer Nachricht genutzt
+* 1x Geheimschlüssel (**secret key**) wird zum Entschlüsseln einer Nachricht genutzt
 * 1x öffentlicher Schlüssel (**public key**) wird zum Verschlüsseln einer Nachricht genutzt
 * Schlüsselaustauschproblematik entfällt
 * sehr rechen- und zeitaufwendig; ca. 1000mal langsamer als symmetrischer Verschlüsselung
@@ -398,10 +398,10 @@ Ausgänge:
 | Zylinder Tür auf |      M1       | fährt ein M1=1 |
 
 ### R-S Tabelle
-| Setzen/Rücksetzen |    Ö     |        S         | Schritte                          |
-| :---------------- | :------: | :--------------: | :-------------------------------- |
-| Setzen            | M1<br>S1 | M2<br>S2, ~~B3~~ | 1.öffnen <br> 2. öffnen abbrechen |
-| Rücksetzen        |    B1    |     B2 v B3      | 3.<br> 4.                         |
+| Setzen/Rücksetzen | Selbsthalterelais 1 | Selbsthalterelais 2 |
+| :---------------- | :-----------------: | :-----------------: |
+| Setzen            |   Setz-Bedingung    |   Setz-Bedingung    |
+| Rücksetzen        | Rücksetz-Bedingung  | Rücksetz-Bedingung  |
 
 ### Schrittkette
 ![Schrittkette](img/Schrittkette.png)
