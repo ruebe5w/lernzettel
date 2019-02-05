@@ -1,5 +1,16 @@
 # Lernzettel Mathe
 
+- [Lernzettel Mathe](#lernzettel-mathe)
+  - [Analysis](#analysis)
+    - [Kurvendiskussion](#kurvendiskussion)
+    - [e-Funktionen](#e-funktionen)
+    - [Integration](#integration)
+  - [Stochastik](#stochastik)
+  - [Analytische Geometrie](#analytische-geometrie)
+    - [Vektoren](#vektoren)
+    - [Geraden](#geraden)
+    - [Ebenen](#ebenen)
+
 ## Analysis
 ### Kurvendiskussion
 
@@ -57,3 +68,46 @@ $$f' = u'\cdot v +u\cdot v'$$
 #### Kettenregel
 ## Stochastik
 ## Analytische Geometrie
+### Vektoren
+
+#### Betrag eines Vektors
+Der Betrag eines Vektors ist die Länge eines seiner Pfeile.
+
+Beispiel
+$$ \overrightarrow{AB} = 
+\begin{pmatrix}
+    2 \\
+    4 \\
+    4
+\end{pmatrix}
+$$
+
+$$|\overrightarrow{AB}|=\sqrt{2^2+4^2+4^2} = \sqrt{36} = 6$$
+
+### Geraden
+Parametergleichung
+
+$$g: \vec{x} = \vec{a} + r \cdot \vec{m}$$
+
+* $\vec{x}$ : beliebiger Raumvektor
+* $\vec{a}$ : Stützvektor
+* $\vec{m}$ : Richtungsvektor
+* $r$ : Geradenparameter
+
+#### Punkt auf der Gerade
+#### Schnittpunkt zweier Geraden
+##### Schnittwinkel zweier Geraden
+#### Schnittpunkt Gerade und Ebene
+##### Schnittwinkel Gerade und Ebene
+### Ebenen
+Ebenengleichung
+
+$$E: \vec{x} = \vec{a} + r \cdot \vec{u}+s\cdot\vec{v}$$
+
+* $\vec{x}$ : beliebiger Raumvektor
+* $\vec{a}$ : Stützvektor
+* $\vec{u},\vec{v}$ : Richtungsvektor
+* $r,s$ : Ebenenparameter
+
+#### Schnittgerade zweier Ebenen
+##### Schnittwinkel zweier Ebenen
