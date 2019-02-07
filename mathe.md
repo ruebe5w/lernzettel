@@ -69,7 +69,6 @@ $$f' = u'\cdot v +u\cdot v'$$
 ## Stochastik
 ## Analytische Geometrie
 ### Vektoren
-
 #### Betrag eines Vektors
 Der Betrag eines Vektors ist die Länge eines seiner Pfeile.
 
@@ -84,15 +83,55 @@ $$
 
 $$|\overrightarrow{AB}|=\sqrt{2^2+4^2+4^2} = \sqrt{36} = 6$$
 
+#### Skalarprodukt
+
+$$ \vec{a} = 
+\begin{pmatrix}
+    a_{1} \\
+    a_{2} \\
+    a_{3}
+\end{pmatrix}
+,
+\vec{b} = 
+\begin{pmatrix}
+    b_{1} \\
+    b_{2} \\
+    b_{3}
+\end{pmatrix}
+$$
+
+$$\vec{a}\cdot\vec{b}=a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3}$$
+
+> $\vec{a}\cdot\vec{b}$ ist eine reelle Zahl
+
+#### Kreuzprodukt/Normalenvektor
+
+![Kreuzprodukt](img/kreuzprodukt.png)
+
+#### Winkel zwischen zwei Vektoren
+
+
 ### Geraden
+#### Geradengleichungen
 Parametergleichung
 
 $$g: \vec{x} = \vec{a} + r \cdot \vec{m}$$
 
 * $\vec{x}$ : beliebiger Raumvektor
-* $\vec{a}$ : Stützvektor
+* $\vec{a}$ : Stützvektor/Ortsvektor
 * $\vec{m}$ : Richtungsvektor
 * $r$ : Geradenparameter
+
+![Parametergleichung](img/g-parameterform.png)
+
+Normalenform
+
+$$g:\vec{n}_{g}\cdot(\vec{x}-\vec{a})=0$$
+
+* $\vec{x}$ : beliebiger Raumvektor
+* $\vec{a}$ : Stützvektor/Ortsvektor
+* $\vec{n}_{g}$ : Normalenvektor von $g$
+
 
 #### Punkt auf der Gerade
 #### Schnittpunkt zweier Geraden
@@ -100,14 +139,31 @@ $$g: \vec{x} = \vec{a} + r \cdot \vec{m}$$
 #### Schnittpunkt Gerade und Ebene
 ##### Schnittwinkel Gerade und Ebene
 ### Ebenen
-Ebenengleichung
+#### Ebenengleichung
 
-$$E: \vec{x} = \vec{a} + r \cdot \vec{u}+s\cdot\vec{v}$$
+Parameterform
+
+$$E: \vec{x} = \vec{a} + r \cdot \vec{b}+s\cdot\vec{c}$$
 
 * $\vec{x}$ : beliebiger Raumvektor
-* $\vec{a}$ : Stützvektor
-* $\vec{u},\vec{v}$ : Richtungsvektor
+* $\vec{a}$ : Stützvektor/Ortsvektor
+* $\vec{b},\vec{c}$ : Richtungsvektor
 * $r,s$ : Ebenenparameter
 
+Normalenform
+
+$$E:\vec{n}_{E}\cdot(\vec{x}-\vec{a})=0$$
+
+* $\vec{x}$ : beliebiger Raumvektor
+* $\vec{a}$ : Stützvektor/Ortsvektor
+* $\vec{n}_{E}$ : Normalenvektor von $E$
+
+Koordinatenform
+
+$$E:ax+by+cz=d$$
+
+* $a,b,c$ : Koordinaten des Normalenvektors
+* $d$ : Skalarprodukt von $\vec{n}$(Normalenvektor) und $\vec{a}$(Stützvektor/Ortsvektor)
+
 #### Schnittgerade zweier Ebenen
-##### Schnittwinkel zweier Ebenen
+#### Schnittwinkel zweier Ebenen
