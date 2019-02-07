@@ -106,7 +106,9 @@ $$\vec{a}\cdot\vec{b}=a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3}$$
 
 #### Kreuzprodukt/Normalenvektor
 
-![Kreuzprodukt](img/kreuzprodukt.png)
+![Kreuzprodukt](img/kreuzprodukt.png){ height=300px }
+
+$$\vec{a}\times\vec{b}=\vec{c}$$
 
 #### Winkel zwischen zwei Vektoren
 
@@ -115,14 +117,14 @@ $$\vec{a}\cdot\vec{b}=a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3}$$
 #### Geradengleichungen
 Parametergleichung
 
+![Parametergleichung](img/g-parameterform.png){ height=300px }
+
 $$g: \vec{x} = \vec{a} + r \cdot \vec{m}$$
 
 * $\vec{x}$ : beliebiger Raumvektor
 * $\vec{a}$ : Stützvektor/Ortsvektor
 * $\vec{m}$ : Richtungsvektor
 * $r$ : Geradenparameter
-
-![Parametergleichung](img/g-parameterform.png)
 
 Normalenform
 
@@ -132,8 +134,9 @@ $$g:\vec{n}_{g}\cdot(\vec{x}-\vec{a})=0$$
 * $\vec{a}$ : Stützvektor/Ortsvektor
 * $\vec{n}_{g}$ : Normalenvektor von $g$
 
-
 #### Punkt auf der Gerade
+
+
 #### Schnittpunkt zweier Geraden
 ##### Schnittwinkel zweier Geraden
 #### Schnittpunkt Gerade und Ebene
@@ -143,6 +146,8 @@ $$g:\vec{n}_{g}\cdot(\vec{x}-\vec{a})=0$$
 
 Parameterform
 
+![Parametergleichung](img/E-parameterform.png){ height=300px }
+
 $$E: \vec{x} = \vec{a} + r \cdot \vec{b}+s\cdot\vec{c}$$
 
 * $\vec{x}$ : beliebiger Raumvektor
@@ -151,6 +156,8 @@ $$E: \vec{x} = \vec{a} + r \cdot \vec{b}+s\cdot\vec{c}$$
 * $r,s$ : Ebenenparameter
 
 Normalenform
+
+![Parametergleichung](img/E-normalenform.png){ height=300px }
 
 $$E:\vec{n}_{E}\cdot(\vec{x}-\vec{a})=0$$
 
