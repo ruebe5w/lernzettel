@@ -9,6 +9,7 @@
     - [Produktregel](#produktregel)
     - [Kettenregel](#kettenregel)
     - [Kurvendiskussion](#kurvendiskussion)
+    - [Abstände](#abst%C3%A4nde)
     - [Trassierung](#trassierung)
     - [e-Funktionen](#e-funktionen)
     - [Integration](#integration)
@@ -82,9 +83,6 @@ $$f' = u'\cdot v +u\cdot v'$$
 
 ### Kettenregel
 ### Kurvendiskussion
-
-
-
 #### 1. Symmetrie
 #### 2. Nullstellen
 > $f(x)=0$
@@ -106,6 +104,17 @@ $$f' = u'\cdot v +u\cdot v'$$
 > $f'''(x_W) > 0 \Rightarrow$ Wendepunkt(R-l) 
 > 
 > $f'''(x_W) = 0 \Rightarrow$ keine Aussage 
+
+### Abstände
+Der Abstand zwischen einem Punkt $P$ und einer Funktion $f$ kann mit dem Satz des Pythagoras hergeleitet werden und resultiert in der folgenden Gleichung für $d$.
+
+$$d(x)=\sqrt{\varDelta x+\varDelta y}$$
+
+$$d(x)=\sqrt{(x-P_x)-(f(x)-P_y)}$$
+
+Möchte man den minimalsten Abstand herausfinden, so muss man das Minimum ermitteln (Ansatz $d'(x)=0$). Hat man das Minimum berechnet, kann der Abstand zwischen den beiden Punkten einfach ausgerechnet werden.
+
+![Abstand-Funktion-Punkt](img/abstand-funktion-punkt.png){ height=250px }
 
 ### Trassierung
 Eine Trassierung ist eine Ansammlung von Funktionen, welche eine gemeinsame Linie bilden. Jede einzelne Funktion hat einen Gültigkeitsbereich. Sie werden folgender Maßen notiert:
@@ -138,6 +147,10 @@ Ist eine Funktion knickfrei mit einer anderen verbunden, so sind haben sie beide
 $$p_1'(x_0)=p_2'(x_0)=d$$
 
 Mit der Übergangsstelle $x_0$ und der Steigung $d$
+
+Wenn die Steigung als Winkel $\alpha$ angegeben ist, so kann dieser mit der folgenden Gleichung in die Steigung $m_p$ umgewandelt werden, um in einer Bedingung verwendet werden zu können.
+
+$$m_p=\tan(\alpha)$$
 
 ##### krümmungsruckfrei
 Ist eine Funktion krümmungsruckfrei mit einer anderen verbunden, so haben sie beide die gleiche Krümmung am Übergangspunkt. Die Bedingung für die Krümmungsruckfreiheit lautet demnach:
