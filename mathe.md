@@ -133,16 +133,16 @@ $$p_1(x_0)=p_2(x_0)=d$$
 Mit der Übergangsstelle $x_0$ und y-Koordinate $d$
 
 ##### knickfrei
-Ist eine Funktion knickfrei mit einer anderen verbunden, so sind haben sie beide die gleiche Steigung am Übergangspunkt. Die Bedingung für die Versatzfreiheit lautet demnach:
+Ist eine Funktion knickfrei mit einer anderen verbunden, so sind haben sie beide die gleiche Steigung am Übergangspunkt. Die Bedingung für die Knickfreiheit lautet demnach:
 
 $$p_1'(x_0)=p_2'(x_0)=d$$
 
 Mit der Übergangsstelle $x_0$ und der Steigung $d$
 
 ##### krümmungsruckfrei
-Ist eine Funktion krümmungsruckfrei mit einer anderen verbunden, so haben sie beide die gleiche Krümmung am Übergangspunkt. Die Bedingung für die Versatzfreiheit lautet demnach:
+Ist eine Funktion krümmungsruckfrei mit einer anderen verbunden, so haben sie beide die gleiche Krümmung am Übergangspunkt. Die Bedingung für die Krümmungsruckfreiheit lautet demnach:
 
-$$p_1''(x_0)=p_2''(x_0)$$
+$$p_1''(x_0)=p_2''(x_0)=d$$
 
 Mit der Übergangsstelle $x_0$ und der Krümmung $d$ (meist $0$)
 
@@ -165,7 +165,7 @@ $$p'(x)=3ax^2+2bx+c$$
 
 Lässt man dieses LGS nun mit dem CAS lösen, ergeben sich für die Parameter folgende Werte:
 
-$a=-\dfrac{1}{125}, b=\dfrac{17}{50}, c=-\dfrac{1}{2}, d=3$
+$$a=-\dfrac{1}{125}, b=\dfrac{17}{50}, c=-\dfrac{1}{2}, d=3$$
 
 und somit die Funktionsgleichung $p(x)=-\dfrac{1}{125}x^3+\dfrac{17}{50}x^2-\dfrac{1}{2}x+3$
 
@@ -223,7 +223,7 @@ die passende Grafik:
 ## Analytische Geometrie
 ### Vektoren
 #### Betrag eines Vektors
-Der Betrag eines Vektors ist die Länge eines seiner Pfeile.
+Der Betrag eines Vektors ist seine Länge.
 
 Beispiel
 $$ \overrightarrow{AB} = 
@@ -266,6 +266,8 @@ $$\vec{a}\cdot\vec{b}=a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3}$$
 ![Kreuzprodukt](img/kreuzprodukt.png){ height=250px }
 
 $$\vec{a}\times\vec{b}=\vec{c}$$
+
+> $\vec{a}\times\vec{b}$ ist ein Vektor
 
 > CAS Vektor > crossP
 
@@ -394,4 +396,4 @@ $$\cos\varphi=\frac{|\vec{n_1}\cdot\vec{n_2}|}{|\vec{n_1}|\cdot|\vec{n_2}|}$$
 
 Der Abstand zwischen dem Punkt $X$ (Vector $\vec{x}$) und der Ebene $E$ (in Normalenform) kann mit folgender Formel berechnet werden. 
 
-$$d(X,E)= \begin{vmatrix}\frac{\vec{n}\cdot (\vec{x}-\vec{a})}{|\vec{n}|}\end{vmatrix}$$
+$$d(X,E)= \begin{vmatrix}\dfrac{\vec{n}\cdot (\vec{x}-\vec{a})}{|\vec{n}|}\end{vmatrix}$$
