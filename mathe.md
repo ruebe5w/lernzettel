@@ -286,6 +286,8 @@ $$\vec{a}\times\vec{b}=\vec{c}$$
 
 #### Winkel zwischen zwei Vektoren
 
+$$\cos\alpha=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}|\cdot|\vec{b}|}$$
+
 > CAS Vektor > angle
 
 ### Geraden
@@ -365,7 +367,7 @@ $$E: \vec{x} = \vec{a} + r \cdot \vec{b}+s\cdot\vec{c}$$
 
 * $\vec{x}$ : beliebiger Raumvektor
 * $\vec{a}$ : Stützvektor/Ortsvektor
-* $\vec{b},\vec{c}$ : Richtungsvektor
+* $\vec{b},\vec{c}$ : Spannvektor
 * $r,s$ : Ebenenparameter
 
 Normalenform
