@@ -18,7 +18,7 @@
     - [Binominalverteilung](#binominalverteilung)
     - [Standardabweichung Sigma](#standardabweichung-sigma)
     - [Konfidenzintervalle für eine unbekannte Wahrscheinlichkeit p](#konfidenzintervalle-f%C3%BCr-eine-unbekannte-wahrscheinlichkeit-p)
-    - [c aus Sicherheitswahrscheinlichkeit](#c-aus-sicherheitswahrscheinlichkeit)
+    - [Sigma-Umgebung c aus Sicherheitswahrscheinlichkeit](#sigma-umgebung-c-aus-sicherheitswahrscheinlichkeit)
     - [Normalverteilung](#normalverteilung)
   - [Analytische Geometrie](#analytische-geometrie)
     - [Vektoren](#vektoren)
@@ -27,20 +27,25 @@
 
 ## Taschenrechnerbefehle
 
-| Funktion            | Befehl                                                                                                              |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Analysis**        |
-| nach Variable lösen | Weiterführend > *solve*                                                                                             |
-| Ableitung           | Berechnungen > *diff*                                                                                               |
-| Integral            | Berechnungen > $\int$ <br> *oder* <br> Keyboard >  Math2 > $\int\limits_\square^\square \blacksquare\!\blacksquare$ |
-| LGS                 | Keyboard > Math1 > $\begin{cases}\blacksquare\!\blacksquare\\\square\!\square\end{cases}$                           |
-| **Stochastik**      |
-| **Vektoren**        |
-| Vektor              | Keyboard > Math2 > $\begin{bmatrix}\blacksquare\!\blacksquare\\\square\!\square\end{bmatrix}$                       |
-| Betrag              | Vektoren > *norm*                                                                                                   |
-| Skalarprodukt       | Vektoren > *dotP*                                                                                                   |
-| Kreuzprodukt        | Vektoren > *crossP*                                                                                                 |
-| Winkel              | Vektoren >  *angle*                                                                                                 |
+| Funktion                                                       | Befehl                                                                                                              |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| **Analysis**                                                   |
+| nach Variable lösen                                            | Weiterführend > *solve*                                                                                             |
+| Ableitung                                                      | Berechnungen > *diff*                                                                                               |
+| Integral                                                       | Berechnungen > $\int$ <br> *oder* <br> Keyboard >  Math2 > $\int\limits_\square^\square \blacksquare\!\blacksquare$ |
+| LGS                                                            | Keyboard > Math1 > $\begin{cases}\blacksquare\!\blacksquare\\\square\!\square\end{cases}$                           |
+| **Stochastik**                                                 |
+| Punktwahrscheinlichkeit einer Bernoulli-Kette                  | Verteilungsfunktionen > Diskret > *binominalPDf*                                                                    |
+| kumulierte Wahrscheinlichkeit einer Bernoulli-Kette            | Verteilungsfunktionen > Diskret > *binominalCDf*                                                                    |
+| Punktwahrscheinlichkeit mit der lokalen Näherungsformel        | Verteilungsfunktionen > Fortlaufend > *normPDf*                                                                     |
+| kumulierte Wahrscheinlichkeit mit der globalen Näherungsformel | Verteilungsfunktionen > Fortlaufend > *normCDf*                                                                     |
+| Quantile einer Normalverteilung                                | Verteilungsfunktionen > Fortlaufend > *invNormCDf*                                                                  |
+| **Vektoren**                                                   |
+| Vektor                                                         | Keyboard > Math2 > $\begin{bmatrix}\blacksquare\!\blacksquare\\\square\!\square\end{bmatrix}$                       |
+| Betrag                                                         | Vektoren > *norm*                                                                                                   |
+| Skalarprodukt                                                  | Vektoren > *dotP*                                                                                                   |
+| Kreuzprodukt                                                   | Vektoren > *crossP*                                                                                                 |
+| Winkel                                                         | Vektoren >  *angle*                                                                                                 |
 
 
 ## Lineare Gleichungssysteme - LGS
@@ -256,7 +261,7 @@ genau $k$ Treffer:
 
 $$\text{P}(X=k)=\text{B}(n;p;k)=\dbinom{n}{k}\cdot p^k\cdot (1-p)^{n-k}$$
 
-> CAS Verteilungsfunktionen > Diskret > binominalPDF
+> CAS Verteilungsfunktionen > Diskret > binominalPDf
 
 #### kumulierte Wahrscheinlichkeiten:
 
@@ -264,7 +269,7 @@ mehr als $a$ Treffer:
 
 $$\text{P}(X\le a)=\sum_{k=0}^{a}\text{B}(n;p;k)$$
 
-> CAS Verteilungsfunktionen > Diskret > binominalCDF
+> CAS Verteilungsfunktionen > Diskret > binominalCDf
 
 ### Binominalverteilung
 
@@ -310,14 +315,19 @@ Wird bei einer unbekannten Wahrscheinlichkeit $p$ die relative Häufigkeit $h=\f
 
 99,7% im Vertrauensintervall $[h-3\frac{\sigma}{n};h_n+3\frac{\sigma}{n}]$
 
+### Sigma-Umgebung c aus Sicherheitswahrscheinlichkeit
+Quantile (Anteilswerte) einer Normalverteilung bzw. Hilfsgröße c mit Sicherheitswahrscheinlich $\gamma$ berechnen.
+
+$$c = \Phi^{-1}(\gamma)$$
+
+> CAS Verteilungsfunktionen > Umkehrfkt. > invNormCDf
+
 #### Konfidenzellipse
 Wird bei einer unbekannten Wahrscheinlichkeit $p$ die relative Häufigkeit $h=\frac{X}{n}$ als Schätzwert für $p$ genutzt, so kann das Vertrauensintervall folgender Maßen bestimmt werden:
 
 VI: $p=h\mp c\cdot\sqrt{\dfrac{p\cdot(1-p)}{n}}$
 
 Mit $c$ als Sigma-Umgebung (wird aus der Sicherheitswahrscheinlichkeit $\gamma$ ermittelt TW S39), h als relative Häufigkeit und n als Stichproben.
-
-### c aus Sicherheitswahrscheinlichkeit
 
 ### Normalverteilung
 Jede binominalverteilte Zufallsgröße $X$ kann näherungsweise mit der Gauß'schen Glockenkurve $\varphi$ beschrieben werden.
@@ -328,6 +338,8 @@ Wenn die Laplace-Bedingung erfüllt ist, kann die die Punktwahrscheinlichkeit mi
 $$\text{P}(X=k)=\text{B}(n;p;k)\approx\frac{1}{\sigma\cdot\sqrt{2\pi}}e^{-\frac{1}{2}z^2}$$
 mit $z=\frac{k-\mu}{\sigma}$
 
+> CAS Verteilungsfunktionen > Fortlaufend > normPDf
+
 #### globale Näherungsformel
 Wenn die Laplace-Bedingung erfüllt ist, kann die die kumulierte Wahrscheinlichkeit mit folgender Vorgehensweise berechnet werden:
 
@@ -336,6 +348,12 @@ $$\Phi(z)=\frac{1}{\cdot\sqrt{2\pi}}\int\limits_{-\infty}^{z}e^{-\frac{1}{2}t^2}
 $$\text{P}(X\le a)=\sum_{k=0}^{a}\text{B}(n;p;k)\approx\Phi(z)$$
 mit $z=\frac{k-\mu+0,5}{\sigma}$
 
+> CAS Verteilungsfunktionen > Fortlaufend > normCDf
+
+##### stetige Zufallsgrößen
+Eine stetige Zufallsgröße kann innerhalb eines bestimmtes Intervalls jeden beliebigen Zahlenwert annehmen. (z.B. Körpergröße, Länge einer Schraube, Gewicht)
+
+Bei einer stetig normalverteilten Zufallsgröße muss die Hilfsgröße für $\Phi(z)$ mit: $z=\frac{r-\mu}{\sigma}$ berechnet werden. Da die Punktwahrscheinlichkeit eines Werts $0$ beträgt, muss auch immer eine Intervallwahrscheinlichkeit berechnet werden ($\text{P}(X\le r), \text{P}(X> r),\text{P}(a\le X\le b)$).
 
 ## Analytische Geometrie
 ### Vektoren
