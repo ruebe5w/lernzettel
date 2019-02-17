@@ -14,6 +14,12 @@
     - [e-Funktionen](#e-funktionen)
     - [Integration](#integration)
   - [Stochastik](#stochastik)
+    - [Bernoulli-Ketten](#bernoulli-ketten)
+    - [Binominalverteilung](#binominalverteilung)
+    - [Standardabweichung Sigma](#standardabweichung-sigma)
+    - [Konfidenzintervalle für eine unbekannte Wahrscheinlichkeit p](#konfidenzintervalle-f%C3%BCr-eine-unbekannte-wahrscheinlichkeit-p)
+    - [c aus Sicherheitswahrscheinlichkeit](#c-aus-sicherheitswahrscheinlichkeit)
+    - [Normalverteilung](#normalverteilung)
   - [Analytische Geometrie](#analytische-geometrie)
     - [Vektoren](#vektoren)
     - [Geraden](#geraden)
@@ -233,13 +239,111 @@ die passende Grafik:
 ![Integral-händisch](img/integral-haendisch.png){ height=250px }
 
 ## Stochastik
+### Bernoulli-Ketten
+Ein **Bernoulli-Versuch** ist ein Experiment mit genau zwei Ausgängen Treffer und kein Treffer mit der Trefferwahrscheinlichkeit p.
+
+Eine **Bernoulli-Kette** ist die $n$-fache wiederholung dieses Experiments.
+
+$n$: Länge der Kette
+
+$k$: Treffer
+
+$p$: Trefferwahrscheinlichkeit
+
+#### Punktwahrscheinlichkeiten:
+
+genau $k$ Treffer:
+
+$$\text{P}(X=k)=\text{B}(n;p;k)=\dbinom{n}{k}\cdot p^k\cdot (1-p)^{n-k}$$
+
+> CAS Verteilungsfunktionen > Diskret > binominalPDF
+
+#### kumulierte Wahrscheinlichkeiten:
+
+mehr als $a$ Treffer:
+
+$$\text{P}(X\le a)=\sum_{k=0}^{a}\text{B}(n;p;k)$$
+
+> CAS Verteilungsfunktionen > Diskret > binominalCDF
+
+### Binominalverteilung
+
+Erwartungswert: $\mu=E(X)=n\cdot p$
+
+Varianz: $V(X)=n\cdot p\cdot(1-p)$
+
+Standardabweichung: $\sigma (x)=\sqrt{n \cdot p \cdot (1-p)}$
+
+### Standardabweichung Sigma
+#### Laplace-Bedingung:
+
+$$\sigma (x)  = \sqrt{n \cdot p \cdot (1-p) } > 3$$
+
+#### Sigma-Umgebungen
+Die Standardabweichung $\sigma$ legt fest, wie stark die Werte eine Zufallsgröße $X$ um den Erwartungswert $\mu$ streuen.
+
+Wenn die **Laplace-Bedingung** erfüllt ist, dann fällt die Anzahl der Treffer $X$ einer Bernoulli-Kette (der Länge $n$, Erwartungswert $\mu$ und der Standardabweichung $\sigma$) mit:
+
+68% in das Intervall $[\mu-\sigma;\mu+\sigma]$,
+
+95,5% in das Intervall $[\mu-2\sigma;\mu+2\sigma]$,
+
+99,7% in das Intervall $[\mu-3\sigma;\mu+3\sigma]$
+
+#### Sigma/n-Umgebungen
+Die $\frac{\sigma}{n}$-Umgebungen beschreiben die Abweichung der relativen Häufigkeit ($\frac{X}{n}$) in einer Bernoulli-Kette von der Trefferwahrscheinlichkeit $p$.
+
+Wenn die **Laplace-Bedingung** erfüllt ist, dann fällt die relativen Häufigkeit $\frac{X}{n}$ einer Bernoulli-Kette (der Länge $n$, Erwartungswert $\mu$ und der Standardabweichung $\sigma$) mit:
+
+68% in das Intervall $[p-\frac{\sigma}{n};p+\frac{\sigma}{n}]$,
+
+95,5% in das Intervall $[p-2\frac{\sigma}{n};p+2\frac{\sigma}{n}]$,
+
+99,7% in das Intervall $[p-3\frac{\sigma}{n};p+3\frac{\sigma}{n}]$
+
+### Konfidenzintervalle für eine unbekannte Wahrscheinlichkeit p
+Wird bei einer unbekannten Wahrscheinlichkeit $p$ die relative Häufigkeit $h=\frac{X}{n}$ als Schätzwert für $p$ genutzt, so liegt $p$ mit:
+
+68% im Vertrauensintervall $[h-\frac{\sigma}{n};h_n+\frac{\sigma}{n}]$,
+
+95,5% im Vertrauensintervall $[h-2\frac{\sigma}{n};h_n+2\frac{\sigma}{n}]$,
+
+99,7% im Vertrauensintervall $[h-3\frac{\sigma}{n};h_n+3\frac{\sigma}{n}]$
+
+#### Konfidenzellipse
+Wird bei einer unbekannten Wahrscheinlichkeit $p$ die relative Häufigkeit $h=\frac{X}{n}$ als Schätzwert für $p$ genutzt, so kann das Vertrauensintervall folgender Maßen bestimmt werden:
+
+VI: $p=h\mp c\cdot\sqrt{\dfrac{p\cdot(1-p)}{n}}$
+
+Mit $c$ als Sigma-Umgebung (wird aus der Sicherheitswahrscheinlichkeit $\gamma$ ermittelt TW S39), h als relative Häufigkeit und n als Stichproben.
+
+### c aus Sicherheitswahrscheinlichkeit
+
+### Normalverteilung
+Jede binominalverteilte Zufallsgröße $X$ kann näherungsweise mit der Gauß'schen Glockenkurve $\varphi$ beschrieben werden.
+
+#### lokale Näherungsformel
+Wenn die Laplace-Bedingung erfüllt ist, kann die die Punktwahrscheinlichkeit mit folgender Vorgehensweise berechnet werden:
+
+$$\text{P}(X=k)=\text{B}(n;p;k)\approx\frac{1}{\sigma\cdot\sqrt{2\pi}}e^{-\frac{1}{2}z^2}$$
+mit $z=\frac{k-\mu}{\sigma}$
+
+#### globale Näherungsformel
+Wenn die Laplace-Bedingung erfüllt ist, kann die die kumulierte Wahrscheinlichkeit mit folgender Vorgehensweise berechnet werden:
+
+$$\Phi(z)=\frac{1}{\cdot\sqrt{2\pi}}\int\limits_{-\infty}^{z}e^{-\frac{1}{2}t^2}dt$$
+
+$$\text{P}(X\le a)=\sum_{k=0}^{a}\text{B}(n;p;k)\approx\Phi(z)$$
+mit $z=\frac{k-\mu+0,5}{\sigma}$
+
+
 ## Analytische Geometrie
 ### Vektoren
 #### Betrag eines Vektors
 Der Betrag eines Vektors ist seine Länge.
 
 Beispiel
-$$ \overrightarrow{AB} = 
+$$\overrightarrow{AB} = 
 \begin{pmatrix}
     2 \\
     4 \\
