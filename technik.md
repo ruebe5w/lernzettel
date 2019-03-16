@@ -4,14 +4,8 @@ date: 2019
 listings-disable-line-numbers: true
 page-numbers: true
 ---
-# Lernzettel Technik
-Todo:
 
-* Java
-  * Alarmanlage testen
-  * Funktionsfähigkeit beurteilen
-* Netzwerktechnik
-  * Schwachstellen
+# Lernzettel Technik
 
 ## Inhaltsverzeichnis
 - [Lernzettel Technik](#lernzettel-technik)

@@ -1,3 +1,9 @@
+---
+title: "Lernzettel Mathe"
+date: 2019
+listings-disable-line-numbers: true
+page-numbers: true
+---
 # Lernzettel Mathe
 
 - [Lernzettel Mathe](#lernzettel-mathe)
@@ -11,6 +17,7 @@
     - [Kurvendiskussion](#kurvendiskussion)
     - [Abstände](#abst%C3%A4nde)
     - [Trassierung](#trassierung)
+    - [Biegelinie](#biegelinie)
     - [e-Funktionen](#e-funktionen)
     - [Integration](#integration)
   - [Stochastik](#stochastik)
@@ -69,9 +76,9 @@ $$
 LGS:
 $$
 \begin{cases}
-    I. \thickspace 0=0+r\cdot 0 \\
-    II. \thickspace -1=-2+r\cdot2 \\
-    III. \thickspace 1=0+r\cdot2
+    I. &\thickspace 0=0+r\cdot 0 \\
+    II. &\thickspace -1=-2+r\cdot2 \\
+    III. &\thickspace 1=0+r\cdot2
 \end{cases}
 $$
 Hieraus kann man den Wert $\frac{1}{2}$ für den Parameter r ermitteln. Somit liegt der Punkt auf der Gerade $g$
@@ -132,9 +139,9 @@ Eine Trassierung ist eine Ansammlung von Funktionen, welche eine gemeinsame Lini
 
 $$ f(x)
 \begin{cases}
-     p_1(x)=-x-3 \space \text{für} \space x < -2 \\
-     p_2(x)=0,25x^2-2 \space \text{für} \space -2 \leq x < 2 \\
-     p_3(x)=0,5x-2,25 \space \text{für} \space 1 \leq x \\
+    p_1(x)=-x-3 &\text{für} \thickspace < -2 \cr
+    p_2(x)=0,25x^2-2 &\text{für} \thickspace -2 \leq x < 2 \\
+    p_3(x)=0,5x-2,25 &\text{für} \thickspace 1 \leq x
 \end{cases}
 $$
 
@@ -177,8 +184,12 @@ Möchte man eine Trasse bilden, so muss man zuerst alle Bedingungen aufstellen. 
 
 Allgemeine Gleichungen GRF3:
 
-$$p(x)=ax^3+bx^2+cx+d$$
-$$p'(x)=3ax^2+2bx+c$$
+$$
+\begin{aligned}
+    p(x)&=ax^3+bx^2+cx+d \\
+    p'(x)&=3ax^2+2bx+c
+\end{aligned}
+$$
 
 |   Punkte:    | Bedingungen: | Gleichungen:                             |
 | :----------: | ------------ | ---------------------------------------- |
@@ -197,7 +208,38 @@ der zugehörige Graph:
 
 ![Beispiel-Trassenbildung](img/trassenbildung.png){ height=250px }
 
+### Biegelinie
 ### e-Funktionen
+#### Kurvendiskussion
+$$f(x)=x\cdot e^x$$
+
+##### Nullstellen
+Ansatz: $f(x)=0$
+
+$$0=\underbrace{x}_{x_1=0}\cdot \underbrace{e^x}_{\ne0}$$
+
+##### Ableitung
+Produktregel: $f'=u'\cdot v +u\cdot v'$
+
+###### Erste Ableitung
+$$
+\begin{aligned}    
+f(x)&=\underbrace{x}_{u}\cdot\underbrace{e^x}_{v} \\\\
+f'(x)&=1\cdot e^x+x\cdot e^x \\
+&=e^x\cdot (1+x)
+\end{aligned}
+$$
+
+###### Zweite Ableitung
+$$
+\begin{aligned}
+f'(x)&=\underbrace{e^x}_{u}\cdot\underbrace{(1+x)}_{v} \\\\
+f''(x)&=e^x\cdot (1+x)+e^x\cdot 1\\
+&=e^x\cdot(1+x+1) \\
+&=e^x\cdot(2+x)
+\end{aligned}
+$$
+
 ### Integration
 Mit der Integration lässt sich der Flächeninhalt unter einer Funktion berechnen.
 
@@ -235,9 +277,14 @@ $$F(x)=0,25x^2$$
 
 einsetzen der Grenzen:
 
-$$A = \int\limits_1^{7,5}(0,5x)dx = [0,25x^2]^{7,5}_{1}$$
-
-$$A=(0,25\cdot7,5^2)-(0,25\cdot1^2)\approx13,81$$
+$$
+\begin{aligned}
+    A&=\int\limits_1^{7,5}(0,5x)dx \\
+    &= [0,25x^2]^{7,5}_{1} \\\\
+    &=(0,25\cdot7,5^2)-(0,25\cdot1^2)\\ 
+    &\approx13,81\text{FE}
+\end{aligned}
+$$
 
 die passende Grafik:
 
@@ -464,9 +511,12 @@ Der Abstand zwischen einem Punkt $X$ und einer Gerade $g$ kann mithilfe einer Hi
 #### Schnittpunkt Gerade und Ebene
 Schneidet sich eine Gerade $g$ und eine Ebene $E$, so kann der Schnittpunkt ermittelt werden, indem die Geradengleichung (in Parameterform) in die Ebendengleichung (in Koordinatenform) eingesetzt wird. Danach wird nach den Geradenparameter gelöst, welcher danach für eine Lösung für den Vektor $\vec{x}$ in die Geradengleichung eingesetzt werden muss.
 
-$$g: \vec{x} = \vec{a} + r \cdot \vec{m}$$
-
-$$E:ax+by+cz=d$$
+$$
+\begin{aligned}
+    g&: \vec{x} = \vec{a} + r \cdot \vec{m} \\\\
+    E&:ax+by+cz=d
+\end{aligned}
+$$
 
 $g$ in $E$
 
@@ -512,9 +562,12 @@ $$E:ax+by+cz=d$$
 #### Schnittgerade zweier Ebenen
 Schneiden sich zwei Ebenen $E_1$ und $E_2$, so kann die Schnittgerade $g$ ermittelt werden, indem eine der beiden Ebenengleichungen (in Koordinaten) in die andere (in Parameterform ) eingesetzt wird. Danach wird nach einen der zwei Parameter gelöst. Die Lösung enthält den anderen Parameter und wird dann in die Ebenengleichung in Parameterform eingesetzt. Diese Ebenengleichung hat jetzt nur noch ein Parameter und macht sie zu einer Geradengleichung.
 
-$$E_1: \vec{x} = \vec{a} + r \cdot \vec{b}+s\cdot\vec{c}$$
-
-$$E_2:ax+by+cz=d$$
+$$
+\begin{aligned}
+    E_1&: \vec{x} = \vec{a} + r \cdot \vec{b}+s\cdot\vec{c} \\\\
+    E_2&:ax+by+cz=d
+\end{aligned}
+$$
 
 $E_1$ in $E_2$
 
