@@ -3,52 +3,12 @@ title: "Lernzettel Technik"
 date: 2019
 listings-disable-line-numbers: true
 page-numbers: true
+toc: true
+toc-title: "Inhalt"
 ---
 
 # Lernzettel Technik
-
 ## Inhaltsverzeichnis
-- [Lernzettel Technik](#lernzettel-technik)
-  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-  - [Netzwerktechnik](#netzwerktechnik)
-    - [Begriffe](#begriffe)
-    - [Hardware](#hardware)
-    - [Uebertragungsmedien](#uebertragungsmedien)
-    - [Protokolle](#protokolle)
-    - [Subnetze](#subnetze)
-    - [VLan](#vlan)
-    - [Firewall](#firewall)
-  - [Backup](#backup)
-    - [inkrementelles Backup](#inkrementelles-backup)
-    - [differentielles Backup](#differentielles-backup)
-    - [Vollbackup](#vollbackup)
-    - [in einer Firma](#in-einer-firma)
-  - [Verschlüsselung](#verschl%C3%BCsselung)
-    - [symmetrische Verschlüsselung](#symmetrische-verschl%C3%BCsselung)
-    - [asymmetrische Verschlüsselung](#asymmetrische-verschl%C3%BCsselung)
-    - [Hybrides Verschlüsselungssystem/verfahren](#hybrides-verschl%C3%BCsselungssystemverfahren)
-  - [Raid](#raid)
-    - [Raid 0](#raid-0)
-    - [Raid 1](#raid-1)
-    - [Raid 5](#raid-5)
-  - [Steuerungstechnik](#steuerungstechnik)
-    - [Drahtbruchsicherheit](#drahtbruchsicherheit)
-    - [Regelung - Steuerung](#regelung---steuerung)
-    - [Zuordnungstabelle](#zuordnungstabelle)
-    - [R-S Tabelle](#r-s-tabelle)
-    - [Schrittkette](#schrittkette)
-  - [Java](#java)
-    - [Datentypen](#datentypen)
-    - [Klassen](#klassen)
-    - [Methoden](#methoden)
-    - [Verzweigungen](#verzweigungen)
-    - [Schleifen](#schleifen)
-    - [Netzwerk](#netzwerk)
-    - [Konfigurations-Datei](#konfigurations-datei)
-    - [Threads](#threads)
-    - [Kommunikation mit einem Server mit telnet](#kommunikation-mit-einem-server-mit-telnet)
-    - [Frequenz zu Periodendauer](#frequenz-zu-periodendauer)
-
 ## Netzwerktechnik
 ### Begriffe
 #### BasisBand

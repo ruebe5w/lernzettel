@@ -3,35 +3,10 @@ title: "Lernzettel Mathe"
 date: 2019
 listings-disable-line-numbers: true
 page-numbers: true
+toc: true
+toc-title: "Inhalt"
 ---
 # Lernzettel Mathe
-
-- [Lernzettel Mathe](#lernzettel-mathe)
-  - [Taschenrechnerbefehle](#taschenrechnerbefehle)
-  - [Lineare Gleichungssysteme - LGS](#lineare-gleichungssysteme---lgs)
-  - [Analysis](#analysis)
-    - [Ableiten](#ableiten)
-    - [Aufleiten](#aufleiten)
-    - [Produktregel](#produktregel)
-    - [Kettenregel](#kettenregel)
-    - [Kurvendiskussion](#kurvendiskussion)
-    - [Abstände](#abst%C3%A4nde)
-    - [Trassierung](#trassierung)
-    - [Biegelinie](#biegelinie)
-    - [e-Funktionen](#e-funktionen)
-    - [Integration](#integration)
-  - [Stochastik](#stochastik)
-    - [Bernoulli-Ketten](#bernoulli-ketten)
-    - [Binominalverteilung](#binominalverteilung)
-    - [Standardabweichung Sigma](#standardabweichung-sigma)
-    - [Konfidenzintervalle für eine unbekannte Wahrscheinlichkeit p](#konfidenzintervalle-f%C3%BCr-eine-unbekannte-wahrscheinlichkeit-p)
-    - [Sigma-Umgebung c aus Sicherheitswahrscheinlichkeit](#sigma-umgebung-c-aus-sicherheitswahrscheinlichkeit)
-    - [Normalverteilung](#normalverteilung)
-  - [Analytische Geometrie](#analytische-geometrie)
-    - [Vektoren](#vektoren)
-    - [Geraden](#geraden)
-    - [Ebenen](#ebenen)
-
 ## Taschenrechnerbefehle
 
 | Funktion                                                       | Befehl                                                                                                              |
@@ -210,6 +185,7 @@ der zugehörige Graph:
 
 ### Biegelinie
 ### e-Funktionen
+![e-Funktion](img/e-Funktion.png){ height=250px }
 #### Kurvendiskussion
 $$f(x)=x\cdot e^x$$
 
