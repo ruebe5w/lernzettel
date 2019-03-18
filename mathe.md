@@ -58,6 +58,8 @@ $$
 $$
 Hieraus kann man den Wert $\frac{1}{2}$ für den Parameter r ermitteln. Somit liegt der Punkt auf der Gerade $g$
 
+___
+
 ## Analysis
 ### Ableiten
 | $f(x)$  |      $x^n$       |
@@ -184,8 +186,71 @@ der zugehörige Graph:
 ![Beispiel-Trassenbildung](img/trassenbildung.png){ height=250px }
 
 ### Biegelinie
+
+Eine Biegelinie (auch Biegungslinie, Durchbiegungslinie, elastische Linie) ist eine mathematisch einfach beschreibbare Kurve $w$ für die Verformung eines geraden Balkens bei mechanischer Belastung. Sie ist eine ganzrationale Funktion 4. Gerades.
+
+|              |                                  |                                            |
+| -----------: | :------------------------------- | :----------------------------------------- |
+| Durchbiegung | [w]=$\text{m}$                   | $w(x)=\int{w'(x)dx}$                       |
+|     Steigung | [w']=$\text{- -}$                | $E\cdot I\cdot w'(x)=-\int{M(x)}dx$        |
+|       Moment | [M]=$\text{N}\cdot \text{m}$     | $E\cdot I\cdot w''(x)=-M(x)=-\int{Q(x)dx}$ |
+|    Querkraft | [Q]=$\text{N}$                   | $E\cdot I\cdot w'''(x)=-Q(x)=\int{q(x)dx}$ |
+| Streckenlast | [q]=$\dfrac{\text{N}}{\text{m}}$ | $E\cdot I\cdot w''''(x)=q(x)$              |
+
+**daraus folgt:**
+
+|              |                                                       |
+| -----------: | :---------------------------------------------------- |
+| Durchbiegung | $w(x)=-\dfrac{1}{E\cdot I}\cdot(ax^4+bx^3+cx^2+dx+e)$ |
+|     Steigung | $w'(x)=-\dfrac{1}{E\cdot I}\cdot(4ax^3+3bx^2+2cx+d)$  |
+|       Moment | $w''(x)=-\dfrac{1}{E\cdot I}\cdot(12ax^2+6bx+2c)$     |
+|    Querkraft | $w'''(x)=-\dfrac{1}{E\cdot I}\cdot(24ax+6b)$          |
+| Streckenlast | $w''''(x)=-\dfrac{1}{E\cdot I}\cdot24ax$ mit $24a=q$  |
+
+#### Flächenträgheitsmoment I
+Das Flächenträgheitsmoment $I$ in $m^4$ ist ein Querschnittskennwert. Es kann mit den folgenden Formeln für die jeweiligen Profile berechnet werden:
+
+|          |                                                                        |                                                                          |
+| -------: | ---------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+|          | ![Kreis](img/Flaechentraegheitsmoment-Kreis.png){ height=120px }       | ![Kreis](img/Flaechentraegheitsmoment-Kreis-2.png){ height=120px }       |
+|    Kreis | $I=\dfrac{\pi\cdot R^4}{4}$                                            | $I=\dfrac{\pi\cdot (R^4 - r^4)}{4}$                                      |
+|          | ![Rechteck](img/Flaechentraegheitsmoment-Rechteck.png){ height=120px } | ![Rechteck](img/Flaechentraegheitsmoment-Rechteck-2.png){ height=120px } |
+| Rechteck | $I=\dfrac{B\cdot H^3}{12}$                                             | $I=\dfrac{B\cdot H^3-b\cdot h^3}{12}$                                    |
+
+#### Elastizitätsmodul E
+Das Elastizitätsmodul $E$ in $Pa$ ist eine Materialkonstante. Für technische Biegebalken wird von einem konstanten $E$ ausgegangen, welches dem Tafelwerken entnommen wird.
+
+#### Rahmenbedingungen
+
+| Festeinspannung         | Loses Ende                      |
+| :---------------------- | :------------------------------ |
+| $w(x_{\text{fest}})=0$  | $w''(x_{\text{Loses Ende}})=0$  |
+| $w'(x_{\text{fest}})=0$ | $w'''(x_{\text{Loses Ende}})=0$ |
+
+| Fest-Loslagerung(Auflager) | Fest-Loslagerung(Auflager) |
+| :------------------------- | :------------------------- |
+| $w(x_{\text{Lager}})=0$    | $w(x_{\text{Lager}})=0$    |
+| $w''(x_{\text{Lager}})=0$  | $w''(x_{\text{Lager}})=0$  |
+
+#### Ermitteln der Biegelinie w
+
+__*Ansatz 1:*__ Streckenlast, Kenngröße $E\cdot I$ und Randbedingungen gegeben
+
+1. ermitteln der Kenngröße $E\cdot I$
+2. $w''''(x)$ mit Hilfe der Kenngröße und der Streckenlast aufstellen
+3. 4 mal integrieren
+4. Rahmenbedingungen nutzen und $w(x)$ mit LGS ermitteln
+
+__*Ansatz 2:*__ Durchbiegung, Kenngröße $E\cdot I$ und Randbedingungen gegeben
+
+1. gegebene Eigenschaften auswerten
+2. LGS aufstellen und lösen, um $w(x)$ zu ermitteln
+
+
+
 ### e-Funktionen
 ![e-Funktion](img/e-Funktion.png){ height=250px }
+
 #### Kurvendiskussion
 $$f(x)=x\cdot e^x$$
 
@@ -265,6 +330,8 @@ $$
 die passende Grafik:
 
 ![Integral-händisch](img/integral-haendisch.png){ height=250px }
+
+___
 
 ## Stochastik
 ### Bernoulli-Ketten
@@ -377,6 +444,8 @@ mit $z=\frac{k-\mu+0,5}{\sigma}$
 Eine stetige Zufallsgröße kann innerhalb eines bestimmtes Intervalls jeden beliebigen Zahlenwert annehmen. (z.B. Körpergröße, Länge einer Schraube, Gewicht)
 
 Bei einer stetig normalverteilten Zufallsgröße muss die Hilfsgröße für $\Phi(z)$ mit: $z=\frac{r-\mu}{\sigma}$ berechnet werden. Da die Punktwahrscheinlichkeit eines Werts $0$ beträgt, muss auch immer eine Intervallwahrscheinlichkeit berechnet werden ($\text{P}(X\le r), \text{P}(X> r),\text{P}(a\le X\le b)$).
+
+___
 
 ## Analytische Geometrie
 ### Vektoren
