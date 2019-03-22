@@ -20,8 +20,6 @@ toc-title: "Inhalt"
 
 Der glühelektrische Effekt (auch Richardson- oder Edison-Effekt) ist das Phänomen, dass eine glühende Metall- oder Halbleiteroberfläche Elektronen emittiert (Glühemission). Mit steigender Temperatur nimmt die kinetische Energie der Leitungselektronen im erhitzten Körper so weit zu, dass immer mehr von ihnen imstande sind, die Potenzialschwelle an der Oberfläche (Austrittsarbeit) zu überwinden.
 
-#### Vakuum Photozelle
-
 #### Wiensches Geschwindigkeitsfilter
 ##### Verwendung
 Ein Geschwindigkeitsfilter dient hauptsächlich dazu, aus dem Teilchenstrahl einer Ionenquelle nur diejenigen Teilchen den Filter passieren zu lassen, die eine bestimmte Geschwindigkeit besitzen, während alle übrigen im Filter „hängenbleiben“ – anders gesagt, kann man damit einen Teilchenstrom mit nur einer genau definierten Geschwindigkeit „präparieren“, aber auch die Geschwindigkeit unbekannter geladener Teilchen bestimmen. Das Filter wird zum Beispiel in einem [Massenspektrometer](#massenspektrometer) genutzt.
@@ -133,7 +131,7 @@ $$
 
 ##### Durchführung
 
-Bei der Röntgenröhre werden Elektronen mit kinetischer Energie genutzt, um Photonen zu erzeugen. Die Energie der Elektronen wird durch Abbremsung ganz oder teilweise (in Stufen) in Photonen umgesetzt. Hierbei entsteht die sogenannte [Bremsstrahlung](#bremsstrahlung)
+Bei der Röntgenröhre werden Elektronen mit kinetischer Energie genutzt, um Photonen zu erzeugen. Die Energie der Elektronen wird durch Abbremsung ganz oder teilweise (in Stufen) in Photonen umgesetzt. Hierbei entsteht die sogenannte [Bremsstrahlung](#bremsstrahlung).
 
 #### Bremsstrahlung
 Die Bremsstrahlung (auch Röntgenstrahlung) entsteht bei der Erzeugung in der [Röntgenröhre](#röntgenröhre).
@@ -141,7 +139,7 @@ Die Bremsstrahlung (auch Röntgenstrahlung) entsteht bei der Erzeugung in der [R
 ##### Entstehung der Bremsstrahlung
 Die Elektronen werden im elektrischen Feld beschleunigt und nehmen dabei die kinetische Energie
 $$\tag*{auf.}\text{E}_\text{kin}=\dfrac{1}{2}m\cdot v^2 = \text{e}\cdot\text{U}_\text{B}$$
-Beim Aufprall auf die Anode werden die Elektronen sehr stark abgebremst. Ihre Energie kann dabei ganz oder teilweise auf ein Photon (Röntgenquant) übertragen werden. Das entstehende Spektrum ist kontinuierlich mit einer kürzesten Wellenlänge $\lambda_0$ bzw. $\lambda_\text{min}$ (max. Photonenenergie).*
+Beim Aufprall auf die Anode werden die Elektronen sehr stark abgebremst. Ihre Energie kann dabei ganz oder teilweise auf ein Photon (Röntgenquant) übertragen werden. Das entstehende Spektrum ist kontinuierlich mit einer kürzesten Wellenlänge $\lambda_0$ bzw. $\lambda_\text{min}$ (max. Photonenenergie).
 
 $$\text{E}_\text{Ph}=h\cdot f=\dfrac{h\cdot c}{\lambda}$$
 
@@ -183,10 +181,25 @@ Treffen beide Bedingungen zu, so entsteht eine kräftige Reflexion in diese Rich
 $$2\cdot \Delta s=2\cdot a \cdot\sin\beta=\text{k}\cdot\lambda$$
 
 #### Beugung am Gitter
-
+#### Vakuum Photozelle
 ##### Aufbau
+![Vakuum Photozelle](img/Vakuum-Photozelle.png){ height=250px }
 
+Eine Anodenring und eine Kathode werden innerhalb eines Vakuumgefäßes platziert. Zusätzlich wird eine Photonenquelle benötigt, welche monoenergetisch sein sollte und genügend Anzahl von Photonen zur Verfügung stellen muss. Hierzu wird eine Hg-Dampflampe eingesetzt. Mit sehr schmalbandigen Filtern wird jeweils eine Spektrallinie des Hg-Linienspektrums ausgefiltert.
+
+##### Theorie
+Treffen Photonen auf eine Metalloberfläche, so können sie ihre Energie an Elektronen im Metall abgeben. Ist die Energie größer als die Austrittsarbeit $W_A$, so können die Elektronen die Metalloberfläche verlassen. Sie lagern sich im Anodenring an, der sich dadurch negativ auf die Spannung U auflädt und ein E-Feld zwischen Anodenring und Kathode aufbaut. Die weitere Aufladung findet solange statt, bis die kinetische Energie $E_{kin}$ der Elektronen beim Austritt aus der Oberfläche nicht mehr ausreicht, um gegen das E-Feld anzukommen. Die Elektronen haben im Anodenring gegenüber der Kathode die potentielle Energie
+$$E_{pot}=\text{e}\cdot\text{U}=E_{kin}$$
+
+Eine Energiebilanz liefert: $\text{e}\cdot\text{U}=h\cdot f-W_A$
+
+Werden $f$ und $\text{U}$ gemessen, so sind das Wirkungsquantum $h$ und die Austrittsarbeit $W_A$ des verwendeten Metalls bestimmbar.
+
+##### Diagramm
+
+![Vakuum Photozelle](img/Vakuum-Photozelle-Diagramm.png){ height=250px }
+
+#### Nahfeldinterferenz
 #### Michelson-Interferometer
 #### He-Ne-Laser
-
 ## Kernphysik
