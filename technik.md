@@ -5,6 +5,7 @@ listings-disable-line-numbers: true
 page-numbers: true
 toc: true
 toc-title: "Inhalt"
+toc-depth: 4
 ---
 
 # Lernzettel Technik
@@ -382,6 +383,20 @@ Legende:
 #### Umsetzung on LOGO
 
 ![Umsetzung in Logo](img/Schrittkette&#32;LOGO.png)
+
+### Kategorien des Stillsetzens
+
+* **Kategorie 0** - ungesteuertes Stillsetzen:
+    
+    Dies geschieht durch sofortiges Abschalten der Energie aller Antriebe.
+
+* **Kategorie 1** - gesteuertes Stillsetzen:
+
+    Zum Anhalten benötigte Energie bleibt zunächst erhalten, erst nach dem Stillstand der Anlage wird die Energie abgeschaltet.
+
+* **Kategorie 2** - gesteuertes Stillsetzen mit Energieerhalt:
+
+    Eine benötigte Stillsetzenergie wird auch nach dem Stillstand der Anlage aus Gefahrengründen nicht abgeschaltet.
 
 ## Java 
 ### Datentypen
