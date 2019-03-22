@@ -7,12 +7,10 @@ toc: true
 toc-title: "Inhalt"
 ---
 
-
-
 # Lernzettel Physik
 * Photoeffekt: [Vakuum Photozelle](#vakuum-photozelle)
 * Inverser Photoeffekt: [Röntgenstrahlung](#bremsstrahlung)
-* Bragg-Reflexion am Kristall: [Bragg-Reflexion](#messung-des-spektrums)
+* Bragg-Reflexion am Kristall: [Bragg-Reflexion](#bragg-reflexion)
 
 ## Elektrische und Magnetische Felder 
 ## Schwingungen und Wellen
@@ -23,7 +21,6 @@ toc-title: "Inhalt"
 Der glühelektrische Effekt (auch Richardson- oder Edison-Effekt) ist das Phänomen, dass eine glühende Metall- oder Halbleiteroberfläche Elektronen emittiert (Glühemission). Mit steigender Temperatur nimmt die kinetische Energie der Leitungselektronen im erhitzten Körper so weit zu, dass immer mehr von ihnen imstande sind, die Potenzialschwelle an der Oberfläche (Austrittsarbeit) zu überwinden.
 
 #### Vakuum Photozelle
-
 
 #### Wiensches Geschwindigkeitsfilter
 ##### Verwendung
@@ -144,7 +141,7 @@ Die Bremsstrahlung (auch Röntgenstrahlung) entsteht bei der Erzeugung in der [R
 ##### Entstehung der Bremsstrahlung
 Die Elektronen werden im elektrischen Feld beschleunigt und nehmen dabei die kinetische Energie
 $$\tag*{auf.}\text{E}_\text{kin}=\dfrac{1}{2}m\cdot v^2 = \text{e}\cdot\text{U}_\text{B}$$
-Beim Aufprall auf die Anode werden die Elektronen sehr stark abgebremst. Ihre Energie kann dabei ganz oder teilweise auf ein Photon (Röntgenquant) übertragen werden. Das entstehende Spektrum ist kontinuierlich mit einer kürzesten Wellenlänge $\lambda_0$ bzw. $\lambda_\text{min}$ (max. Photonenenergie).
+Beim Aufprall auf die Anode werden die Elektronen sehr stark abgebremst. Ihre Energie kann dabei ganz oder teilweise auf ein Photon (Röntgenquant) übertragen werden. Das entstehende Spektrum ist kontinuierlich mit einer kürzesten Wellenlänge $\lambda_0$ bzw. $\lambda_\text{min}$ (max. Photonenenergie).*
 
 $$\text{E}_\text{Ph}=h\cdot f=\dfrac{h\cdot c}{\lambda}$$
 
@@ -160,7 +157,30 @@ $$\dfrac{h\cdot c}{\lambda}=\text{e}\cdot\text{U}_\text{B}$$
 
 ##### Messung des Spektrums
 
-Zur Messung wird folgender Aufbau genutzt, das Spektrum mit der Bragg-Reflexion an einem Kristall zu messen:
+Zur Messung wird folgender Aufbau genutzt, um das Spektrum mit der [Bragg-Reflexion](#bragg-reflexion) zu messen. Dabei wird ein Kristall mit Röntgenstrahlung bestrahlt. Die am Kristall reflektierte Röntgenstrahlung wird mit Hilfe eines Zählrohrs gemessen:
+
+![Bragg-Reflexion an einem Kristall](img/Drehkristallmethode.jpg){ height=250px }
+
+#### Bragg-Reflexion
+In einigen Fällen beobachtet man, dass Wellen an regelmäßigen Strukturen nur unter ganz bestimmten Winkeln besonders stark reflektiert werden. Diese Winkel werden Glanzwinkel genannt, sie sind von der Wellenlänge und dem Strukturabstand abhängig. Die Bedingung wird als Bragg-Bedingung bezeichnet, die Reflexion als Bragg Reflexion. Es ist eine Interferenzerscheinung.
+
+Typisch ist, dass Reflexion nicht nur an der Oberfläche erfolgt, sondern die Welle auch tief in das Material eindringen. Dies ist z.B. bei [Röntgenstrahlung](#bremsstrahlung) der Fall. Bragg Reflexion wird typisch bei Wellenlängen beobachtet/genutzt, die in der gleichen Größenordnung oder kleiner als die Gitterkonstante ist. Als Gitter werden Kristallgitter eingesetzt. Die Atome in Kristallen haben konstante Abstände, im einfachsten Fall in allen Richtungen die gleichen. Die Atome bilden Streuzentren für die einlaufende Welle. Das bedeutet, von jedem Atom geht in alle Richtungen eine Elementarwelle aus. Genzeichnet wurden hier aber nur die Ausbreitungsrichtungen, die für konstruktive Interferenz in Reflexionsrichtung von Bedeutung sind.
+
+![Bragg-Reflexion](img/Bragg-Reflexion.png){ height=250px }
+
+Zwei Bedingungen müssen erfüllt sein:
+
+1. "Normale Reflexion":
+   
+    An jeder Gitterebene (z.B. Oberfläche des Kristalls) wird an jedem Atom die einlaufende Welle gestreut. FÜr die Richtung Einfallswinkel = Ausfallswinkel ensteht konstruktive Interferenz, da die Welle ausgehend keinen Gangunterschied zur Welle einlaufend hat.
+
+2. Bragg Reflexion:
+
+    Ein Teil der Welle dringt tiefer in den Kristall ein und wird dann an tieferliegenden Ebenen gestreut. Diese Anteile haben den Gangunterschied $2\cdot\Delta s$ gegenüber den gestreuten Anteilen aus der darüberliegenden Ebene. Konstruktive Interferenz kann nur entstehen, wenn dieser Gangunterschied ein vielfaches der Wellenlänge ist.
+
+Treffen beide Bedingungen zu, so entsteht eine kräftige Reflexion in diese Richtung, der Winkel wird daher auch Glanzwinkel genannt. Die zusammengefasste Bedingung wird als Bragg-Beziehung bezeichnet:
+
+$$2\cdot \Delta s=2\cdot a \cdot\sin\beta=\text{k}\cdot\lambda$$
 
 #### Beugung am Gitter
 
@@ -168,5 +188,5 @@ Zur Messung wird folgender Aufbau genutzt, das Spektrum mit der Bragg-Reflexion 
 
 #### Michelson-Interferometer
 #### He-Ne-Laser
-####
+
 ## Kernphysik
