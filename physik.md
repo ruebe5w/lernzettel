@@ -5,21 +5,15 @@ listings-disable-line-numbers: true
 page-numbers: true
 toc: true
 toc-title: "Inhalt"
+toc-depth: 4
 ---
 
 # Lernzettel Physik
-* Photoeffekt: [Vakuum Photozelle](#vakuum-photozelle)
-* Inverser Photoeffekt: [Röntgenstrahlung](#bremsstrahlung)
-* Bragg-Reflexion am Kristall: [Bragg-Reflexion](#bragg-reflexion)
-
 ## Elektrische und Magnetische Felder 
 ## Schwingungen und Wellen
+
 ## Quanten und Atomphysik
 ### Versuche
-#### Glühelektrischer Effekt
-
-Der glühelektrische Effekt (auch Richardson- oder Edison-Effekt) ist das Phänomen, dass eine glühende Metall- oder Halbleiteroberfläche Elektronen emittiert (Glühemission). Mit steigender Temperatur nimmt die kinetische Energie der Leitungselektronen im erhitzten Körper so weit zu, dass immer mehr von ihnen imstande sind, die Potenzialschwelle an der Oberfläche (Austrittsarbeit) zu überwinden.
-
 #### Wiensches Geschwindigkeitsfilter
 ##### Verwendung
 Ein Geschwindigkeitsfilter dient hauptsächlich dazu, aus dem Teilchenstrahl einer Ionenquelle nur diejenigen Teilchen den Filter passieren zu lassen, die eine bestimmte Geschwindigkeit besitzen, während alle übrigen im Filter „hängenbleiben“ – anders gesagt, kann man damit einen Teilchenstrom mit nur einer genau definierten Geschwindigkeit „präparieren“, aber auch die Geschwindigkeit unbekannter geladener Teilchen bestimmen. Das Filter wird zum Beispiel in einem [Massenspektrometer](#massenspektrometer) genutzt.
@@ -64,19 +58,19 @@ Da die Geschwindigkeit $v$ und die Größe der Flussdichte $B$ bekannt sind, hä
 
 * $\text{U}_\text{H}$ **Heizspannung**:
   
-  Die Heizspannung hat die Funktion, mittels Glühelektrischem Effekt freie Elektronen in der Röhre zur Verfügung zu stellen.
+    Die Heizspannung hat die Funktion, mittels Glühelektrischem Effekt freie Elektronen in der Röhre zur Verfügung zu stellen.
 
 * $\text{U}_\text{B}$ **Beschleunigungsspannung**:
 
-  Die Beschleunigungsspannung hat die Funktion, zwischen Kathode und Gitter ein elektrisches Feld zur Verfügung zu stellen, in dem Elektronen beschleunigt werden.
+    Die Beschleunigungsspannung hat die Funktion, zwischen Kathode und Gitter ein elektrisches Feld zur Verfügung zu stellen, in dem Elektronen beschleunigt werden.
 
 * $\text{U}_\text{G}$ **Gegenspannung**:
 
-  Die Gegenspannung sorgt dafür, dass zwischen Gitter und Anode ein Gegenfeld erzeugt wird. Dadurch wird erreicht, dass nur Elektronen, die eine Mindestenergie beim Durchfliegen des  Gitters haben, die Anode erreichen und vom Strommesser gemessen werden.
+    Die Gegenspannung sorgt dafür, dass zwischen Gitter und Anode ein Gegenfeld erzeugt wird. Dadurch wird erreicht, dass nur Elektronen, die eine Mindestenergie beim Durchfliegen des  Gitters haben, die Anode erreichen und vom Strommesser gemessen werden.
 
 * $\text{I}_\text{A}$ **Strommesser**:
   
-  Das Strommessgerät misst den Anodenstrom und damit die Anzahl der Elektronen je Zeiteinheit, die die Anode erreicht.
+    Das Strommessgerät misst den Anodenstrom und damit die Anzahl der Elektronen je Zeiteinheit, die die Anode erreicht.
 
 ##### Bewegung eines Elektrons in der Röhre
 
@@ -86,7 +80,7 @@ So bildet sich ein Minimum im Messschrieb, wenn sich eine Anregungszone direkt v
 
 ##### Diagramm
 
-![Franck-Hertz-Versuch Messchrieb](img/franck-hertz-versuch_messschrieb.jpeg){ height=250px }
+![Franck-Hertz-Versuch Messschrieb](img/franck-hertz-versuch_messschrieb.jpeg){ height=250px }
 
 **Hinweis:** Es werden die Maxima genutzt um die Anregungsenergie festzustellen, da diese gegenüber den Minima leichter zu Identifizieren sind. Dies ist möglich, da die Maxima und Minima ungefähr den gleichen Abstand haben.
 
@@ -133,6 +127,103 @@ $$
 
 Bei der Röntgenröhre werden Elektronen mit kinetischer Energie genutzt, um Photonen zu erzeugen. Die Energie der Elektronen wird durch Abbremsung ganz oder teilweise (in Stufen) in Photonen umgesetzt. Hierbei entsteht die sogenannte [Bremsstrahlung](#bremsstrahlung).
 
+#### #Beugung am Gitter
+#### Vakuum Photozelle
+##### Aufbau
+![Vakuum Photozelle](img/Vakuum-Photozelle.png){ height=250px }
+
+Eine Anodenring und eine Kathode werden innerhalb eines Vakuumgefäßes platziert. Zusätzlich wird eine Photonenquelle benötigt, welche monoenergetisch sein sollte und genügend Anzahl von Photonen zur Verfügung stellen muss. Hierzu wird eine Hg-Dampflampe eingesetzt. Mit sehr schmalbandigen Filtern wird jeweils eine Spektrallinie des Hg-Linienspektrums ausgefiltert.
+
+##### Theorie
+Treffen Photonen auf eine Metalloberfläche, so können sie ihre Energie an Elektronen im Metall abgeben. Ist die Energie größer als die Austrittsarbeit $W_A$, so können die Elektronen die Metalloberfläche verlassen. Sie lagern sich im Anodenring an, der sich dadurch negativ auf die Spannung U auflädt und ein E-Feld zwischen Anodenring und Kathode aufbaut. Die weitere Aufladung findet solange statt, bis die kinetische Energie $E_{kin}$ der Elektronen beim Austritt aus der Oberfläche nicht mehr ausreicht, um gegen das E-Feld anzukommen. Die Elektronen haben im Anodenring gegenüber der Kathode die potentielle Energie
+$$E_{pot}=\text{e}\cdot\text{U}=E_{kin}$$
+
+Eine Energiebilanz liefert: $\text{e}\cdot\text{U}=h\cdot f-W_A$
+
+Werden $f$ und $\text{U}$ gemessen, so sind das Wirkungsquantum $h$ und die Austrittsarbeit $W_A$ des verwendeten Metalls bestimmbar.
+
+##### Diagramm
+
+![Vakuum Photozelle](img/Vakuum-Photozelle-Diagramm.png){ height=250px }
+
+
+
+#### Fluoreszenz an Kunststoffplatte
+Beobachtungen beim Durchgang und Streuung von Photonen an einer transparenten Kunststoffplatte, die fluoreszierende Farbstoffe enthält.
+
+##### Aufbau
+![Fluoreszenz an Kunststoffplatte](img/Fluoreszenz&#32;an&#32;Kunststoffplatte.png){ height=250px }
+
+##### Diagramme
+![Fluoreszenz Spektrum](img/Fluoreszenz-Spektrum.png){ height=250px }
+
+##### Deutung
+In der Platte nimmt der Leuchtstoff kurzwellige Photonen auf und strahlt mittels [Fluoreszenz](#fluoreszenz) langwellige Photonen ab. Die Emission erfolgt in beliebige Richtungen, so dass die Photonen die Platte auch seitlich verlassen können.
+
+
+#### Michelson-Interferometer
+##### Aufbau
+![Michelson-Interferometer](img/Michelson-Interferometer.png){ height=250px }
+
+##### Ablauf
+Beim Michelson-Interferometer trifft das Licht der Lichtquelle als erstes auf den halbdurchlässigen Spiegel, an dem es sich aufteilt. Ein Teil der des Licht durchläuft den Spiegel (rot), der andere wird reflektiert (mit Einfallswinkel = Ausfallswinkel)(blau). Beide werden dann jeweils nocheinmal von einem undurchlässigen Spiegel reflektiert und treffen wieder auf den halbdurchlässigen Spiegel, wobei sie ihn wieder so durchlaufen, dass sie in Richtung des Detektors parallel verlaufen. Beide Wellen haben jetzt einen gewissen Weg zurückgelegt. Ist die Differenz beider Wege ein vielfaches der Wellenlänge, kommt es zur [konstruktiven Interferenz](#interferenz).
+
+Das Michelson-Interferometer kann somit genutzt werden, um die Wellenlänge der Lichtquelle zu bestimmen.
+
+Für die Wegdifferenz $\Delta x$ und zwei benachbarten Maxima gilt:
+
+$$\Delta x = \dfrac{\lambda}{2}$$
+
+Dieser Zusammenhang gilt, da bei Verschiebung eines einzelnen Spiegels die Welle den Wegunterschied der beiden Spiegel $\Delta x$ doppelt durchlaufen muss (Hin- und Rückweg). Somit beträgt die Wellenlängenänderung/Gangunterschied $2\cdot \Delta x$.
+
+#### He-Ne-Laser
+Laser steht für light amplification by stimulated emission of radiation.
+Ein Laser stahlt mithilfe  der [stimulierten Emission](#absorption-und-emission) ein intensives, kaum divergentes Lichtbündel aus.
+
+##### Aufbau
+![He-Ne Laser](img/He-Ne-Aufbau.png){ height=250px }
+
+##### Optimierter Aufbau
+![He-Ne Laser](img/He-Ne-Aufbau-2.png){ height=250px }
+
+Nach einer ersten spontanen Emission in einem Gasvolumen könnte sich in einem gepumpten Medium die verstärkte Laserwelle (theoretisch) in jede beliebige Richtung ausbreiten. Damit es zu einer sehr großen Verstärkung kommt und um die Richtung der Verstärkung vorzugeben, wird das Gas in einer Kapilarröhre (kleiner Durchmesser, große Länge) zwischen zwei Spiegeln betrieben.
+
+Die Welle bildet sich als stehende Welle zwischen den Spiegeln aus, die Photonen durchlaufen also das Medium mehrfach. Der Abstand der Endspiegel wird auf ein ganzahliges Vielfaches der Wellenlänge eingestellt, so dass konstruktive Interferenz innerhalb des Aufbaus besteht. Er wird daher auch als Resonator bezeichnet. 
+
+Ein Endspiegel ist teildurchlässig (wenige Prozent). Hier wird das Laserlicht zur Nutzung ausgekoppelt. (Auch) Die ausgekoppelte Leistung muss durch das Pumpen ständig nachgeliefert werden.
+
+##### Vorraussetzungen für einen Laser
+Da Atome eines Gases am meisten sich im Grundzustand befinden, würde die simple Vorhandenheit eines Gases nicht viel Erfolg in einem Laser bringen. Das liegt daran, dass sich nur ein paar Atome im angeregten Zustand befinden. Wenn diese ihre Energie durch eine spontane Emission über ein Photon abgeben, ist es sehr wahrscheinlich, dass dieses von einem anderen Atom absorbiert (Resonanzabsorption) wird. Das führt dazu das die eingebrachte Energie in beliebige Richtungen abgestrahlt wird.
+
+![Emission bei Normalbesetzung](img/He-Ne-Normalbesetzung.png){ height=250px }
+
+Um eine möglichst hohe Wahrscheinlichkeit für eine stimulierte Emission zu erreichen, muss eine Besetzungsinversion des Gases vorhanden sein (also mehr Atome in einem höheren Energiezustand). Durch die Besetzungsinversion ist es wahrscheinlicher, dass ein Photon eine stimulierte Emission auslöst, als dass es absorbiert wird. Geht nun eine Atom in den Grundzustand, kann das emittierte Photon eine stimulierte Emission in den anderen Atomen auslösen. Da Photonen einer stimulierten Emission mit gleicher Phasenlage und Raumrichtung emittiert werden, findet eine Lichtverstärkung statt.
+
+![Emission bei Besetzungsinversion](img/He-Ne-Besetzungsinversion.png){ height=250px }
+
+Da eine Besetzung normalerweise nicht vorkommt, wird sie künstlich hervorgerufen, in dem das Neongas gepumpt wird.
+
+##### Pumpen des Neongas
+Im Helium-Neon Laser wird Neon als aktives (Laser-)Medium und Helium für das Pumpen genutzt, wobei etwa 5 mal so viele Heliumatome wie Neonatome im Gasvolumen vorhanden sind.
+
+Vereinfachte Darstellung:
+
+![He-Ne Laser - Pumpen](img/He-Ne-Pumpen.png){ height=250px }
+
+Durch einen Elektronenstoß werden die Heliumatome auf das Anregungsniveau $E_{2, He}$=20,61eV. Dieses Niveau ist relativ langlebig, was das Helium daran hindert, durch die Emission eines Photons in den Grundzustand gelangen. Wenn nun eines dieser angeregten Heliumatome auf ein Neonatom trifft, kann es seine Energie bei der Atomkollision an das Neonatom abgeben. Diese Energie hebt das Neonatom ein den angeregten Zustand. Das Heliumatom (jetzt wieder im Grundzustand) wird dann recht schnell wieder durch einen Elektronenstoß angeregt.
+
+Da Neon ein metastabiles Energieniveau bei $E_{3, Ne}$ hat, eignet es sich gut für Laseranwendungen. Es bleibt relativ lange in diesem Zustand, was genug Zeit von einem Photon zu einer stimulierten Emission auf das Energieniveau $E_{2, Ne}$ gesenkt zu werden. Von da aus geht das Neonatom recht schnell in den Grundzustand und kann dann wieder bei einem Zusammenstoß mit einem Helium angeregt werden.
+
+### Themen
+#### Glühelektrischer Effekt
+Der glühelektrische Effekt (auch Richardson- oder Edison-Effekt) ist das Phänomen, dass eine glühende Metall- oder Halbleiteroberfläche Elektronen emittiert (Glühemission). Mit steigender Temperatur nimmt die kinetische Energie der Leitungselektronen im erhitzten Körper so weit zu, dass immer mehr von ihnen imstande sind, die Potenzialschwelle an der Oberfläche (Austrittsarbeit) zu überwinden.
+
+#### #Interferenz
+Interferenz beschreibt die Änderung der Amplitude bei der Überlagerung von zwei oder mehreren Wellen.
+
+Bei der destruktiven Interferenz ist die Summe der Amplituden null.
+Bei der konstruktiven Interferenz ist die Summe der Amplituden maximal.
+
 #### Bremsstrahlung
 Die Bremsstrahlung (auch Röntgenstrahlung) entsteht bei der Erzeugung in der [Röntgenröhre](#röntgenröhre).
 
@@ -170,7 +261,7 @@ Zwei Bedingungen müssen erfüllt sein:
 
 1. "Normale Reflexion":
    
-    An jeder Gitterebene (z.B. Oberfläche des Kristalls) wird an jedem Atom die einlaufende Welle gestreut. FÜr die Richtung Einfallswinkel = Ausfallswinkel ensteht konstruktive Interferenz, da die Welle ausgehend keinen Gangunterschied zur Welle einlaufend hat.
+    An jeder Gitterebene (z.B. Oberfläche des Kristalls) wird an jedem Atom die einlaufende Welle gestreut. FÜr die Richtung Einfallswinkel = Ausfallswinkel entsteht konstruktive Interferenz, da die Welle ausgehend keinen Gangunterschied zur Welle einlaufend hat.
 
 2. Bragg Reflexion:
 
@@ -180,26 +271,32 @@ Treffen beide Bedingungen zu, so entsteht eine kräftige Reflexion in diese Rich
 
 $$2\cdot \Delta s=2\cdot a \cdot\sin\beta=\text{k}\cdot\lambda$$
 
-#### Beugung am Gitter
-#### Vakuum Photozelle
-##### Aufbau
-![Vakuum Photozelle](img/Vakuum-Photozelle.png){ height=250px }
+#### Absorption und Emission
+Atome besitzen nur diskrete Energieniveaus. Ein sich selbst überlassenes Atom strebt immer den niedrigsten Energiezustand an (Grundzustand). Atome mit einem erhöhten Energie zustand wird als angeregt bezeichnet
 
-Eine Anodenring und eine Kathode werden innerhalb eines Vakuumgefäßes platziert. Zusätzlich wird eine Photonenquelle benötigt, welche monoenergetisch sein sollte und genügend Anzahl von Photonen zur Verfügung stellen muss. Hierzu wird eine Hg-Dampflampe eingesetzt. Mit sehr schmalbandigen Filtern wird jeweils eine Spektrallinie des Hg-Linienspektrums ausgefiltert.
+Die **Anregung** erfolgt z.B. durch Absorption eines Photons oder durch äußere Stöße z.B. mit Elektronen ([Franck-Hertz-Versuch](#franck-hertz-versuch), Entladungslampen, ...).
 
-##### Theorie
-Treffen Photonen auf eine Metalloberfläche, so können sie ihre Energie an Elektronen im Metall abgeben. Ist die Energie größer als die Austrittsarbeit $W_A$, so können die Elektronen die Metalloberfläche verlassen. Sie lagern sich im Anodenring an, der sich dadurch negativ auf die Spannung U auflädt und ein E-Feld zwischen Anodenring und Kathode aufbaut. Die weitere Aufladung findet solange statt, bis die kinetische Energie $E_{kin}$ der Elektronen beim Austritt aus der Oberfläche nicht mehr ausreicht, um gegen das E-Feld anzukommen. Die Elektronen haben im Anodenring gegenüber der Kathode die potentielle Energie
-$$E_{pot}=\text{e}\cdot\text{U}=E_{kin}$$
+Die **Abregung**, also der Übergang zu einem niedrigen Energieniveau wird auch als Zerfall bezeichnet. Er erfolgt unter Emission (Aussendung) eines Photons mit der passenden Energiedifferenz.
+Der energetische Zerfall erfolgt entweder (meist innerhalb kurzer Zeit, z.B. 10 s) spontan oder stimuliert. Die stimulierte Emission wird technisch z.B. beim Laser ausgenutzt.
 
-Eine Energiebilanz liefert: $\text{e}\cdot\text{U}=h\cdot f-W_A$
+Weil die **Energiezustände** der gebundenen Elektronen **diskret** sind, können auch nur diskrete Energien aufgenommen (Absorption) oder abgegeben (Emission) werden. Als Ausnahme hiervon muss aber die Grenzenergie beachtet werden. Wird mehr als die **Grenzenergie** zugeführt, so wird ein Elektron vollständig vom Atom abgetrennt (freies Elektron, geht ins Kontinuum über). Das Atom wird also **ionisiert**. Das freie Elektron kann (meistens, hier vereinfachte Darstellung) beliebige 'überschüssige Energie' als kinetische Energie haben.
 
-Werden $f$ und $\text{U}$ gemessen, so sind das Wirkungsquantum $h$ und die Austrittsarbeit $W_A$ des verwendeten Metalls bestimmbar.
+![Emission und Absorption](img/Emission&#32;und&#32;Absorption.png){ height=250px }
 
-##### Diagramm
+Bei der **spontanen Emission** wird das Photon in **zufälliger Raumrichtung** emittiert.
 
-![Vakuum Photozelle](img/Vakuum-Photozelle-Diagramm.png){ height=250px }
+Bei der **stimulierten Emission** sind beide Photonen **phasengleich** und breiten sich in die **selbe Raumrichtung** aus.
 
-#### Nahfeldinterferenz
-#### Michelson-Interferometer
-#### He-Ne-Laser
+#### Fluoreszenz
+(Grundlage: [Absorption und Emission](#absorption-und-emission))
+
+Einige Stoffe neigen dazu, von einem höheren angeregten Zustand nicht direkt in den Grundzustand zu zerfallen, sondern zunächst einen weiteren vorhandenen und erlaubten Zustand einzunehmen.
+
+![Fluoreszenz](img/Fluoreszenz.png){ height=250px }
+
+Dazu wird der Rücksprung vom angeregten Energieniveau $E_3$ in den Grundzustand $E_1$ z.B. in zwei Sprünge aufgeteilt. Es kann also grundsätzlich nur energiereiche/kurzwellige Strahlung in energieärmere/langwellige Strahlung umgesetzt werden.
+
+Technisch wird dies für Leuchtstoffe ausgenutzt, z.B. für "weiße LEDs".
+
+#### #Nahfeldinterferenz
 ## Kernphysik
