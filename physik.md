@@ -10,6 +10,189 @@ toc-depth: 4
 
 # Lernzettel Physik
 ## Elektrische und Magnetische Felder 
+### Einheiten und Größen
+|Größe|Formelzeichen|Einheiten|
+|--|--|--|
+### Elektrische Felder
+#### Coulombsches Kraftgesetz
+Das Coulombsche Kraftgesetzt beschreibt die Kraft zwischen zwei punktförmigen Ladungen $q_1$ und $q_2$.
+
+![Coulombsches Kraftgesetz](img/Coulombsches&#32;Gesetz.jpeg){ height=250px }
+
+$$F_el=\dfrac{1}{4\cdot \pi\cdot \epsilon_0}\cdot \dfrac{Q_1\cdot Q_2}{r^2}$$
+
+* $\epsilon_0$ (Epsilon Null): Elektrische Feldkonstante, abhängig vom Material zwischen den beiden Ladungen
+
+Da die Feldkonstante meist bekannt ist bleibt der erste Teil der Gleichung ($\frac{Q_1\cdot Q_2}{r^2}$) konstant ist, hängt die Kraft nun nur noch vom Abstand und natürlich von den beiden Ladungen ab.
+
+**Folgerungen:**
+
+> Sind die Vorzeichen beider Ladungen gleich, stoßen sie sich ab.
+
+> Sind die Vorzeichen unterschiedlich, ziehen sie sich an.
+
+> Je größer der Abstand, desto kleiner die Anziehungs-/ Abstoßungskraft
+
+
+#### Die Feldidee
+"Gleichnamige Ladungen stoßen sich ab" und "ungleichnamige Ladungen stoßen ziehen sich an" ist eine einfache Beobachtung, die von der Vorstellung ausgeht Kräfte unmittelbar über Entfernungen wirksam werden. Faraday ordnete dem Umfelder von Ladungen eine Eigenschaft zu, die er elektrisches Feld nannte. Das elektrische Feld trifft nun als Vermittler für die die wirkenden Kräfte auf.
+
+Zur Untersuchung von Feldern bringt man eine kleine Ladung in den Raum zwischen zwei Ladungen und ermittelt die Kraft auf diese Ladung. DIe Kräfte zeigen entlang von Linien, den sogenannten Feldlinien, welche von "+" nach "-" gehen.
+
+> Elektrisches Feld $\Rightarrow$ Kraft pro Ladung
+
+> Feldlinien von "+" nach "-"
+
+Formel für das Elektrische Feld:
+
+$$\vec{E}=\dfrac{\vec{F}}{q}\text{in}\dfrac{\text{N}}{\text{C}}$$
+
+#### Plattenkondensator
+
+![Ladung im Plattenkondensator](img/E-Feld-Plattenkondensator.png){ height=250px }
+
+Da die Spannung = Energie pro Ladung,
+
+$$U=\dfrac{W}{q}$$
+
+und die Energie/Arbeit = Kraft mal Distanz
+
+$$W=F\cdot d$$
+
+Lässt sich folgender Zusammenhang ermitteln:
+
+$$
+%U=\dfrac{E\cdot \sout{q}\cdot d}{\sout{q}}=E\cdot d
+U=\dfrac{E\cdot q\cdot d}{q}=E\cdot d
+$$
+
+Daraus resultiert die Formel für das homogene Feld im Plattenkondensator:
+
+$$E=\dfrac{U}{d}$$
+
+#### Kondensator
+### Magnetische Felder
+#### Feldlinien und Feldgrößen
+##### Pole und Richtung des Magnetfeldes
+Ungleichnamige Pole ziehen sich an, gleichnamige stoßen sich ab. Wird ein Magnet zerbrochen, so ergibt sich wieder die entsprechende Ausrichtung und auch Kräfte zwischen dem zerbrochenen Magneten bleibt qualitativ erhalten. Daraus kann unmittelbar gefolgert werden, dass es keine magnetischen Monopole gibt. Magnete sind Dipole.
+
+> Im Raum um einen Magneten besteht ein magnetisches Feld. Die **Feldlinienrichtung** wird außerhalb eines Magneten als vom **Nordpol zum Südpol** laufend festgelegt.
+
+> Es ist üblich, dass der N**o**rdpol r**o**t und der S**ü**dpol gr**ü**n (oder bla**u**) gekennzeichnet wird.
+
+> Magnetische Feldlinien haben keinen Anfang und kein Ende, sie sind in sich geschlossen.
+
+> Je dichter die Feldlinien, desto größer ist die magnetische Flussdichte an diesem Ort.
+
+##### Magnetischer Fluss
+Beschreibt die gesamte magnetische Wirkung eines Magneten auf seine Umgebung. Er ist ein Maß für die "Gesamtzahl der Feldlinien"
+
+> **Formelzeichen:** $\Phi$ (Phi)
+
+> **Einheit:** $[\Phi]=1\text{Wb}=1\text{Vs}$ (Weber, Voltsekunde)
+
+##### Magnetische Flussdichte/Feldstärke
+Die Flussdichte gibt an, wie viel Fluss pro senkrecht durechsetzter Fläche vorhanden ist. Sie ist also ein Maß dafür wie dicht die Feldlinien beieinander liegen und damit, wie stark die Wirkung des Magnetfeldes an einem Ort ist.
+
+> **Formelzeichen:** $B=\dfrac{\Phi}{\text{A}}$
+
+> **Einheit:** $[B]=1\text{T}=1\dfrac{\text{Vs}}{\text{m}^2}=1\dfrac{\text{N}}{\text{Am}}$ (Tesla)
+
+#### Magnetfeld eines stromdurchflossenen Leiters und Spule
+##### einzelner Leiter
+![Feldlinien eines Stromdurchflossenen Leiters](img/Magnetfeld&#32;Stromdurchflossener&#32;Leiter.jpeg){ height=250px }
+![Magnetfeld eines stromdurchflossenen Leiters](img/Rechte-Faust-Regel.gif){ height=250px }
+
+Die magnetische Flussdichte/Feldstärke eines stromdurchflossenen Leiters mit dem Abstand $r$ beträgt:
+
+$$B=\mu_0\cdot \dfrac{I}{2\cdot\pi\cdot r}$$
+
+mit der magnetische Feldkonstanten $\mu_0$.
+
+##### Spule
+Mehrere Leiterschleifen ergeben eine Spule mit $N$ Windungen. Das Feldbild ergibt sich aus der Überlagerung des Stromes in den Windungen. Im inneren der Spule drängen sich die Feldlinien eng beieinander, die Flussdichte ist gegenüber einem gesteckten Leiter größer. Spulen haben im Außenraum ein sehr schwaches Magnetfeld, wohingehend der Innenraum ein sehr starkes Magnetfeld besitzt, welches näherungsweise homogen ist.
+
+![Feldlinien einer Spule](img/Magnetfeld&#32;Spule.gif){ height=250px }
+
+Die Richtung des Feldes erhält man mithilfe der Rechten-Faust-Regel (wie beim einzelnen Leiter, jedoch sind die Bezeichnungen getauscht) mit dem Daumen als B-Feld Richtung und den restlichen Fingern als Stromrichtung.
+
+Die Flussdichte einer Spule kann unter der Voraussetzung, dass sie lang ist (Länge erheblich länger als Durchmesser) mit folgender Gleichung berechnet werden:
+
+$$B=\mu_0\cdot\dfrac{N\cdot I}{l}$$
+
+$\Rightarrow$ Die Flussdichte ist unabhängig vom Durchmesser!
+
+Die Flussdichte kann (bei sonnst gleichen Bedingungen) durch Einbringen eines ferromagnetisches Werkstoffes in das Feld erhöht werden. Oft verwendet wird z.B. ein Eisenkern. Zunächst liegen die Elementarmagnete im Eisen regellos durcheinander, ihre magnetische Wirkungen heben sich nach außen auf. Nach dem Einschalten des Spulenstroms richten sich die Elementarmagnete - aufgrund der magnetischen Wirkung der Spule - aus. Nun "addieren" sich ihre magnetischen Wirkungen und verstärken diejenige der Spule.
+
+##### Spulenpaar
+Das Helmholtz Spulenpaar besteht aus zwei sehr kurzen identischen Spulen. Sie sind in einem Abstand angeordnet, der genau ihrem Radius entspricht und werden vom selben Strom gelichsinnig durchflossen. Die stark homogenen Felder der beiden Einzelspulen überlagern (addieren sich vektoriell) gerade so, dass das Feld zwischen den Spulen näherungsweise homogen und konstant ist.
+
+![Spulenpaar](img/Magnetfeld&#32;Spulenpaar.png){ height=250px }
+
+#### Kraft auf einen stromdurchflossenen Leiter
+Befindet sich ein stromdurchflossener Leiter in einem Magnetfeld (Beispiel Stromwaage), so ist die Kraft proportional zur Länge $l$ des Leiters als auch der Strom $I$. Damit kann die magnetische Flussdichte/Feldstärke $B$ mit 
+$$\tag*{definiert werden.}B=\dfrac{F}{l\cdot I}$$
+
+Diese gilt aber nur wenn alle drei Größen vektoriell senkrecht aufeinander stehen.
+
+![Stromdurchflossener Leiter im Magnetfeld](img/Magnetfeld&#32;Stromdurchflossener&#32;Leiter&#32;im&#32;Magnetfeld.gif){ height=250px }
+
+Möchte man die Kraft berechnen, die auf diesen Leiter wirkt, so ergibt sich:
+
+$$F=l\cdot I\cdot B\cdot\sin(\alpha)$$
+
+mit $\alpha$ als Winkel zwischen $I$ und $B$.
+
+#### Lorentzkraft
+Wenn man sich die [Kraft die auf einen stromdurchflossenen Leiter](#kraft-auf-einen-stromdurchflossenen-leiter) wirkt genauer anguckt, stellt man fest, dass die Kraft nicht auf den Leiter in dem Sinne wirkt, sondern eher auf die Ladungsträger innerhalb des Leiters. Die auf den Leiter wirkende Kraft ist die Summe der Kräfte die jeweils auf die bewegten Ladungsträger im Magnetfeld wirken. Die Kraft die auf bewegte Ladungsträger im Magnetfeld wirkt, nennt man Lorentzkraft.
+
+![Elektronenverteilung im Leiterquerschnitt](img/Magnetfeld&#32;Lorentzkraft&#32;Elektronenverteilung&#32;Leiterquerschnitt.png){ height=250px }
+
+Der Strom $I$ besteht aus $N$ Elektronen mit der Elementarladung $e$, die mit der Driftgeschwindigkeit $v$ durch den Leiterquerschnitt strömen. Die [Gesamtkraft](#kraft-auf-einen-stromdurchflossenen-leiter) setzt sich aus den $N$ Einzelkräften $F_L$ auf jedes der $N$ Elektronen, das zum Stromfluss beiträgt.
+
+$$F_L=q\cdot v\cdot B$$
+
+#### Hall-Effekt
+![Hall Effekt](img/Magnetfeld&#32;Hall-Effekt.png){ height=250px }
+
+Wenn in einem Leiter der Strom $I$ fließt, so bewegen sich die Ladungsträger (hier Elektronen) in ihm. Wenn dieser auch zusätzlich von einem $B$-Feld durchsetzt werden, dann werden sie (in der Grafik) in Betrachterrichtung durch die [Lorentzkraft](#lorentzkraft) abgelenkt. Die Elektronen sammeln sich an dieser Seite. So entsteht auf der betrachternahen Seite ein Elektronenüberschuss und gegenüber eine Elektronenmangel.
+
+Daraus folgend baut sich ein elektrisches Feld über die Seite b auf. Das bedeutet, dass nun zusätzlich eine elektrische Feldkraft $F_{el}$ in entgegengesetzter Betrachterrichtung wirkt. Die Ladungstrennung endet (nach einer sehr kurzer Zeit), wenn sich die Feldkräfte Lorentzkraft $F_L$ und Coulombkraft $F_{el}$ das Gleichgewicht halten. Die Ladungsträger fließen also tatsächlich (wieder) in Längsrichtung des Leiters.
+
+Die sogenannte Hallspannung lässt sich dann zwischen den beiden Seiten mit den getrennten Ladungsträgern messen.
+
+Sie lässt sich vereinfacht aus dem Kräftegleichgewicht herleiten (laut KC):
+
+$$
+\begin{aligned}
+    F_{el}&=F_L\\
+    E\cdot e&=e\cdot v\cdot B\\
+    U_H&=E\cdot e=e\cdot v\cdot B
+\end{aligned}
+$$
+
+Die komplette Gleichung für die Hallspannung lautet (Mit der Hallkonstanten $R_H$, eine Materialkonstante):
+
+$$U_H=R_H\cdot \dfrac{I\cdot B}{d}$$
+
+Da die Hallspannung proportional zu $B$ ist, ist sie sehr gut geeignet um die Flussdichte $B$ zu messen. Eine Vergrößerung des Querstroms $I$ ist auch sinnvoll, da die Hallspannung auch proportional zur Driftgeschwindigkeit $v$ ist. Wichtig ist noch, dass für die tatsächliche technische Ausführung meist keine metallische Leiter, sondern Halbleiter genutzt werden, da diese weniger freie Ladungsträger haben, welche bei gleichem Strom eine deutlich höhere Driftgeschwindigkeit besitzen.
+
+#### Induktion
+#### Drei-Finger-Regel
+![Drei-Finger-Regel](img/Magnetfeld&#32;Drei-Finger-Regel.png){ height=250px }
+
+* **Daumen** - Ursache:
+
+    Zeigt in die technische Stromrichtung (von + nach -)
+
+* **Zeigefinger** - Vermittlung:
+  
+    Zeigt in die Magnetfeldrichtung (von N nach S)
+
+* **Mittelfinger** - Wirkung:
+
+    Gibt die Kraftrichtung an
+
 ## Schwingungen und Wellen
 
 ## Quanten und Atomphysik
@@ -127,7 +310,34 @@ $$
 
 Bei der Röntgenröhre werden Elektronen mit kinetischer Energie genutzt, um Photonen zu erzeugen. Die Energie der Elektronen wird durch Abbremsung ganz oder teilweise (in Stufen) in Photonen umgesetzt. Hierbei entsteht die sogenannte [Bremsstrahlung](#bremsstrahlung).
 
-#### #Beugung am Gitter
+#### Beugung und Interferenz am Gitter
+Mit dem folgenden Versuch können Wellenlängen von unbekannten Lichtquellen bestimmt werden.
+
+##### Aufbau
+Um Interferenzmuster auf einem Schirm zu erzeugen wird eine kaum divergente Lichtquelle (meistens ein Laser) und ein ein Doppelspalt oder Gitter benötigt.
+
+![Aufbau](img/Doppelspalt-Aufbau.jpg){ height=250px }
+
+![Doppelspalt im Detail](img/Doppelspalt-im&#32;Detail.png){ height=250px }
+
+![Doppelspalt Übersicht](img/Doppelspalt-Uebersicht.png){ height=250px }
+
+Wenn der Abstand zwischen Spalt und Schirm deutlich größer als der Spaltabstand ist (~ einige Meter bis <1mm), dann kann man die Ausbreitungsrichtungen als näherungsweise parallel annehmen und die folgenden Zusammenhänge aufstellen:
+
+$$\sin(\alpha)=\dfrac{\Delta s}{g}$$
+
+Für Maxima:
+$$\sin(\alpha)=\dfrac{n\cdot \lambda}{g}$$
+
+Für Minima:
+$$\sin(\alpha)=\dfrac{(2n-1) \cdot \dfrac{\lambda}{2}}{g}$$
+
+##### Entstehung der Maxima
+![Interferenzmuster am Schirm](img/Doppelspalt-Interferenzmuster.jpg){ height=250px }
+
+Trifft kohärentes Licht z.B. aus einem Laser auf ein Gitter, so entsteht im Wellenmodell des Lichts an jeder Öffnung eine Elementarwelle, die untereinander alle gleichphasig sind. Bis zum entfernt aufgestellten Schirm müssen sie, abhängig vom Winkel zum betrachteten Ort auf dem Schirm, unterschiedlich lange Wegstrecken zurücklegen, so dass ein Gangunterschied zwischen den Elementarwellen auftritt. Alle Elementarwellen interferrieren am Ort des Schirms. Ist der Gangunterschied ein ganzzahlig Vielfaches der Wellenlänge, interferrieren sie konstruktiv und es kann eine große Lichtintensität beobachtet werden, die als Maximum bezeichnet wird. Interferrieren sie destruktiv kann ein Minimum, also die "Abwesenheit" von Licht beobachtet werden.
+
+
 #### Vakuum Photozelle
 ##### Aufbau
 ![Vakuum Photozelle](img/Vakuum-Photozelle.png){ height=250px }
@@ -188,7 +398,7 @@ Ein Laser stahlt mithilfe  der [stimulierten Emission](#absorption-und-emission)
 
 Nach einer ersten spontanen Emission in einem Gasvolumen könnte sich in einem gepumpten Medium die verstärkte Laserwelle (theoretisch) in jede beliebige Richtung ausbreiten. Damit es zu einer sehr großen Verstärkung kommt und um die Richtung der Verstärkung vorzugeben, wird das Gas in einer Kapilarröhre (kleiner Durchmesser, große Länge) zwischen zwei Spiegeln betrieben.
 
-Die Welle bildet sich als stehende Welle zwischen den Spiegeln aus, die Photonen durchlaufen also das Medium mehrfach. Der Abstand der Endspiegel wird auf ein ganzahliges Vielfaches der Wellenlänge eingestellt, so dass konstruktive Interferenz innerhalb des Aufbaus besteht. Er wird daher auch als Resonator bezeichnet. 
+Die Welle bildet sich als stehende Welle zwischen den Spiegeln aus, die Photonen durchlaufen also das Medium mehrfach. Der Abstand der Endspiegel wird auf ein ganzzahliges Vielfaches der Wellenlänge eingestellt, so dass konstruktive Interferenz innerhalb des Aufbaus besteht. Er wird daher auch als Resonator bezeichnet. 
 
 Ein Endspiegel ist teildurchlässig (wenige Prozent). Hier wird das Laserlicht zur Nutzung ausgekoppelt. (Auch) Die ausgekoppelte Leistung muss durch das Pumpen ständig nachgeliefert werden.
 
@@ -300,3 +510,85 @@ Technisch wird dies für Leuchtstoffe ausgenutzt, z.B. für "weiße LEDs".
 
 #### #Nahfeldinterferenz
 ## Kernphysik
+Atome haben einen Durchmesser von ca. $10^{-10}$m (ungefähr konstant). Aus Streuversuchen (Rutherford) ist bekannt, dass der Kern nur einen Durchmesser von ca. $10^{-14}$m hat (nicht konstant). Der Kern (Nukleus) besteht aus den Kernbaussteinen (Nukleonen) Protonen und Neutronen. **Grobe** Massenangaben
+$$
+\begin{aligned}
+    m_P&=1\text{u}\\
+    m_N&=1\text{u}\\
+    m_e&=0\text{u}\\
+    \text{u-atomare Masseneinheit, }1\text{u}&=1,661\cdot10^{-27}\text{kg}
+\end{aligned}
+$$
+Nukleonen sind auch Quanten. Sind sie im Kern gebunden, so haben sie eine Bindungsenergie. Diese kann näherungsweise mit dem Modell des [linearen Potentialtopfs](#linearer-Potenzialtopf) bestimmt werden.
+
+$$
+\begin{aligned}
+    E&=-\dfrac{n^2}{8m\cdot l^2}n^2\\\\
+    E&=-\dfrac{(6,6261\cdot 10^{-34}\text{J}\cdot \text{s})}{8\cdot 1,661\cdot 10^{-27}\text{kg}\cdot (10^{-15}\text{m})^2}\\
+    E&\approx 2\text{MeV}
+\end{aligned}
+$$
+
+### linearer Potenzialtopf
+### Zerfälle
+#### Alpha-Zerfall
+Ein instabiler Kern wandelt sich ein einen anderen Kern um, indem er ein $\alpha$-Teilchen emittiert.
+
+$$^A_Z\text{X}\Rightarrow^{A-4}_{Z-2}\text{Y}+^4_2\text{He}$$
+
+![Alpha Zerfall](img/Alpha-Zerfall.png){ height=250px }
+
+##### Energie
+Alpha-Strahlung besteht aus Heliumkernen. Diese haben eine für das instabile Nuklid typische feste Energie im Bereich von MeV.
+
+##### Reichweite
+Alpha-Strahlung hat in Luft eine Reichweite von wenigen cm und wird z.B. von einem Blatt Papier absorbiert.
+
+##### Zerfallsreihe
+![Alpha Zerfall - Zerfallsreihe](img/Alpha&#32;Zerfallsreihe.png){ height=250px }
+
+#### Beta-Zerfall
+Es gibt mehrere $\beta$-Zerfälle, hier wird nur der $\beta^-$ Zerfall beschrieben.
+
+Beim $\beta^-$ Zerfall wird ein Neutron des Kerns in ein Proton umgewandelt. Dabei wird unter anderem ein Elektron emittiert.
+
+Damit einige Erhaltungssätze gültig bleiben, muss dabei auch ein weiteres leichtes elektrisch neutrales Teilchen, im falle des $\beta^-$ Zerfalls ein Elektron-Antineutrino, emittiert werden.
+
+
+$$^A_Z\text{X}\Rightarrow^A_{Z+1}\text{Y}+^0_{-1}\text{e}+ \overline{v}_e$$
+
+![Beta Zerfall](img/Beta-Zerfall.png){ height=250px }
+
+##### Energie
+Das Spektrum von $\beta^-$ Teilchen ist kontinuierlich, es treten also alle Energien bis zu einer Maximalenergie für diesen Zerfall auf. Diese betragen typisch bis zu einigen MeV.
+
+##### Reichweite
+Betastrahlung hat in Luft eine Reichweite (energieabhängig) von bis zu mehreren Metern. Eine wenige mm dicke Aluminiumschicht absorbiert Betastrahlung vollständig.
+
+##### Zerfallsreihe
+![Beta Zerfall - Zerfallsreihe](img/Beta&#32;Zerfallsreihe.png){ height=250px }
+
+#### Gamma-Zerfall
+Häufig befindet sich ein Kern nach einem vorangegangenem $\alpha$ oder $\beta$-Zerfall noch in einem energetisch angeregtem Zustand die "überschüssige" Energie wird dann als ein (oder mehrere) $\gamma$-Quanten (Photonen) abgegeben. Die Nukleonen bleiben unverändert, dass Nuklid gibt lediglich Energie ab.
+
+$$^A_Z\text{X}^*\Rightarrow^A_Z\text{Y}+\gamma$$
+
+![Gamma Zerfall](img/Gamma-Zerfall.png){ height=250px }
+
+##### Energie
+Die häufigst auftretende Energie wird genannt. Oft sind verschiedene und mehrere Übergänge möglich. DIe Energien bilden dann ein scharfes charakteristisches Linienspektrum.
+
+##### Reichweite
+Gammastrahlung durchdringt Papier und auch größere Aluminiumschichten fast ungehindert und kann nur durch besondere Abschirmungen (z.B. Blei) geschwächt werden.
+
+#### Zerfallsgesetz
+Zerfallsgesetz für die Anzahl der Kerne $N(t)$:
+
+$$N(t)=N_0\cdot e^{-\lambda\cdot t}$$
+mithilfe der Halbwertszeit:
+$$N(t)=N_0\cdot\Big(\dfrac{1}{2}\Big)^{\frac{1}{T_1/2}}$$
+
+Zerfallsgesetz für die Zerfälle je Zeiteinheit Aktivität $A(t)$:
+$$A(t)=A_0\cdot e^{-\lambda\cdot t}$$
+mithilfe der Halbwertszeit:
+$$A(t)=A_0\cdot\Big(\dfrac{1}{2}\Big)^{\frac{1}{T_1/2}}$$
