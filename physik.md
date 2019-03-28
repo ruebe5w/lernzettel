@@ -178,6 +178,68 @@ $$U_H=R_H\cdot \dfrac{I\cdot B}{d}$$
 Da die Hallspannung proportional zu $B$ ist, ist sie sehr gut geeignet um die Flussdichte $B$ zu messen. Eine Vergrößerung des Querstroms $I$ ist auch sinnvoll, da die Hallspannung auch proportional zur Driftgeschwindigkeit $v$ ist. Wichtig ist noch, dass für die tatsächliche technische Ausführung meist keine metallische Leiter, sondern Halbleiter genutzt werden, da diese weniger freie Ladungsträger haben, welche bei gleichem Strom eine deutlich höhere Driftgeschwindigkeit besitzen.
 
 #### Induktion
+Eine Induktionsspannung wird in einem Leiter, einer Leiterschleife oder einer Spule durch Änderung der Magnetflussdichte $B$ oder Änderung der Fläche $A$ (die vom Magnetfeld sekrecht durchsetzt wird). Allgmein lässt sich eine Induktionsspannung durch Änderung des magnetischen Flusses $\Phi$ hervorrufen, da $\Phi=B\cdot A$.
+
+##### Induktion in einem Bewegten Leiter
+Wird ein Leiter senkrecht zu den Feldlinien eines homogenen Magnetfeldes bewegt, erfahren die im Leiter mitbewegten Ladungen eine Lorentzkraft. Als Folge davon werden die beweglichen Elektronen innerhalb des Leiters bewegt, es kommt längs des Leiters zu einer Verschiebung der Ladungsschwerpunkte (Ladungsüberschuss, Ladungsmangel).
+
+Die Ladungsverschiebung bewirkt das Auftreten einer elektrischen Kraft (z.B. auf ein Elektron in der Leitermitte), die umso stärker ist, je mehr Ladungen getrennt wurden.
+
+Im stationären Fall, d.h. bei Bewegung des Leiters mit konstanter Geschwindigkeit, halten sich die Lorentzkraft und die elektrische Kraft auf ein Elektron die Waage. Es gilt
+
+$$
+\begin{aligned}
+    F_{el}&=F_L\\
+    e\cdot E &= e\cdot v\cdot B
+\end{aligned}
+$$
+
+Verknüpft mit dem als homogen angenommenen elektrischen Feld E, welches längs des Leiters der Länge $l$ wirkt, ist eine Spannung, die Induktionsspannung $U_i$:
+
+$$E=\dfrac{U_i}{l}$$
+
+Setzt man (2) in (1) ein, so erhält man:
+
+$$U_i=B\cdot l\cdot v$$
+
+bzw. Aufgrund des Gesetz von LENZ
+
+##### Induktion durch Änderung der Fläche
+![Induktion durch Flächenänderung](img/Induktionsspannung&#32;-&#32;Flaechenaenderung.png){ height=250px }
+
+Die Geschwindigkeit, mit der der Leiter aus dem Magnetfeld herausbewegt wird, kann auch als Änderung der Fläche aufgefasst werden, die vom Magnetfeld senkrecht durchsetzt wird.
+
+Flächenänderung:
+$$
+\begin{aligned}
+    \Delta A&=l\cdot \Delta s\\\\
+    \dfrac{\Delta A}{\Delta t}&=l\cdot\dfrac{\Delta s}{\Delta t}=l\cdot v
+\end{aligned}
+$$
+Wenn also $U_i=B\cdot l\cdot v$, dann:
+
+$$U_i=B\cdot\dfrac{\Delta A}{\Delta t}$$
+
+##### Induktion durch Änderung der Flussdichte
+Die Änderung der Flussdichte kann z.B. durch Bewegung eines Permanentmagnets in einer Spule oder einer zweiten Spule bzw. Elektromagneten.
+
+![Induktion durch Flächenänderung](img/Induktionsspannung&#32;Flussdichtenaenderung.png){ height=250px } 
+
+Ein zeitlich veränderlicher Strom erzeugt in der Feldspule eine zeitlich veränderliche  Flussdichte B(t). An der innenliegenden Induktionsspule wird eine Induktionsspannung U(t) gemessen. Die Induktionsspannung ist proportional zur Änderungsrate der Flussdichte:
+
+$$U_i=N\cdot A\cdot \dfrac{\Delta B}{\Delta t}$$
+
+##### Allgemeines Induktionsgesetz
+Beide Zusammanhänge lassen sich mit dem allgemeinen Induktionsgesetz zusammenfassen, da $\Phi=B\cdot A$.
+
+Somit werden $U_i=B\cdot\dfrac{\Delta A}{\Delta t}=\dfrac{B\cdot \Delta A}{\Delta t}=\dfrac{\Delta\Phi}{\Delta t}$ und ebenso $U_i=N\cdot A\cdot \dfrac{\Delta B}{\Delta t}=N\cdot\dfrac{A\cdot\Delta B}{\Delta t}=N\cdot\dfrac{\Delta\Phi}{\Delta t}$
+
+Lässt man allgemein also $N$ Windungen zu und führt für $\Delta t \rightarrow 0$ Differentiale ein, folgt eine einfache Darstellung des allgemeinen Induktionsgesetzes:
+
+$$U_i=-N\cdot \dfrac{d\Phi}{dt}=-N\dot{\Phi}$$
+
+Das Minuszeichen wird aufgrund der Lenz'schen Regel eingeführt. 
+
 #### Drei-Finger-Regel
 ![Drei-Finger-Regel](img/Magnetfeld&#32;Drei-Finger-Regel.png){ height=250px }
 
