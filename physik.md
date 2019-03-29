@@ -10,9 +10,6 @@ toc-depth: 4
 
 # Lernzettel Physik
 ## Elektrische und Magnetische Felder 
-### Einheiten und Größen
-|Größe|Formelzeichen|Einheiten|
-|--|--|--|
 ### Elektrische Felder
 #### Coulombsches Kraftgesetz
 Das Coulombsche Kraftgesetzt beschreibt die Kraft zwischen zwei punktförmigen Ladungen $q_1$ und $q_2$.
@@ -71,6 +68,64 @@ Daraus resultiert die Formel für das homogene Feld im Plattenkondensator:
 $$E=\dfrac{U}{d}$$
 
 #### Kondensator
+Die Spannung zwischen den beiden Platten an einem Kondensator ist proportional zur Ladung auf den Platten. Das Verhältnis von Ladung $Q$ zur Spannung $U$ ist die Kapazität $C$ des Kondensators.
+
+Definition:
+
+$$C=\dfrac{Q}{U}\\$$
+
+Einheiten:
+
+$$[C]=\dfrac{[Q]}{[U]}=\dfrac{1\text{As}}{1\text{V}}=1\text{F}$$
+
+##### Kapazität
+
+$$C=\epsilon_r\epsilon_0\dfrac{A}{d}$$
+
+* $\epsilon_r$: relative Permittivität (Dielektrizitätszahl), Material zwischen den Platten
+* $\epsilon_0$: elektrische Feldkonstante
+* $A$: Plattenfläche
+* $d$: Plattenabstand
+
+Schlussfolgerungen:
+> Je höher die Spannung zwischen den Platten, ...
+
+> Je größer die Fläche der Platten, ...
+
+> Je kleiner der Plattenabstand, ...
+
+> Je höher die relative Permittivität, ...
+
+..., desto größer die Kapazität.
+
+##### Arbeit und Energie am Kondensator
+Um einen Kondensator zu laden, muss man an ihm arbeiten. (Man muss gegen die Feldkräfte weiter Ladungen trennen und auf seine Platten aufbringen.) Ist er geladen, so kann er Arbeit verrichten. Er hat also Energie gespeichert und kann damit z.B. eine Lampe zum Leuchten bringen, bis er wieder entladen ist.
+
+Um die gespeicherte Energie zu berechnen, wird auf die Definition der Spannung zurück gegriffen.
+
+Definition Spannung: $U=\dfrac{W}{Q}\bigg(=\dfrac{\Delta W}{\Delta Q}\bigg)$ für konstantes elektrisches Feld!!
+
+Weil die Spannung $U$ von der gespeicherten Ladung $Q$ abhängig ist und diese sich ändert. Aber wenn man jeweils nur "ein kleines bisschen Ladung transportiert" kann man so tun als wenn die Spannung sich dabei nicht ändert.
+
+![Kondensator Laden](img/E-Feld&#32;Kondensator.png){ height=250px }
+
+Arbeit um ein geladenen Kondensator ein bisschen weiter zu laden: $\Delta W=U\cdot\Delta Q$
+
+Die Fläche unter dem $Q$-$U$-Graphen ergibt die Arbeit, die insgesamt aufgebracht werden muss, auf die Endspannung $U_0$ aufzuladen. Die Integration aller $\Delta W$ ergibt eine Dreiecksfläche die sich einfach berechnen lässt.
+
+Arbeit zum Laden = gespeicherte Energie: 
+$$W=\dfrac{1}{2}\cdot Q_0\cdot U_0=\dfrac{1}{2}C\cdot U^2_0$$
+
+##### Feldenergie, Energiedichte des elektrischen Feldes
+Man sagt zwar umgangssprachlich "der Kondensator speichert Energie". Fachlich korrekt wäre: "der Kondensator speichert Ladung auf seinen Platten" und "Kondensatoren sind Bauteile, die elektrische Felder in sich binden/einfangen". Die Energie steckt im elektrischen Feld innerhalb des Kondensators! Dies wird klar, wenn man sich erneut veranschaulicht, wie der Kondensator geladen wird. Dabei werden Ladungen gegen die Feldkräfte im elektrischen Feld um eine Wegestecke verschoben (der einen Platteentnommen und zur anderen Platte geführt). Es wird also am Feld gearbeitet und somit wird Energie dem Feld hinzugeführt!
+
+Einfaches Umformen mit der "Kondensatorformel" liefert:
+
+$$W=\frac{1}{2}\cdot\epsilon_0\cdot\dfrac{A}{d}\cdot(E\cdot d)^2=\dfrac{1}{2}\epsilon_0\cdot E^2\cdot V$$
+
+##### Laden eines Kondensators
+
+
 ### Magnetische Felder
 #### Feldlinien und Feldgrößen
 ##### Pole und Richtung des Magnetfeldes
@@ -92,7 +147,7 @@ Beschreibt die gesamte magnetische Wirkung eines Magneten auf seine Umgebung. Er
 > **Einheit:** $[\Phi]=1\text{Wb}=1\text{Vs}$ (Weber, Voltsekunde)
 
 ##### Magnetische Flussdichte/Feldstärke
-Die Flussdichte gibt an, wie viel Fluss pro senkrecht durechsetzter Fläche vorhanden ist. Sie ist also ein Maß dafür wie dicht die Feldlinien beieinander liegen und damit, wie stark die Wirkung des Magnetfeldes an einem Ort ist.
+Die Flussdichte gibt an, wie viel Fluss pro senkrecht durchsetzter Fläche vorhanden ist. Sie ist also ein Maß dafür wie dicht die Feldlinien beieinander liegen und damit, wie stark die Wirkung des Magnetfeldes an einem Ort ist.
 
 > **Formelzeichen:** $B=\dfrac{\Phi}{\text{A}}$
 
@@ -202,8 +257,6 @@ Setzt man (2) in (1) ein, so erhält man:
 
 $$U_i=B\cdot l\cdot v$$
 
-bzw. Aufgrund des Gesetz von LENZ
-
 ##### Induktion durch Änderung der Fläche
 ![Induktion durch Flächenänderung](img/Induktionsspannung&#32;-&#32;Flaechenaenderung.png){ height=250px }
 
@@ -238,7 +291,29 @@ Lässt man allgemein also $N$ Windungen zu und führt für $\Delta t \rightarrow
 
 $$U_i=-N\cdot \dfrac{d\Phi}{dt}=-N\dot{\Phi}$$
 
-Das Minuszeichen wird aufgrund der Lenz'schen Regel eingeführt. 
+Das Minuszeichen wird aufgrund der [Lenz'schen Regel](#lenz'sche-regel) eingeführt. 
+
+#### Lenz'sche Regel
+##### Erläuterung am Beispiel
+Wird ein Magnet in die Nähe einer kurzgeschlossenen, frei aufgehängten Spule gebracht, so bewegt sie sich.
+
+![Aufbau](img/Lenz-Spule-Magnet-Aufbau.gif){ height=250px }
+
+Durch die Bewegung des Magneten ändert sich die Stärke des Magnetfelds, indem die Spule liegt. Somit wird eine Induktionsspannung hervorgerufen. Da die Spule kurzgeschlossen ist, fließt ein Strom, der Induktionsstrom. Dieser erzeugt selbst ein Magnetfeld, welches dem Magnetfeld des Magneten in Wechselwirkung tritt.
+
+![Vergrößerung B](img/Lenz-Spule-Magnet-01.jpg){ height=250px }
+
+Wenn der Magnet auf die Spule zubewegt wird, weicht sie nach links aus. Der Induktionsstrom fließt so, dass am rechten Ende der Spule ein Nordpol entsteht. Somit stoßen sich Magnet und Spule ab.
+
+![Verkleinerung B](img/Lenz-Spule-Magnet-02.jpg){ height=250px }
+
+Wenn der Magnet von der Spule wegbewegt wird, folgt sie der Bewegung des Magneten nach rechts. Der Induktionsstrom fließt so, dass am rechten Ende der Spule ein Südpol entsteht. Somit ziehen sich Magnet und Spule ab.
+
+Diese Bewegung sind auch nach Umdrehen des Magneten zu beobachten!
+
+Allgemein beschreibt Lenz:
+
+> Der Induktionsstrom ist stets so gerichtet, dass er die Ursache seiner Entstehung zu hemmen sucht.
 
 #### Drei-Finger-Regel
 ![Drei-Finger-Regel](img/Magnetfeld&#32;Drei-Finger-Regel.png){ height=250px }
@@ -254,6 +329,9 @@ Das Minuszeichen wird aufgrund der Lenz'schen Regel eingeführt.
 * **Mittelfinger** - Wirkung:
 
     Gibt die Kraftrichtung an
+
+rechte Hand: technische Stromrichtung
+linke Hand: Bewegung von Elektronen
 
 ## Schwingungen und Wellen
 
@@ -490,11 +568,22 @@ Da Neon ein metastabiles Energieniveau bei $E_{3, Ne}$ hat, eignet es sich gut f
 #### Glühelektrischer Effekt
 Der glühelektrische Effekt (auch Richardson- oder Edison-Effekt) ist das Phänomen, dass eine glühende Metall- oder Halbleiteroberfläche Elektronen emittiert (Glühemission). Mit steigender Temperatur nimmt die kinetische Energie der Leitungselektronen im erhitzten Körper so weit zu, dass immer mehr von ihnen imstande sind, die Potenzialschwelle an der Oberfläche (Austrittsarbeit) zu überwinden.
 
-#### #Interferenz
-Interferenz beschreibt die Änderung der Amplitude bei der Überlagerung von zwei oder mehreren Wellen.
+#### Interferenz und Beugung
+##### Beugung
+Als Beugung bezeichnet man die Ablenkung einer Welle an einem Hindernis. Beugung tritt dabei sowohl bei mechanischen Wellen, wie z.B. Wasserwellen, auf als auch bei elektromagnetischen Wellen wie Licht.
 
-Bei der destruktiven Interferenz ist die Summe der Amplituden null.
-Bei der konstruktiven Interferenz ist die Summe der Amplituden maximal.
+![Beugung am Spalt](img/Beugung-Elementarwelle.jpeg){ height=250px }
+
+Die Wellen werden am Spalt gebeugt, also abgelenkt und breiten sich hinter dem Spalt kugelförmig in sogenannten Elementarwellen aus.
+
+##### Interferenz
+Die Überlagerung von Wellen wird als Interferenz bezeichnet. Dabei sind zwei Fälle von besonderer Bedeutung: konstruktive Interferenz und destruktive Interferenz. Bei konstruktiver Interferenz verstärken sich die einzelnen Wellen, bei destruktiver Interferenz löschen sich die Wellen gegenseitig aus.
+
+Damit konstruktive oder destruktive Interferenz zwischen den Wellen auftritt, müssen die Wellen einen bestimmten Gangunterschied (Wegdifferenz) $\Delta s$ besitzen.
+
+Für konstruktive Interferenz, muss der Gangunterschied ein vielfaches der Wellenlänge $\lambda$ sein. ($\Delta s=n\cdot\lambda$)
+
+Für destruktive Interferenz, muss der Gangunterschied $\Delta s=(n+\dfrac{1}{2})\cdot\lambda$ betragen.
 
 #### Bremsstrahlung
 Die Bremsstrahlung (auch Röntgenstrahlung) entsteht bei der Erzeugung in der [Röntgenröhre](#röntgenröhre).
@@ -570,7 +659,21 @@ Dazu wird der Rücksprung vom angeregten Energieniveau $E_3$ in den Grundzustand
 
 Technisch wird dies für Leuchtstoffe ausgenutzt, z.B. für "weiße LEDs".
 
-#### #Nahfeldinterferenz
+#### Nahfeldinterferenz
+Wenn im Gegensatz zur [Beugung am Gitter](#) der Abstand $b$ zwischen zwei Quellen nicht klein gegenüber der Entfernung zum Beobachtungspunkt $E$ ist, dann wird von Nahfeldinterferenz gesprochen. (Beispiele hierfür sind z.B. zwei Tupfer in Wasser, Lautsprecher oder auch Mikrowellen)
+
+##### konstruktive Interferenz
+Zur konstruktiven Interferenz kommt es, wenn der Gangunterschied (Wegdifferenz) $\Delta s=n\cdot\lambda$ annimmt.
+
+![konstruktive Interferenz](img/Nahfeldinterferenz-konstruktiv.png){ height=250px }
+
+##### destruktive Interferenz
+Zur konstruktiven Interferenz kommt es, wenn der Gangunterschied (Wegdifferenz) $\Delta s=(n-\dfrac{1}{2})\cdot\lambda$ annimmt.
+
+![destruktive Interferenz](img/Nahfeldinterferenz-destruktiv.png){ height=250px }
+
+> In diesen Fällen kann der Gangunterschied ds ganz simple ausgemessen werden mit $\Delta s=\overline{S_1E}-\overline{S_2E}$
+
 ## Kernphysik
 Atome haben einen Durchmesser von ca. $10^{-10}$m (ungefähr konstant). Aus Streuversuchen (Rutherford) ist bekannt, dass der Kern nur einen Durchmesser von ca. $10^{-14}$m hat (nicht konstant). Der Kern (Nukleus) besteht aus den Kernbaussteinen (Nukleonen) Protonen und Neutronen. **Grobe** Massenangaben
 $$
