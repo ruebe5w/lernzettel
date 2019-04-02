@@ -1,19 +1,13 @@
 # Lernzettel
-## PDFs
-+ [Technik am 7.5.19](technik.pdf)
-+ [Mathe am 3.5.19](mathe.pdf)
-+ [Physik am 29.4.19](physik.pdf)
-+ [Englisch am 8.5.19](englisch.pdf)
-+ [BVT](bvt.pdf)
+|Fach|Termin|Datei|
+|--|:--:|--|
+|Physik| 29.04.2019|[PDF](physik.pdf), [Markdown](physik.md)|
+|Mathe|03.05.2019|[PDF](mathe.pdf), [Markdown](mathe.md)|
+|Technik|07.05.2019|[PDF](technik.pdf), [Markdown](technik.md)|
+|Englisch|08.05.2019|[PDF](englisch.pdf), [Markdown](englisch.md)|
+|BVT||[PDF](bvt.pdf), [Markdown](bvt.md)|
 
-## Markdown:
-+ [Technik](technik.md)
-+ [Mathe](mathe.md)
-+ [Physik](physik.md)
-+ [Englisch](englisch.md)
-+ [BVT](bvt.md)
-
-## Cheat sheets
+---
 + [Markdown Math](http://csrgxtu.github.io/2015/03/20/Writing-Mathematic-Fomulars-in-Markdown/)
 + [katex](https://katex.org/docs/supported.html)
-+ [Markdown cheatsheet](https://docs.gitlab.com/ee/user/markdown.html)
++ [Markdown](https://docs.gitlab.com/ee/user/markdown.html)
