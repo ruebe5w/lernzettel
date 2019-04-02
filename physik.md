@@ -420,14 +420,14 @@ Trägheitskraft:
 $$F=m\cdot\ddot{s}=-D\cdot s(t)$$
 
 ### Masse-Feder-Schwinger
-![Masse-Feder-Schwinger](img/Masse-Feder-Schwinger.jpg){ height=250px }
-
 Bei dem Masse-Feder-Schwinger wird eine Masse an einer Feder befestigt. Er ist ein Beispiel für eine [harmonische Schwingung](#harmonische-schwingung).
 
-### Fadenpendel
-![Fadenpendel](img/Fadenpendel.jpg){ height=250px }
+![Masse-Feder-Schwinger](img/Masse-Feder-Schwinger.png){ height=250px }
 
-Generell ist das Fadenpendel nicht harmonisch, bei kleinen Auslenkungen jedoch schon ($\varphi<10°$).
+### Fadenpendel
+Generell ist das Fadenpendel nicht harmonisch, bei kleinen Auslenkungen jedoch schon ($\alpha<10°$).
+
+![Fadenpendel](img/Fadenpendel.png){ height=250px }
 
 Bei kleinen Auslenkungen gilt:  
 Das Kraftgesetz lautet $F=-\dfrac{m\cdot g}{l}\cdot s=-D\cdot s$, mit $D=\dfrac{m\cdot g}{l}$
@@ -457,14 +457,14 @@ Diese schwingungsfähigen Teilchen müssen untereinander eine Kopplung aufweisen
 Nachdem ein Oszillator $\text{O}_1$ alle Phasen einer Schwingung durchlaufen ist (nach Ablauf der Periodendauer $T$), hat sich die Welle so weit ausgebreitet, dass ein weiterer Oszillator (z.B. $\text{O}_5$) synchron mit ihm zu schwingen beginnt. Die beiden Oszillatoren haben den Abstand einer **Wellenlänge** $\lambda$.
 
 ##### Querwellen/Transversalwellen
-![Querwellen/Transversalwellen](img/Querwelle-Transversalwellen.png){ height=250px }
-
 Wenn die Ausbreitungsrichtung senkrecht auf der Schwingungsrichtung steht, wird sie als Querwelle/Transversalwelle bezeichnet.
 
-##### Längsquellen/Longitudinalwellen
-![Längsquellen/Longitudinalwellen](img/Laengswelle-Longitidinalwellen.png){ height=250px }
+![Querwellen/Transversalwellen](img/Querwelle-Transversalwellen.png){ height=250px }
 
+##### Längsquellen/Longitudinalwellen
 Wenn die Ausbreitungsrichtung parallel zur Schwingungsrichtung steht, wird sie als Längswelle/Longitudinalwelle bezeichnet.
+
+![Längsquellen/Longitudinalwellen](img/Laengswelle-Longitidinalwellen.png){ height=250px }
 
 ### Räumliche und Zeitliche Darstellung von Wellen
 Man kann die Auslenkung $y$ sowohl in Abhängigkeit von der Zeit als auch vom Ort darstellen.
@@ -486,10 +486,23 @@ Die Ausbreitungsgeschwindigkeit $c$ einer harmonischen Welle beträgt:
 
 $$c=\lambda\cdot f$$
 
-### Reflexion mechanischer Wellen
+### Reflexion mechanischen Wellen
+#### Reflexion am losen Ende
+Bei einem losen Ende wird ein Berg als Berg und ein Tal als Tal reflektiert.
+
+![Reflexion am losen Ende](img/Reflexion-loses&#32;Ende.png){ height=250px }
+
+#### Reflexion am festen Ende
+Bei einem feste Ende wird ein Berg als Tal und ein Tal als Berg reflektiert. Somit erfährt die Welle eine Phasensprung von $\pi$.
+
+![Reflexion am festen Ende](img/Reflexion-festes&#32;Ende.png){ height=250px }
+
+[Anschauliche Animation](https://de.wikibooks.org/wiki/Physik_Oberstufe/_Schwingungen_und_Wellen/_Mechanische_Wellen#/media/File:WaveReflect.gif)
+
 ### Stehende Welle
 ### Dopplereffekt
 ### EM-Wellen
+![Elektromagnetisches Spektrum](img/Elektromagnetisches&#32;Spektrum.png)
 
 # Quanten und Atomphysik
 ## Versuche
