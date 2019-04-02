@@ -332,6 +332,164 @@ rechte Hand: technische Stromrichtung
 linke Hand: Bewegung von Elektronen
 
 # Schwingungen und Wellen
+* Masse-Feder-Schwinger
+* stehende Welle
+* Transversalwelle/Querwelle
+* Longitudinalwelle/Längswelle
+* Exkurs: Sinusfunktion
+* Dopplereffekt
+* EM-Wellen
+
+## Sinus-Exkurs
+$$y=a\cdot\sin(b\cdot x)+c$$
+
+* $a$: maximale Amplitude (y-Wert der Maxima bzw Minima)
+* $b$: "Skalierung" der Sinusfunktion in x-Richtung, wie oft sie sich wiederholt nach gleicher Zeit
+* $c$: Verschiebung der Sinusfunktion in y-Richtung
+
+## Schwingungen
+### Merkmale von Schwingungen
+Gleichartige Bewegungsabläufe, bei denen sich die Richtung immer wieder umkehrt und die sich nach einer bestimmten Zeit wiederholen, heißen Schwingungen.
+
+#### Begriffe
+
+* *Auslenkung* $s$: Entfernung des Schwingkörpers zur Ruhelage
+* *Amplitude* $\hat{s}$: Maximale Auslenkung
+* *Periodendauer* $T$: Zeit die ein Schwingungsvorgang braucht, um sich zu wiederholen
+* *Periode*: kleinstes, örtliches oder zeitliches Intervall nach dem sich der Vorgang wiederholt
+
+Schwingungen mit abnehmender Amplitude nenn man auch **gedämpfte Schwingungen**.
+
+### Periodische Schwingung
+Periodische Schwingungen werden Bewegungen genannt, wenn der Körper nach gleichlangen Zeitabschnitten wieder den gleichen Ort, die gleiche Geschwindigkeit und die gleiche Beschleunigung besitzt.
+
+Ein Körper bewegt sich periodisch mit der der Periodendauer $T=1\text{s}$, wenn er nach 1s den den gleichen Ort, die gleiche Geschwindigkeit und die gleiche Beschleunigung besitzt.
+
+Die Frequenz $f$ ist der Kehrwert der Periodendauer $T$.
+
+$$f=\dfrac{1}{T}$$
+
+### Harmonische Schwingung
+Harmonische Schwingungen werden Bewegungen genannt, wenn sie durch eine Sinusfunktion beschrieben werden kann.
+
+Sie kann mit den folgenden Gleichungen beschrieben werden:
+
+Zeit-Ort-Gesetz:
+$$s(t)=\hat{s}\cdot\sin(\omega\cdot t+\varphi)$$
+
+Zeit-Geschwindigkeits-Gesetz:
+$$
+\begin{aligned}
+    v(t)&=\dot{s}=\hat{v}\cdot\cos(\omega\cdot t+\varphi)\\
+    v(t)&=\dot{s}=\hat{s}\cdot\omega\cdot\cos(\omega\cdot t+\varphi)
+\end{aligned}
+$$
+
+Zeit-Beschleunigungs-Gesetz:
+$$ \begin{aligned}
+    a(t)&=\ddot{s}=-\hat{a}\cdot\sin(\omega\cdot t+\varphi)\\
+    a(t)&=\ddot{s}=-\hat{s}\cdot\omega^2\cdot\sin(\omega\cdot t+\varphi)
+\end{aligned}
+$$
+
+* $s$ in $\text{m}$: Auslenkung
+* $v$ in $\frac{\text{m}}{\text{s}}$: Geschwindigkeit
+* $a$ in $\frac{\text{m}}{\text{s}^2}$: Beschleunigung
+* $\omega$ in $\frac{\text{rad}}{\text{s}}$=$\frac{1}{\text{s}}$: Winkelgeschwindigkeit/Kreisfrequenz
+* $\varphi$in $\text{rad}$: Phasenverschiebung
+
+#### Kräfte bei der harmonischen Schwingung
+Bei einer harmonischen Schwingung sind Rückstellkraft und Auslenkung proportional zueinander.  
+Unterliegt ein Oszillator einem linearen Kraftgesetz, so ergibt sich eine harmonische Schwingung mit:
+
+$$D=m\cdot\omega^2=m\cdot\dfrac{4\pi^2}{T^2}$$
+
+Die Winkelgeschwindigkeit/Kreisfrequenz lässt sich bestimmen mit:
+
+$$\omega=2\cdot\pi\cdot f=\dfrac{2\cdot\pi}{T}$$
+
+Die Periodendauer lässt sich bestimmen mit:
+
+$$T=2\cdot\pi\sqrt{\dfrac{m}{D}}$$
+
+* $m$: Masse
+* $D$ in $\frac{\text{N}}{\text{m}}$: Federkonstante (beschreibt wie viel Kraft für eine bestimmte Auslenkung benötigt wird)
+
+Trägheitskraft:
+
+$$F=m\cdot\ddot{s}=-D\cdot s(t)$$
+
+### Masse-Feder-Schwinger
+![Masse-Feder-Schwinger](img/Masse-Feder-Schwinger.jpg){ height=250px }
+
+Bei dem Masse-Feder-Schwinger wird eine Masse an einer Feder befestigt. Er ist ein Beispiel für eine [harmonische Schwingung](#harmonische-schwingung).
+
+### Fadenpendel
+![Fadenpendel](img/Fadenpendel.jpg){ height=250px }
+
+Generell ist das Fadenpendel nicht harmonisch, bei kleinen Auslenkungen jedoch schon ($\varphi<10°$).
+
+Bei kleinen Auslenkungen gilt:  
+Das Kraftgesetz lautet $F=-\dfrac{m\cdot g}{l}\cdot s=-D\cdot s$, mit $D=\dfrac{m\cdot g}{l}$
+
+Somit folgt die Berechnung für die Periodendauer $T$:
+
+$$T=2\cdot\pi\sqrt{\dfrac{l}{g}}$$
+
+* $g$: Fallbeschleunigung ($9,81\frac{\text{m}}{\text{s}^2}$)
+* $l$: Länge des Fadenpendels (siehe Grafik)
+
+> Die Periodendauer ist in diesem Fall unabhängig von der Masse!
+
+## Wellen
+### Mechanische Wellen
+Eine sich im Raum mit einer bestimmten Geschwindigkeit ausbreitende Störung heißt Welle. Eine Welle transportiert Energie und Impuls.  
+Vorstellen kann man sich die Welle als räumlich ausbreitende Schwingung.
+
+#### Entstehung von Wellen
+Ein Erreger zwingt ein Teilchen (auch Oszillator) des Körpers aus seiner Ruhelage. Aufgrund seiner Trägheit übernimmt der nächste Oszillator etwas zeitversetzt diese Störung, es entsteht eine Phasenverschiebung $\Delta\varphi$ zwischen den Bewegungen benachbarter Oszillatoren. Die Energie, die der erste Oszillator durch die Störung erhalten hat, wird so auf die benachbarten Oszillatoren übertragen. Diese Übertragungen von Energie bewirken den Energietransport einer Welle.
+
+#### Ausbreitung von Wellen
+Die Ausbreitung mechanischer Wellen erfordert einen Träger in dem sich schwingungsfähige Teilchen befinden. Dieser Träger ist das **Medium**. Von ihm hängt die **Ausbreitungsgeschwindigkeit** $c$ ab mit der sich die Störung durch den Träger bewegt.
+
+Diese schwingungsfähigen Teilchen müssen untereinander eine Kopplung aufweisen, so dass sich die von außen einwirkende Störung über das System fortpflanzen kann.
+
+Nachdem ein Oszillator $\text{O}_1$ alle Phasen einer Schwingung durchlaufen ist (nach Ablauf der Periodendauer $T$), hat sich die Welle so weit ausgebreitet, dass ein weiterer Oszillator (z.B. $\text{O}_5$) synchron mit ihm zu schwingen beginnt. Die beiden Oszillatoren haben den Abstand einer **Wellenlänge** $\lambda$.
+
+##### Querwellen/Transversalwellen
+![Querwellen/Transversalwellen](img/Querwelle-Transversalwellen.png){ height=250px }
+
+Wenn die Ausbreitungsrichtung senkrecht auf der Schwingungsrichtung steht, wird sie als Querwelle/Transversalwelle bezeichnet.
+
+##### Längsquellen/Longitudinalwellen
+![Längsquellen/Longitudinalwellen](img/Laengswelle-Longitidinalwellen.png){ height=250px }
+
+Wenn die Ausbreitungsrichtung parallel zur Schwingungsrichtung steht, wird sie als Längswelle/Longitudinalwelle bezeichnet.
+
+### Räumliche und Zeitliche Darstellung von Wellen
+Man kann die Auslenkung $y$ sowohl in Abhängigkeit von der Zeit als auch vom Ort darstellen.
+
+Ein y-t-Diagramm zeigt den zeitlichen Verlauf der Bewegung eines Oszillator an einem bestimmten Ort. Die y(t)-Funktion einer harmonischen Welle entspricht der einer harmonische Schwingung:
+
+![Zeitliche Darstellung](img/Wellen_y-t-Diagramm.jpg){ height=250px }
+
+In einem y-x-Diagramm lässt sich die Lage der Gesamtheit der Oszillatoren, also alle Auslenkungen, für einen bestimmten Zeitpunkt darstellen:
+
+![Räumliche Darstellung](img/Wellen_y-x-Diagramm.jpg){ height=250px }
+
+### Harmonische Wellen
+Eine **periodische Welle** ein zeitlich und räumlich periodischer Vorgang. Frequenz bzw. Periodendauer kennzeichnen die zeitliche, die Wellenlänge die räumliche Periodizität. 
+
+Wellen deren räumliches Muster sich zu jedem Zeitpunkt durch eine Sinusfunktion darstellen lässt, heißt **harmonische Welle**.
+
+Die Ausbreitungsgeschwindigkeit $c$ einer harmonischen Welle beträgt:
+
+$$c=\lambda\cdot f$$
+
+### Reflexion mechanischer Wellen
+### Stehende Welle
+### Dopplereffekt
+### EM-Wellen
 
 # Quanten und Atomphysik
 ## Versuche
