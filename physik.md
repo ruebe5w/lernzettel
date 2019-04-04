@@ -137,6 +137,9 @@ Ungleichnamige Pole ziehen sich an, gleichnamige stoßen sich ab. Wird ein Magne
 
 > Je dichter die Feldlinien, desto größer ist die magnetische Flussdichte an diesem Ort.
 
+> $\bigotimes\Rightarrow$ B-Feld zeigt in vom Betrachter weg  
+> $\bigodot\Rightarrow$ B-Feld kommt auf den Betrachter zu
+
 #### Magnetischer Fluss
 Beschreibt die gesamte magnetische Wirkung eines Magneten auf seine Umgebung. Er ist ein Maß für die "Gesamtzahl der Feldlinien"
 
@@ -332,13 +335,6 @@ rechte Hand: technische Stromrichtung
 linke Hand: Bewegung von Elektronen
 
 # Schwingungen und Wellen
-* Masse-Feder-Schwinger
-* stehende Welle
-* Transversalwelle/Querwelle
-* Longitudinalwelle/Längswelle
-* Exkurs: Sinusfunktion
-* Dopplereffekt
-* EM-Wellen
 
 ## Sinus-Exkurs
 $$y=a\cdot\sin(b\cdot x)+c$$
@@ -396,7 +392,7 @@ $$
 * $v$ in $\frac{\text{m}}{\text{s}}$: Geschwindigkeit
 * $a$ in $\frac{\text{m}}{\text{s}^2}$: Beschleunigung
 * $\omega$ in $\frac{\text{rad}}{\text{s}}$=$\frac{1}{\text{s}}$: Winkelgeschwindigkeit/Kreisfrequenz
-* $\varphi$in $\text{rad}$: Phasenverschiebung
+* $\varphi$ in $\text{rad}$: Phasenverschiebung
 
 #### Kräfte bei der harmonischen Schwingung
 Bei einer harmonischen Schwingung sind Rückstellkraft und Auslenkung proportional zueinander.  
@@ -486,6 +482,16 @@ Die Ausbreitungsgeschwindigkeit $c$ einer harmonischen Welle beträgt:
 
 $$c=\lambda\cdot f$$
 
+### Huygenssches Prinzip
+Das huygenssche Prinzip besagt, dass jeder Punkt einer Wellenfront als Ausgangspunkt einer neuen Welle, der so genannten Elementarwelle, betrachtet werden kann.  
+Durch dieses Prinzip lassen sich die Phänomene der Reflexion, Brechung und Beugung von Wellen beschreiben.
+
+![Reflexion](img/Huygenssches&#32;Prinzip&#32;-&#32;Reflexion.png){ height=250px }
+
+![Brechung](img/Huygenssches&#32;Prinzip&#32;-&#32;Brechung.png){ height=250px }
+
+![Beugung](img/Huygenssches&#32;Prinzip&#32;-&#32;Beugung.png){ height=250px }
+
 ### Reflexion mechanischen Wellen
 #### Reflexion am losen Ende
 Bei einem losen Ende wird ein Berg als Berg und ein Tal als Tal reflektiert.
@@ -500,9 +506,73 @@ Bei einem feste Ende wird ein Berg als Tal und ein Tal als Berg reflektiert. Som
 [Anschauliche Animation](https://de.wikibooks.org/wiki/Physik_Oberstufe/_Schwingungen_und_Wellen/_Mechanische_Wellen#/media/File:WaveReflect.gif)
 
 ### Stehende Welle
+Eine stehende Welle entsteht bei der Überlagerung von gegenläufigen Wellen gleicher Amplitude und Frequenz.  
+Zu beobachten ist:
+
+* Die Amplituden sind an jedem Ort zeitlich konstant
+* Stellen, an denen die Amplitude null ist, werden **Knoten** genannt
+* Stellen, an denen die Amplitude maximal ist, werden **Bäuche** genannt
+* Die Entfernung zwischen zwei benachbarten Knoten oder Bäuchen beträgt $\dfrac{\lambda}{2}$
+
+Am losen Ende hat die reflektierte Welle die gleiche Phase wie die einlaufende Welle. Durch Überlagerung der einlaufenden mit der reflektierten Welle bildet sich eine stehende Welle mit einem Schwingungsbauch am losen Ende des Wellenträgers.
+
+![Stehende Welle am losem Ende](img/Stehende&#32;Welle&#32;-&#32;zwei&#32;lose&#32;Enden.png){ height=250px }
+
+Am festen Ende hat die reflektierte Welle eine Phasenverschiebung um $\pi$ relativ zur einlaufenden Welle. Man spricht von einem Phasensprung um  $\pi$ am festen Ende. Wieder bildet sich eine stehende Welle, diesmal mit einem Knoten am festen Ende
+
+![Stehende Welle am festen Ende](img/Stehende&#32;Welle&#32;-&#32;verschiedene&#32;Enden.png){ height=250px }
+
+#### Stehende Wellen zwischen zwei Reflektoren
+Zwischen zwei Reflektoren mit dem Abstand $L$ können sich nur stehende Wellen mit bestimmten Wellenlängen bilden. Die Frequenzen zu diesen Wellenlängen werden als Eigenfrequenzen oder Eigenresonanzen bezeichnet.
+
+![Stehende welle zwischen zwei festen Enden](img/Stehende&#32;Welle&#32;-&#32;zwei&#32;feste&#32;Enden.png){ height=250px }
+
+Für die Grundschwingung, die Schwingung mit der kleinsten bzw. tiefsten Frequenz, findet man mit $c=\lambda \cdot f$:
+
+$$f_{0}={\frac {c}{2L}}$$
+
+Die nächste mögliche stehende Welle, die die Bedingung der Knoten an den Enden erfüllt, ist die erste Oberschwingung. Dabei passt genau eine Wellenlänge auf den Wellenträger und es gilt:
+
+$$f_{1}={\frac {c}{L}}=2f_{0}$$
+
+Und somit für die zweit Oberschwingung:
+
+$$f_{2}={\frac {3c}{2L}}=3f_{0}$$
+
+Welche Randbedingung dazu führt, dass die Wellenlängen nicht beliebig sein können, hängt von der Art der betrachteten Welle ab. Beispielsweise muss bei fest eingespannten Enden einer schwingenden Saite an beiden Enden jeweils ein Schwingungsknoten vorliegen.
+
+Bei einer stehenden elektromagnetischen Welle gilt, dass die elektrische Feldstärke am reflektierenden Leiter null sein muss, wohingegen die magnetische Feldstärke dort immer einen Schwingungsbauch besitzt. Bei der resultierenden elektromagnetischen Welle sind nun elektrisches Feld und magnetisches Feld um 90° phasenverschoben, wobei das E- und B-Feld der hin- bzw. rücklaufenden Welle phasengleich sind.
+
 ### Dopplereffekt
+Der Doppler-Effekt ist die zeitliche Stauchung bzw. Dehnung eines Signals bei Veränderungen des Abstands zwischen Sender und Empfänger während der Dauer des Signals. Ursache ist die Veränderung der Laufzeit. Dieser rein kinematische Effekt tritt bei allen Signalen auf, die sich mit einer bestimmten Geschwindigkeit, meist Lichtgeschwindigkeit oder Schallgeschwindigkeit, ausbreiten. Breitet sich das Signal in einem Medium aus, so ist dessen Bewegungszustand zu berücksichtigen.
+
+![Doppler Effekt](img/Doppler&#32;Effekt.png){ height=250px }
+
+Bei periodischen Signalen erhöht bzw. vermindert sich die beobachtete Frequenz. Das betrifft sowohl Tonhöhen als auch Modulationsfrequenzen, z. B. den Wechsel der Töne eines Martinhorns. Bei geringen Geschwindigkeiten im Verhältnis zur Ausbreitungsgeschwindigkeit gibt dieses Verhältnis zugleich die relative Frequenzänderung $\Delta f/f$ an. Bei reflektiertem Signal, wie beim Radar-Doppler und Ultraschall-Doppler, verdoppelt sich mit der Laufzeit auch die Doppler-Verschiebung $\Delta f$. 
+
 ### EM-Wellen
+Elektromagnetische Wellen sind Wellen aus gekoppelten [elektrischen und magnetischen Feldern](#elektrische-und-magnetische-felder). Beispiele für elektromagnetische Wellen sind Radiowellen, Mikrowellen, Wärmestrahlung, Licht, Röntgenstrahlung und Gammastrahlung. Elektromagnetische Wellen im Vakuum sind [Transversalwellen](#Querwellen/Transversalwellen). Die Wechselwirkung elektromagnetischer Wellen mit Materie hängt von ihrer Frequenz ab, die über viele Größenordnungen variieren kann.
+
+Anders als zum Beispiel Schallwellen benötigen elektromagnetische Wellen kein Medium, um sich auszubreiten, können dies aber.
+
+Sie bewegen sich im Vakuum unabhängig von ihrer Frequenz mit Lichtgeschwindigkeit fort.
+
+Im freien Raum stehen die Vektoren des elektrischen und des magnetischen Feldes senkrecht aufeinander und auf der Ausbreitungsrichtung.
+
+Sie Entsteht z.B. durch die [spontane Emission](#absorption-und-emission) oder auch in der [Röntgenröhre](#röntgenröhre). 
+
+[Ausbreitung einer EM-Welle](https://de.wikipedia.org/wiki/Elektromagnetische_Welle#/media/File:EM-Wave.gif)
+
 ![Elektromagnetisches Spektrum](img/Elektromagnetisches&#32;Spektrum.png)
+
+#### Polarisation von EM-Wellen
+Im Wellenmodell sind EM-Wellen eine senkrecht zur ihrer Ausbreitungsrichtung schwingende Welle, also eine Transversalwelle. Die Polarisation bzw. die Polarisationsrichtung der Welle beschreibt, in welcher Richtung die Welle schwingt. Dabei bezieht man sich meist auf die Richtung des E-Feld-Vektors. Der B-Feld-Vektor schwingt entsprechend senkrecht zur Polarisationsrichtung. 
+
+![](img/Polarisation&#32;-&#32;vertikal.png)
+
+![](img/Polarisation&#32;-&#32;horizontal.png)
+
+![](img/Polarisation&#32;-&#32;winkel.png)
 
 # Quanten und Atomphysik
 ## Versuche
@@ -801,6 +871,8 @@ Treffen beide Bedingungen zu, so entsteht eine kräftige Reflexion in diese Rich
 
 $$2\cdot \Delta s=2\cdot a \cdot\sin\beta=\text{k}\cdot\lambda$$
 
+### De Broglie
+
 ### Absorption und Emission
 Atome besitzen nur diskrete Energieniveaus. Ein sich selbst überlassenes Atom strebt immer den niedrigsten Energiezustand an (Grundzustand). Atome mit einem erhöhten Energie zustand wird als angeregt bezeichnet
 
@@ -853,6 +925,7 @@ $$
     \text{u-atomare Masseneinheit, }1\text{u}&=1,661\cdot10^{-27}\text{kg}
 \end{aligned}
 $$
+
 Nukleonen sind auch Quanten. Sind sie im Kern gebunden, so haben sie eine Bindungsenergie. Diese kann näherungsweise mit dem Modell des [linearen Potentialtopfs](#linearer-Potenzialtopf) bestimmt werden.
 
 $$
@@ -863,7 +936,40 @@ $$
 \end{aligned}
 $$
 
+## Elektronen in einem Atom
+Elektronen in der Hülle verhalten sich wie Quanten. Ihnen kann kein genauer Ort zu einem Zeitpunkt und keine genaue Geschwindigkeit zugeordnet werden, sie können nicht auf "Elektronenbahnen" umlaufen (Bohr). Ihr Verhalten wird durch die Zustandsfunktion $\psi(\vec{x}, t)$  (psi) beschrieben. Für die Wellenlänge von $\psi$ gilt die De-Broglie-Beziehung $\lambda \cdot p = h$.
+
+$\psi$ oder auch die Amplitude von $\psi$ haben keine unmittelbare physikalische Bedeutung. Das Quadrat der Zustandsfunktion $\psi^2$ hingegen ist hilfreich und beschreibt den Aufenthaltsort als Wahrscheinlichkeit(-sdichte).
+
+$\psi^2(x)\cdot\Delta x$ gibt die Wahrscheinlichkeit an, das Elektron in einem Intervall der Länge $\Delta x$ in der Umgebung des Ortes $x$ zu finden.  
+(bzw $\psi^2(x)\cdot\Delta V$ ... in einem Volumen $\Delta V$ in der Umgebung des Ortes $\vec{x}$ ....)
+
 ## linearer Potenzialtopf
+Die Elektronen in einer Atomhülle können sich nicht völlig frei bewegen. Sie unterliegen z.B. den anziehenden
+Coulombkräften des Kerns. Daher werden sie auch als gebundene Elektronen bezeichnet. Das Verhalten
+solcher Elektronen soll in einem sehr einfachen Modell untersucht werden.
+Das Elektron soll sich nur in einer Richtung bewegen können, auf einer Strecke der Länge L.
+Man erreicht diese Einschränkung des Aufenhaltsbereiches dadurch, dass man die potenzielle Energie des
+Elektrons außerhalb des Bereiches als unendlich groß annimmt und im einfachsten Fall innerhalb des
+Bereiches zu Null setzt. Anschaulich spricht man daher von einem Potenzialtopf, in dem das Elektron gefangen
+ist. Um den Potentialtopf zu verlassen, müsste das Elektron eine unendlich große Energie haben und dies ist
+nicht möglich. Daher gilt außerhalb des Potenzialtopfs des Länge $L: \psi(x)=0 für x < 0 und x > L$.
+
+Innerhalb des Potenzialtopfs bildet $\psi(x)$ stehende sinusförmige Wellen aus, vergleichbar denen, die Sie
+z.B. von Schallwellen oder Mikrowellen zwischen festen Enden kennen.
+
+![Modell des linearen Potentialtopfs](img/linearer&#32;Potenzialtopf.png){ height=250px }
+
+Damit sich stehende Wellen ausbilden, muss gelten: $\lambda_n=\dfrac{2\cdot L}{n}$
+
+Mit De-Broglie ergibt sich der Impuls dannzu: $p_n=\dfrac{h}{\lambda_n}=\dfrac{h\cdot n}{2\cdot L}$
+
+Und damit die kinetische Energie des Elektrons: $E_n=\dfrac{p_n^2}{2\cdot m_e}=\dfrac{h^2\cdot n^2}{8\cdot m_e\cdot L^2}$
+
+Die Bindung eines Elektrons auf einen begrenzten Raumbereich führt immer zu diskreten Energienevaus $E_n$.
+
+Die Energieniveaus und die Zustandsfunktion und damit auch die Wahrscheinlichkeitsdichte sind eindeutig durch die Quantenzahl $n$ bestimmt.
+
 ## Zerfälle
 ### Alpha-Zerfall
 Ein instabiler Kern wandelt sich ein einen anderen Kern um, indem er ein $\alpha$-Teilchen emittiert.
@@ -915,14 +1021,66 @@ Die häufigst auftretende Energie wird genannt. Oft sind verschiedene und mehrer
 #### Reichweite
 Gammastrahlung durchdringt Papier und auch größere Aluminiumschichten fast ungehindert und kann nur durch besondere Abschirmungen (z.B. Blei) geschwächt werden.
 
-### Zerfallsgesetz
+## Zerfallsgesetz
+Wann ein einzelner Kern zerfällt ist nicht vorhersagbar, 'Kerne altern nicht und haben keine Lebensdauer'. Ein instabiler Kern 'entscheidet' sich in jeder Zeiteinheit erneut mit der gleichen Wahrscheinlichkeit, ob er zerfällt (oder nicht). Er hat kein Gedächtnis, so wie z.B. auch ein Würfel kein Gedächtnis hat. Es handelt sich also um einen stochastischen Prozess, $\lambda$ wird die Zerfallskonstante genannt (Wahrscheinlichkeit pro Zeiteinheit zu zerfallen). Sicherlich ist die Anzahl der Zerfälle proportional zur Anzahl der vorhandenen Kerne und zur Zerfallskonstanten. Die Zerfälle reduzieren die vorhandene Anzahl $N(t)$ , so dass zusätzlich ein negatives Vorzeichen eingefügt wird.
+
 Zerfallsgesetz für die Anzahl der Kerne $N(t)$:
 
 $$N(t)=N_0\cdot e^{-\lambda\cdot t}$$
-mithilfe der Halbwertszeit:
-$$N(t)=N_0\cdot\Big(\dfrac{1}{2}\Big)^{\frac{1}{T_1/2}}$$
 
 Zerfallsgesetz für die Zerfälle je Zeiteinheit Aktivität $A(t)$:
 $$A(t)=A_0\cdot e^{-\lambda\cdot t}$$
-mithilfe der Halbwertszeit:
+
+Sowohl der Bestand, als auch die Aktivität zerfallen also exponentiell.
+Die Zerfallskonstante $\lambda$ kann unhandlich kleine Werte annehmen und ist wenig anschaulich. In Tafelwerken und Nuklidkarten wird daher die anschauliche Größe "Halbwertszeit" $T_{1 / 2}$ ( $T_H$ , $t_h$ )angegeben. Sie gibt an, nach welcher Zeitdauer der Bestand an Kernen auf die Hälfte zerfallen ist, bzw. nach welcher Zeitdauer die Aktivität auf die Hälfte zurückgegangen ist.
+
+Zerfallsgesetze umgeschrieben mithilfe der Halbwertszeit:
+$$N(t)=N_0\cdot\Big(\dfrac{1}{2}\Big)^{\frac{1}{T_1/2}}$$
+
 $$A(t)=A_0\cdot\Big(\dfrac{1}{2}\Big)^{\frac{1}{T_1/2}}$$
+
+Nachweisen des Zerfallsgesetz im Messgraphen:
+
+![Graph](img/Zerfallsgesetz&#32;-&#32;nachweisen.png){ height=250px }
+
+## Abstandsgesetz
+Wenn sonst keine weitere Behinderung oder Strahlung auftritt, nimm die Intensität der Strahlung einer punkförmigen Quelle mit dem Quadrat des Abstand von der Quelle ab.  
+Die Leistung durchsetzt in größerem Abstand eine quadratische anwachsende Fläche. Die Intensität als Leistung pro Fläche nimmt also mit dem Quadrat der Entfernung ab.
+
+$$I\sim Z\sim\dfrac{1}{d^2}$$
+
+![Abstandsgesetz](img/Abstandsgesetz.png){ height=250px }
+
+Man denke sich für das A z.B. die Öffnung eines [Geiger-Müller-Zählrohres](#geiger-müller-zählrohr).
+
+Dieses quadratische Abstandsgesetz gillt nur für punktförmige Quellen und Größen, die mit dem Energiebegriff, wie z.B. Leistung, Leistungsdichte, Intensität, Anzahl von Teilen pro Zeiteinheit, etc.
+
+## Radiokarbonmethode/C-14 Methode
+Die Radiokarbonmethode oder auch C-14 Methode wird für die Datierung von kohlenstoffhaltiger, insbesondere organische Materialien.  
+$^{14}$C kommt in der Natur so nicht vor. Es sollten nur die Isotope $^{12}$ und $^{12}$ vorkommen. $^{14}$C hat eine Halbwertszeit von 5730 Jahren.
+
+In abgestorbene Organismen nimmt die Menge an $^{14}$C aufgrund des [Zerfallgesetzes](#zerfallsgesetz) ab. Lebende Organismen sind davon nicht betroffen, da diese ständig den "normalen" Anteil an $^{14}$C wieder aufnehmen. Wird die Konzentration eines toten Organismus gemessen, so kann der Todeszeitpunkt mithilfe des [Zerfallsgesetz](#zerfallsgesetz) berechnet werden.
+
+z.B. mit umstellen der Zerfallsgesetze:
+
+$$t=\dfrac{T_{1/2}}{\ln\dfrac{1}{2}}\cdot\ln\Big(\dfrac{N(t)}{N_0}\Big)$$
+
+$$t=\dfrac{T_{1/2}}{\ln2}\cdot\ln\Big(\dfrac{A(t)}{A_0}\Big)$$
+
+In der oberen Atmosphäre wird ständig neues $^{14}$C durch Kernumwandlung () gebildet. Zum einen zerfällt das gebildete Isotop $^{14}$C ständig, zum anderen wird es ständig neu gebildet. Es stellt sich ein Gleichgewicht ein, bei dem genau soviel neu gebildet, wie zeitgleich zerfällt.
+
+Im Gleichgewicht beträgt die Konzentration ca.: $N(^{14}\text{C})=1,2\cdot 10^{-12}\cdot N(^{14}\text{C}_{\text{ges}})$
+
+## Geiger-Müller-Zählrohr
+In einem Metallzylinder, der z.B. mit Argon gefüllt ist, ist ein Metalldraht isoliert gespannt aufgehängt. Zwischen dem positiv geladenen Draht und er Hülle herrscht ein radiales elektrisches Feld, das in der Nähe des Drahtes eine sehr große Feldstärke hat.
+
+Tritt ionisierende Strahlung (z.B. $\alpha$, $\beta$, $\gamma$) in das Rohr, so bilden sich entlang der Flugbahn Ionenpaare aus Elektronen und den (schweren) Atomionen. Die Elektronen werden zum Draht hin beschleunigt. Sie erreichen so hohe Energien, dass sie durch Stoßionisation weitere sogenannte Sekundärelektronen aus der Gasfüllung auslösen. Es entsteht eine Elektronenlawine.  
+Erreichen diese Elektronen den Draht so führt diese Ladung zu einem Stromimpuls, der über den Wiederstand zur Quelle abfließt. Der Stromimpuls führt zu einem Spannungsimpuls am Widerstand. Die Spannungsimpulse können gezählt werden. **Jedes** eingedrungene **Teilchen** führt zu einem **Spannungsimpuls**.
+
+![Geiger Müller Zählrohr](img/GMZ.png){ height=250px }
+
+Die **Impulse** werden **pro Zeiteinheit** gemessen, dies ist die **Zählrate**, z.B. in Impulsen je Sekunde.  
+Die Atomionen sind schwer und benötigen einige Zeit, bis sie zur Hülse abgeflossen sind. Das Zählrohr hat eine sogenannte Totzeit, bis es das nächste Teilchen registrieren kann.  
+So wie jedes Messgerät für ionisierende Strahlung hat auch das GMZ einen sogenannten Nulleffekt, der auch ohne ein vermessendes Präparat auftritt (Hintergrundstrahlung, Höhenstrahlung, ...). Die ohne Präparat gemessene Strahlung wird als Nullrate bezeichnet.
+
+## Kernspaltung und Kernfusion

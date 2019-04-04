@@ -4,6 +4,7 @@ date: 2019
 listings-disable-line-numbers: true
 page-numbers: true
 toc: true
+toc-depth: 2
 toc-title: "Inhalt"
 ---
 # Taschenrechnerbefehle
