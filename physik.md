@@ -872,6 +872,27 @@ Treffen beide Bedingungen zu, so entsteht eine kräftige Reflexion in diese Rich
 $$2\cdot \Delta s=2\cdot a \cdot\sin\beta=\text{k}\cdot\lambda$$
 
 ### De Broglie
+Auch bewegten Teilchen mit Masse kann eine Wellenlänge zugeordnet werden:
+
+$$\lambda=\dfrac{h}{p}$$
+
+* $h$: Wirkungsquantum
+* $p$: Impuls mit $p=m\cdot v$
+
+#### Impuls des Elektrons - Elektronen im E-Feld beschleunigt
+EES:
+
+$$
+\begin{aligned}
+    E_{el}&=E_{kin}\\
+    e\cdot U_B&=\dfrac{1}{2}\cdot m\cdot v^2\\
+    v&=\sqrt{\dfrac{2\cdot e\cdot U_B}{m}}
+\end{aligned}
+$$
+
+Somit ist $p=m\cdot\sqrt{\dfrac{2\cdot e\cdot U_B}{m}}$
+
+mit $\dfrac{e}{m}=1,76\cdot10^{11}\text{C}\cdot\text{kg}^{-1}=1,76\cdot10^{11}\dfrac{\text{As}}{\text{kg}}$
 
 ### Absorption und Emission
 Atome besitzen nur diskrete Energieniveaus. Ein sich selbst überlassenes Atom strebt immer den niedrigsten Energiezustand an (Grundzustand). Atome mit einem erhöhten Energie zustand wird als angeregt bezeichnet
@@ -1084,3 +1105,20 @@ Die Atomionen sind schwer und benötigen einige Zeit, bis sie zur Hülse abgeflo
 So wie jedes Messgerät für ionisierende Strahlung hat auch das GMZ einen sogenannten Nulleffekt, der auch ohne ein vermessendes Präparat auftritt (Hintergrundstrahlung, Höhenstrahlung, ...). Die ohne Präparat gemessene Strahlung wird als Nullrate bezeichnet.
 
 ## Kernspaltung und Kernfusion
+### Kernspaltung
+Große Kerne, Nuklide mit hoher Ordnungszahl, können durch Neutronen gespalten werden. Dabei entstehen zumeist zwei Bruchstücke mittlerer Größe, die häufig im Massenverhältnis 2:3 stehen. Die frei werdende Energie beträgt ca. 200 MeV und tritt hauptsächlich als kinetische Energie der beiden Bruchstücke auf. Je Spaltung werden typisch 2 bis 3 Neutronen frei, die
+nach Abbremsung auf wenige eV für neue Kernspaltungen zur Verfügung stehen.
+
+![Kernspaltung von Uran-235](img/Kernspaltung&#32;Uran-235.png){ height=250px }
+
+Bei der Kernspaltung eines Uran-235-Isotops durch den Beschuss mit einem langsamen Neutron entsteht in bestimmten Fällen ein Krypton-89-Isotop, ein Barium-144-Isotop und 3 freie Neutronen. 
+Bei der Kernspaltung eines Uran-235-Isotops durch den Beschuss mit langsamen Neutronen wird kurzzeitig ein instabiler Zwischenkern (Uran-236) gebildet, welcher in zwei mittelschwere Kernbruchstücke "zerplatzt". Bei diesem Spaltprozess entstehen 2 bis 3 sehr schnelle Neutronen, die nach einer Abbremsung weitere Kernspaltungen auslösen können (Kettenreaktion). Die bei der Spaltung entstandenen Kernbruchstücke sind radioaktiv und zerfallen weiter.
+
+#### Kettenreaktion
+Viele Neutronen gehen 'verloren' und stehen für weitere Kernspaltungen nicht zur Verfügung. Führt mindestens genau ein Neutron einer Generation zu einer Kernspaltung der Folgegeneration, so spricht man einer Kettenreaktion. Die Anzahl der genutzten Neutronen je Generation und damit die Anzahl der Kernspaltungen verhalten sich im Zeitverlauf exponentiell, das Verhältnis zur Folgegeneration wird als Multiplikationsfaktor $k$ (oder auch Kritikalität) bezeichnet. Ist die Kritikalität $k > 1$ , so kommt es zu einer unkontrollierten Kettenreaktion, dies wird für Kriegswaffen genutzt. Für die technische Nutzung muss für einen stationären Betrieb $k = 1$ zu jeder Zeit exakt eingehalten werden.
+
+## Ablenkung von Strahlung
+Alpha- und Betastrahlung wird auch als Teilchenstrahlung bezeichnet, da sie aus "klassischen Teilchen" besteht. Alphateilchen sind zweifach positiv geladen, $\beta^-$ Teilchen (Elektronen) einfach negativ.
+Damit ergibt sich eine einfache Möglichkeit, die Strahlungsart mithilfe der Ablenkung in einem Magnetfeld zu unterscheiden ([Lorentzkraft](#lorentzkraft)).
+
+![Ablenkung von Strahlung im B-Feld](img/Ablenkung&#32;von&#32;Strahlung.png){ height=250px }
