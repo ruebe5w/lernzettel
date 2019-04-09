@@ -89,7 +89,7 @@ $$f' = u'\cdot v +u\cdot v'$$
 > 
 > $f''(x_E) > 0 \Rightarrow$ Minimum
 > 
-> $f''(x_E) = 0 \Rightarrow$ keine Aussage
+> $f''(x_E) = 0 \Rightarrow$ kein Extremum, sondern Sattelpunkt
 
 ### 4. Wendepunkte
 > $f''(x)=0$  
@@ -98,7 +98,7 @@ $$f' = u'\cdot v +u\cdot v'$$
 > 
 > $f'''(x_W) > 0 \Rightarrow$ Wendepunkt(R-l) 
 > 
-> $f'''(x_W) = 0 \Rightarrow$ keine Aussage 
+> $f'''(x_W) = 0 \Rightarrow$ kein Wendepunkt 
 
 ## Abstände
 Der Abstand zwischen einem Punkt $P$ und einer Funktion $f$ kann mit dem Satz des Pythagoras hergeleitet werden und resultiert in der folgenden Gleichung für $d$.
