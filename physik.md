@@ -1076,6 +1076,12 @@ Man denke sich für das A z.B. die Öffnung eines [Geiger-Müller-Zählrohres](#
 
 Dieses quadratische Abstandsgesetz gillt nur für punktförmige Quellen und Größen, die mit dem Energiebegriff, wie z.B. Leistung, Leistungsdichte, Intensität, Anzahl von Teilen pro Zeiteinheit, etc.
 
+## Ablenkung von Strahlung
+Alpha- und Betastrahlung wird auch als Teilchenstrahlung bezeichnet, da sie aus "klassischen Teilchen" besteht. Alphateilchen sind zweifach positiv geladen, $\beta^-$ Teilchen (Elektronen) einfach negativ.
+Damit ergibt sich eine einfache Möglichkeit, die Strahlungsart mithilfe der Ablenkung in einem Magnetfeld zu unterscheiden ([Lorentzkraft](#lorentzkraft)).
+
+![Ablenkung von Strahlung im B-Feld](img/Ablenkung&#32;von&#32;Strahlung.png){ height=250px }
+
 ## Radiokarbonmethode/C-14 Methode
 Die Radiokarbonmethode oder auch C-14 Methode wird für die Datierung von kohlenstoffhaltiger, insbesondere organische Materialien.  
 $^{14}$C kommt in der Natur so nicht vor. Es sollten nur die Isotope $^{12}$ und $^{12}$ vorkommen. $^{14}$C hat eine Halbwertszeit von 5730 Jahren.
@@ -1117,8 +1123,3 @@ Bei der Kernspaltung eines Uran-235-Isotops durch den Beschuss mit langsamen Neu
 #### Kettenreaktion
 Viele Neutronen gehen 'verloren' und stehen für weitere Kernspaltungen nicht zur Verfügung. Führt mindestens genau ein Neutron einer Generation zu einer Kernspaltung der Folgegeneration, so spricht man einer Kettenreaktion. Die Anzahl der genutzten Neutronen je Generation und damit die Anzahl der Kernspaltungen verhalten sich im Zeitverlauf exponentiell, das Verhältnis zur Folgegeneration wird als Multiplikationsfaktor $k$ (oder auch Kritikalität) bezeichnet. Ist die Kritikalität $k > 1$ , so kommt es zu einer unkontrollierten Kettenreaktion, dies wird für Kriegswaffen genutzt. Für die technische Nutzung muss für einen stationären Betrieb $k = 1$ zu jeder Zeit exakt eingehalten werden.
 
-## Ablenkung von Strahlung
-Alpha- und Betastrahlung wird auch als Teilchenstrahlung bezeichnet, da sie aus "klassischen Teilchen" besteht. Alphateilchen sind zweifach positiv geladen, $\beta^-$ Teilchen (Elektronen) einfach negativ.
-Damit ergibt sich eine einfache Möglichkeit, die Strahlungsart mithilfe der Ablenkung in einem Magnetfeld zu unterscheiden ([Lorentzkraft](#lorentzkraft)).
-
-![Ablenkung von Strahlung im B-Feld](img/Ablenkung&#32;von&#32;Strahlung.png){ height=250px }
