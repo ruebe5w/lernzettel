@@ -246,8 +246,6 @@ __*Ansatz 2:*__ Durchbiegung, Kenngröße $E\cdot I$ und Randbedingungen gegeben
 1. gegebene Eigenschaften auswerten
 2. LGS aufstellen und lösen, um $w(x)$ zu ermitteln
 
-
-
 ## e-Funktionen
 ![e-Funktion](img/e-Funktion.png){ height=250px }
 
@@ -351,11 +349,15 @@ genau $k$ Treffer:
 
 $$\text{P}(X=k)=\text{B}(n;p;k)=\dbinom{n}{k}\cdot p^k\cdot (1-p)^{n-k}$$
 
+mit $\dbinom{n}{k}=\dfrac{n!}{k!(n-k)!}$
+
+und $a!=1\cdot2\cdot3\cdot\dots a$
+
 > CAS Verteilungsfunktionen > Diskret > binominalPDf
 
 ### kumulierte Wahrscheinlichkeiten:
 
-mehr als $a$ Treffer:
+maximal $a$ Treffer:
 
 $$\text{P}(X\le a)=\sum_{k=0}^{a}\text{B}(n;p;k)$$
 
@@ -433,7 +435,7 @@ mit $z=\frac{k-\mu}{\sigma}$
 ### globale Näherungsformel
 Wenn die Laplace-Bedingung erfüllt ist, kann die die kumulierte Wahrscheinlichkeit mit folgender Vorgehensweise berechnet werden:
 
-$$\Phi(z)=\frac{1}{\cdot\sqrt{2\pi}}\int\limits_{-\infty}^{z}e^{-\frac{1}{2}t^2}dt$$
+$$\Phi(z)=\frac{1}{\sqrt{2\pi}}\int\limits_{-\infty}^{z}e^{-\frac{1}{2}t^2}dt$$
 
 $$\text{P}(X\le a)=\sum_{k=0}^{a}\text{B}(n;p;k)\approx\Phi(z)$$
 mit $z=\frac{k-\mu+0,5}{\sigma}$
@@ -551,7 +553,21 @@ $$\cos\varphi=\frac{|\vec{m_g}\cdot\vec{m_h}|}{|\vec{m_g}|\cdot|\vec{m_h}|}$$
 
 ### Abstand Punkt von Gerade
 
-Der Abstand zwischen einem Punkt $X$ und einer Gerade $g$ kann mithilfe einer Hilfsebene $H$ berechnet werden.
+Der Abstand zwischen einem Punkt $P$ und einer Gerade $g$ kann mithilfe einer Hilfsebene $E$ berechnet werden.
+
+![Abstand Punkt von Gerade](img/Abstand&#32;Punkt&#32;Gerade.png){ height=250px }
+
+1. Wird die Normalengleichung der Hilfsebene $E$ ($E:\vec{n}\cdot(\vec{x}-\vec{p})=0$ mit $\vec{n}$ als Richtungsvektor von $g$) aufgestellt, welche orthogonal auf $g$ steht und den Punkt $P$ enthält
+2. Der Schnittpunkt $F$ der Ebene $E$ und der Geraden $g$ wird ermittelt
+3. Der Abstand $d$ des Punkts zur Geraden beträgt $|\overrightarrow{PF}|$
+
+### Abstand zwei windschiefer Geraden
+Der Abstand von zwei windschiefen Geraden $g$ und $h$ beträgt:
+
+$$d(g,h)=\begin{vmatrix}\dfrac{(\vec{a}-\vec{b})\cdot\vec{n}}{|\vec{n}|}\end{vmatrix}$$
+
+* $\vec{a}, \vec{b}$ sind Ortsvektoren der Punkte $A$ (irgendein Punkt auf $g$) und $B$(irgendein Punkt auf $h$)
+* $\vec{n}$ Kreuzprodukt der beiden Richtungsvektoren der Geraden (z.B. $\vec{n}=\vec{u}\times\vec{v}$)
 
 ### Schnittpunkt Gerade und Ebene
 Schneidet sich eine Gerade $g$ und eine Ebene $E$, so kann der Schnittpunkt ermittelt werden, indem die Geradengleichung (in Parameterform) in die Ebendengleichung (in Koordinatenform) eingesetzt wird. Danach wird nach den Geradenparameter gelöst, welcher danach für eine Lösung für den Vektor $\vec{x}$ in die Geradengleichung eingesetzt werden muss.
@@ -629,6 +645,6 @@ $$\cos\varphi=\frac{|\vec{n_1}\cdot\vec{n_2}|}{|\vec{n_1}|\cdot|\vec{n_2}|}$$
 
 ### Abstand Punkt und Ebene
 
-Der Abstand zwischen dem Punkt $X$ (Vector $\vec{x}$) und der Ebene $E$ (in Normalenform) kann mit folgender Formel berechnet werden. 
+Der Abstand zwischen dem Punkt $X$ (Vektor $\vec{x}$) und der Ebene $E$ (in Normalenform) kann mit folgender Formel berechnet werden. 
 
 $$d(X,E)= \begin{vmatrix}\dfrac{\vec{n}\cdot (\vec{x}-\vec{a})}{|\vec{n}|}\end{vmatrix}$$
