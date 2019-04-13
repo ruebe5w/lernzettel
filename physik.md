@@ -970,7 +970,7 @@ Die Elektronen in einer Atomhülle können sich nicht völlig frei bewegen. Sie 
 Coulombkräften des Kerns. Daher werden sie auch als gebundene Elektronen bezeichnet. Das Verhalten
 solcher Elektronen soll in einem sehr einfachen Modell untersucht werden.
 Das Elektron soll sich nur in einer Richtung bewegen können, auf einer Strecke der Länge L.
-Man erreicht diese Einschränkung des Aufenhaltsbereiches dadurch, dass man die potenzielle Energie des
+Man erreicht diese Einschränkung des Aufenthaltsbereiches dadurch, dass man die potenzielle Energie des
 Elektrons außerhalb des Bereiches als unendlich groß annimmt und im einfachsten Fall innerhalb des
 Bereiches zu Null setzt. Anschaulich spricht man daher von einem Potenzialtopf, in dem das Elektron gefangen
 ist. Um den Potentialtopf zu verlassen, müsste das Elektron eine unendlich große Energie haben und dies ist
@@ -983,11 +983,12 @@ z.B. von Schallwellen oder Mikrowellen zwischen festen Enden kennen.
 
 Damit sich stehende Wellen ausbilden, muss gelten: $\lambda_n=\dfrac{2\cdot L}{n}$
 
-Mit De-Broglie ergibt sich der Impuls dannzu: $p_n=\dfrac{h}{\lambda_n}=\dfrac{h\cdot n}{2\cdot L}$
+Mit De-Broglie ergibt sich der Impuls dann zu: $p_n=\dfrac{h}{\lambda_n}=\dfrac{h\cdot n}{2\cdot L}$
 
-Und damit die kinetische Energie des Elektrons: $E_n=\dfrac{p_n^2}{2\cdot m_e}=\dfrac{h^2\cdot n^2}{8\cdot m_e\cdot L^2}$
+Und damit die kinetische Energie des Elektrons: $E_n=\dfrac{p_n^2}{2\cdot m_e}=\dfrac{h^2\cdot n^2}{8\cdot m_e\cdot L^2}$  
+Für den Einheitennachweis kann man das Wirkungsquantum $h$ in Js und eV verwendet, um wieder auf eV zu kommen.
 
-Die Bindung eines Elektrons auf einen begrenzten Raumbereich führt immer zu diskreten Energienevaus $E_n$.
+Die Bindung eines Elektrons auf einen begrenzten Raumbereich führt immer zu diskreten Energieniveaus $E_n$.
 
 Die Energieniveaus und die Zustandsfunktion und damit auch die Wahrscheinlichkeitsdichte sind eindeutig durch die Quantenzahl $n$ bestimmt.
 
@@ -1074,7 +1075,7 @@ $$I\sim Z\sim\dfrac{1}{d^2}$$
 
 Man denke sich für das A z.B. die Öffnung eines [Geiger-Müller-Zählrohres](#geiger-müller-zählrohr).
 
-Dieses quadratische Abstandsgesetz gillt nur für punktförmige Quellen und Größen, die mit dem Energiebegriff, wie z.B. Leistung, Leistungsdichte, Intensität, Anzahl von Teilen pro Zeiteinheit, etc.
+Dieses quadratische Abstandsgesetz gilt nur für punktförmige Quellen und Größen, die mit dem Energiebegriff, wie z.B. Leistung, Leistungsdichte, Intensität, Anzahl von Teilen pro Zeiteinheit, etc.
 
 ## Ablenkung von Strahlung
 Alpha- und Betastrahlung wird auch als Teilchenstrahlung bezeichnet, da sie aus "klassischen Teilchen" besteht. Alphateilchen sind zweifach positiv geladen, $\beta^-$ Teilchen (Elektronen) einfach negativ.
